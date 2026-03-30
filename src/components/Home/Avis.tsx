@@ -1,7 +1,7 @@
-export function Avis() {
+export default function Avis() {
     return (
         <>
-            {/* Avis des patients : images carousel */}
+            {/* Avis des patients */}
             <section className="px-4 md:px-[48px] py-[40px] md:py-[80px] flex flex-col gap-[32px] md:gap-[48px]">
                 {/* Header */}
                 <div className="flex flex-col gap-[16px] md:gap-[24px] items-center text-center">

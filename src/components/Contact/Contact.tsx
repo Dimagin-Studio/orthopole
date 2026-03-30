@@ -1,4 +1,4 @@
-export function Contact() {
+export default function Contact() {
     return (
         <>
             {/* Prise de rdv & Map */}
@@ -11,10 +11,10 @@ export function Contact() {
                             Besoin d'un rendez-vous ou d'une information ?
                         </h2>
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-[16px] md:gap-[24px] font-medium">
-                            <p className="text-[#F5F3EF] bg-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-fit">
+                            <p className="text-[#F5F3EF] bg-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
                                 <a href="">PRENDRE RENDEZ-VOUS</a>
                             </p>
-                            <p className="border border-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-fit">
+                            <p className="border border-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
                                 <a href="">NOUS CONTACTER</a>
                             </p>
                         </div>
@@ -40,7 +40,7 @@ export function Contact() {
                         height="300"
                         className="w-full md:h-[350px] lg:h-[480px]"
                         style={{ border: 0 }}
-                        allowFullScreen=""
+                        allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>

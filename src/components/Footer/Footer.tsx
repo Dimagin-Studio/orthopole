@@ -1,4 +1,4 @@
-export function Footer() {
+export default function Footer() {
     return (
         <>
             <footer className="pt-[48px] md:pt-[96px] px-[24px] md:px-[48px] pb-[24px] bg-[#172D47] text-[#F5F3EF] flex flex-col gap-[32px] md:gap-[48px]">
