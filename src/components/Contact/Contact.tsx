@@ -1,34 +1,36 @@
+import { Link } from "react-router-dom";
+
 export default function Contact() {
     return (
         <>
             {/* Prise de rdv & Map */}
-            <section className="px-[24px] md:px-[48px] pt-[48px] md:pt-[80px] pb-[64px] md:pb-[128px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-[32px] md:gap-[64px] items-center">
+            <section className="px-[24px] md:px-[48px] pt-[40px] md:pt-[80px] pb-[64px] md:pb-[128px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-[32px] md:gap-[64px] items-center">
                 {/* Zone text header & Tel */}
                 <div className="flex flex-col gap-[32px] md:gap-[48px] mx-auto lg:mx-0 lg:w-[540px]">
                     {/* Header */}
                     <div className="flex flex-col gap-[24px] md:gap-[32px] text-center lg:text-left">
-                        <h2 className="text-[28px] md:text-[36px] lg:text-5xl leading-[1.4] tracking-tight">
+                        <h2 className="text-3xl lg:text-5xl leading-[1.4] tracking-tight">
                             Besoin d'un rendez-vous ou d'une information ?
                         </h2>
-                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-[16px] md:gap-[24px] font-medium">
-                            <p className="text-[#F5F3EF] bg-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
-                                <a href="">PRENDRE RENDEZ-VOUS</a>
+                        <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[16px] md:gap-[24px] font-medium">
+                            <p className="text-[#FBF8F3] bg-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
+                                <Link to="/infos">Contact/Infos</Link>
                             </p>
                             <p className="border border-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
-                                <a href="">NOUS CONTACTER</a>
+                                <Link to="/infos">Contact/Infos</Link>
                             </p>
                         </div>
                     </div>
 
                     {/* Téléphone */}
-                    <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-2 font-[Outfit] text-center lg:text-left">
-                        <p className="font-light">Ou par téléphone sur</p>
-                        <span className="px-[12px] py-[8px] flex items-center gap-2 bg-[#0C1A2E0D]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
+                    <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[8px] font-[Outfit] text-center lg:text-left">
+                        <p className="font-light leading-[1.2]">Ou par téléphone sur</p>
+                        <div className="px-[12px] py-[8px] flex items-center gap-[8px] bg-[#0C1A2E0D]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
                                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                             </svg>
-                            01 89 29 18 85
-                        </span>
+                            <p>01 89 29 18 85</p>
+                        </div>
                     </div>
                 </div>
 

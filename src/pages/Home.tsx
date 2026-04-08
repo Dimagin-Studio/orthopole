@@ -21,8 +21,6 @@ export default function Home() {
 
                 <Equipe />
 
-                <Photos />
-
                 <Avis />
 
                 <Contact />

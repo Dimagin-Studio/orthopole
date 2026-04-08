@@ -26,14 +26,14 @@ export function Hamburger({ children }: { children: React.ReactNode }) {
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
             >
-                <span className={`block w-6 h-0.5 z-20 bg-[#FBF8F3] transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span>
-                <span className={`block w-6 h-0.5 bg-[#FBF8F3] transition-all ${isOpen ? "opacity-0" : ""}`}></span>
-                <span className={`block w-6 h-0.5 z-20 bg-[#FBF8F3] transition-all ${isOpen ? "-rotate-45 -translate-y-1" : ""}`}></span>
+                <span className={`block w-6 h-0.5 z-20 bg-[#0C1A2E] transition-all ${isOpen ? "rotate-45 fixed bg-[#FBF8F3]" : ""}`}></span>
+                <span className={`block w-6 h-0.5 bg-[#0C1A2E] transition-all ${isOpen ? "opacity-0 fixed" : ""}`}></span>
+                <span className={`block w-6 h-0.5 z-20 bg-[#0C1A2E] transition-all ${isOpen ? "-rotate-45 fixed bg-[#FBF8F3]" : ""}`}></span>
             </button>
 
             {/* Menu déroulant (pour mobile) */}
             <div
-                className={`fixed inset-0 bg-[#0C1A2E] h-fit p-4 z-10 transition-all duration-300 ease-in-out overflow-y-auto ${isOpen ? "block" : "hidden"
+                className={`fixed inset-0 bg-[#0C1A2E] p-4 z-10 transition-all duration-300 ease-in-out overflow-y-auto ${isOpen ? "block" : "hidden"
                     }`}
             >
                 <div className="flex flex-col gap-6 w-full pt-12">
