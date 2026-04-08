@@ -40,6 +40,7 @@ export default function Footer() {
                             <p className="text-[14px] md:text-[16px] max-w-[300px] md:max-w-none">Recevez des mises à jour, des conseils de santé et des informations exclusives.</p>
                             <input
                                 type="email"
+                                name="email"
                                 placeholder="Entrez votre adresse e-mail"
                                 className="border-b border-gray-500 bg-transparent py-[12px] md:py-[24px] text-[14px] md:text-[16px] focus:outline-none w-full max-w-[300px]"
                             />

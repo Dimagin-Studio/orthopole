@@ -5,49 +5,26 @@ export default function Header() {
     return (
         <>
             <header
-                className="w-full h-auto md:h-[600px] lg:h-[800px] px-[24px] md:px-[48px] pt-[16px] pb-[48px] text-[#FBF8F3] flex flex-col gap-[24px] md:gap-0 bg-cover bg-no-repeat overflow-hidden"
+                className="w-full h-screen px-[24px] md:px-[48px] pt-[16px] pb-[48px] text-[#FBF8F3] flex flex-col gap-[24px] md:gap-0 bg-cover bg-no-repeat overflow-hidden"
                 style={{ backgroundImage: "url('/images/hero-section.png')" }}
             >
-                {/* Navigation */}
-                <nav className="w-full text-lg flex flex-col md:flex-row gap-y-[16px] md:gap-y-0 gap-x-[16px] md:gap-x-[32px] md:items-center justify-items-start md:justify-between text-center">
-                    {/* Titre "ORTHOPOLE" */}
-                    <div className="text-xl font-medium leading-[1.4] justify-self-center md:justify-self-start">
-                        ORTHOPOLE
-                    </div>
-
-                    {/* Contenu du menu */}
-                    <Hamburger>
-                        <>
-                            {/* Version desktop/tablette */}
-                            <div className="hidden md:flex md:justify-between md:items-center w-full">
-                                {/* <ul> centré */}
-                                <ul className="flex justify-start gap-[24px] font-semibold leading-[1.4] list-none w-full">
-                                    <li><Link to="/">Accueil</Link></li>
-                                    <li><Link to="/specialites">Nos spécialités</Link></li>
-                                    <li><Link to="/equipes">Nos équipes</Link></li>
-                                    <li><Link to="/infos">Contact/Infos</Link></li>
-                                </ul>
-                                {/* Bouton "RENDEZ-VOUS" à droite */}
-                                <div className="text-[#0C1A2E] bg-[#C9BBA8] font-medium leading-[23.48px] px-[20px] lg:px-[24px] py-[10px] w-fit">
-                                    <a href="">RENDEZ-VOUS</a>
-                                </div>
+                {/* Contenu du menu */}
+                <Hamburger>
+                    <>
+                        {/* Container ul + bouton rdv */}
+                        <div className="flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                            <ul className="flex flex-col md:flex-row gap-[24px] md:justify-between font-semibold leading-[1.4] list-none w-fit text-center">
+                                <li><Link to="/">Accueil</Link></li>
+                                <li><Link to="/specialites">Nos spécialités</Link></li>
+                                <li><Link to="/equipes">Nos équipes</Link></li>
+                                <li><Link to="/infos">Infos/Contact</Link></li>
+                            </ul>
+                            <div className="text-[#0C1A2E] bg-[#C9BBA8] font-medium leading-[23.48px] px-[24px] py-[10px] w-full md:w-fit">
+                                <a href="">RENDEZ-VOUS</a>
                             </div>
-
-                            {/* Version mobile */}
-                            <div className="md:hidden flex flex-col gap-6 w-full">
-                                <ul className="flex flex-col gap-[24px] font-semibold leading-[1.4] list-none w-full text-center">
-                                    <li><Link to="/">Accueil</Link></li>
-                                    <li><Link to="/specialites">Nos spécialités</Link></li>
-                                    <li><Link to="/equipes">Nos équipes</Link></li>
-                                    <li><Link to="/infos">Contact/Infos</Link></li>
-                                </ul>
-                                <div className="text-[#0C1A2E] bg-[#C9BBA8] font-medium leading-[23.48px] px-[16px] py-[8px] w-full mx-auto">
-                                    <a href="">RENDEZ-VOUS</a>
-                                </div>
-                            </div>
-                        </>
-                    </Hamburger>
-                </nav>
+                        </div>
+                    </>
+                </Hamburger>
 
                 {/* Section centre */}
                 <section className="max-w-[781px] h-full flex flex-col gap-[24px] md:gap-[48px] justify-center text-center md:text-left">

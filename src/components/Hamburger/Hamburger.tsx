@@ -19,17 +19,24 @@ export function Hamburger({ children }: { children: React.ReactNode }) {
     }, []);
 
     return (
-        <div>
-            {/* Bouton hamburger (visible uniquement sur mobile) */}
-            <button
-                className="hamburger-button md:hidden flex flex-col justify-center items-center gap-1 w-8 h-6"
-                onClick={() => setIsOpen(!isOpen)}
-                aria-label="Toggle menu"
-            >
-                <span className={`block w-6 h-0.5 z-20 bg-[#0C1A2E] transition-all ${isOpen ? "rotate-45 fixed bg-[#FBF8F3]" : ""}`}></span>
-                <span className={`block w-6 h-0.5 bg-[#0C1A2E] transition-all ${isOpen ? "opacity-0 fixed" : ""}`}></span>
-                <span className={`block w-6 h-0.5 z-20 bg-[#0C1A2E] transition-all ${isOpen ? "-rotate-45 fixed bg-[#FBF8F3]" : ""}`}></span>
-            </button>
+        <nav className="w-full px-[24px] md:px-[48px] py-[16px] text-lg grid grid-cols-1 lg:grid-cols-3 gap-y-[16px] lg:gap-y-0 gap-x-[16px] lg:gap-x-[32px] lg:items-center justify-items-start lg:justify-between text-center">
+            <div className="flex justify-between items-center w-full lg:w-fit">
+                <img
+                    src="/images/logo.png"
+                    alt="Logo Orthopole"
+                    className="w-fit h-fit object-cover object-center"
+                />
+                {/* Bouton hamburger (visible uniquement sur mobile) */}
+                <button
+                    className="hamburger-button lg:hidden flex flex-col justify-center items-center gap-1 w-8 h-6"
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle menu"
+                >
+                    <span className={`block w-6 h-0.5 z-20 bg-[#0C1A2E] transition-all ${isOpen ? "rotate-45 fixed bg-[#FBF8F3]" : ""}`}></span>
+                    <span className={`block w-6 h-0.5 bg-[#0C1A2E] transition-all ${isOpen ? "opacity-0 fixed" : ""}`}></span>
+                    <span className={`block w-6 h-0.5 z-20 bg-[#0C1A2E] transition-all ${isOpen ? "-rotate-45 fixed bg-[#FBF8F3]" : ""}`}></span>
+                </button>
+            </div>
 
             {/* Menu déroulant (pour mobile) */}
             <div
@@ -42,9 +49,9 @@ export function Hamburger({ children }: { children: React.ReactNode }) {
             </div>
 
             {/* Contenu du menu (visible sur desktop) */}
-            <div className="hidden md:flex md:justify-between md:items-center w-full">
+            <div className="hidden lg:flex col-span-2 justify-between items-center w-full">
                 {children}
             </div>
-        </div>
+        </nav>
     );
 }

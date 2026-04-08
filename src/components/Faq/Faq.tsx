@@ -103,9 +103,9 @@ export default function Faq() {
         <>
             <section className="px-[24px] md:px-[48px] py-[40px] md:pt-[128px] md:pb-[48px] md:pb-[96px] grid grid-cols-1 gap-[48px] place-items-center">
                 {/* Header */}
-                <h1 className="text-center text-3xl md:text-5xl leading-[1.4] tracking-tight">
+                <h2 className="text-center text-3xl md:text-5xl leading-[1.4] tracking-tight">
                     Questions fréquentes
-                </h1>
+                </h2>
 
                 {/* Container */}
                 <div className="md:w-[720px] flex flex-col gap-[40px]">
