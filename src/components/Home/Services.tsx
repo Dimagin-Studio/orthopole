@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Services() {
     return (
         <>
@@ -14,33 +16,33 @@ export default function Services() {
                 </div>
 
                 {/* Container */}
-                <div className="text-[#F5F3EF] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]">
                     {/* Box service 1 */}
-                    <div className="w-full h-[340px] md:h-[460px] flex flex-col gap-[8px] p-[24px] justify-end bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: "url('/images/service.jpg')" }}>
-                        <h4 className="text-xl md:text-[22px] font-medium leading-[1.4]">Chirurgie orthopédique</h4>
-                        <p className="font-[Outfit] text-sm leading-[1.3]">Réparer et restaurer la mobilité</p>
+                    <div className="w-full h-[340px] md:h-[460px]">
+                        <Link to="/specialites#chirurgie-orthopedique">
+                            <img src="/images/photos-figma/home-chirurgie.png" alt="Service chirurgie orthopédique" className="h-full w-full" />
+                        </Link>
                     </div>
 
                     {/* Box service 2 */}
-                    <div className="w-full h-[340px] md:h-[460px] flex flex-col gap-[8px] p-[24px] justify-end bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: "url('/images/service.jpg')" }}>
-                        <h4 className="text-xl md:text-[22px] font-medium leading-[1.4]">Radiologie & imagerie</h4>
-                        <p className="font-[Outfit] text-sm leading-[1.3]">Diagnostic précis par imagerie</p>
+                    <div className="w-full h-[340px] md:h-[460px]">
+                        <Link to="/specialites#imagerie-radiologie">
+                            <img src="/images/photos-figma/home-img.png" alt="Service imagerie & radiologie" className="h-full w-full" />
+                        </Link>
                     </div>
 
                     {/* Box service 3 */}
-                    <div className="w-full h-[340px] md:h-[460px] flex flex-col gap-[8px] p-[24px] justify-end bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: "url('/images/service.jpg')" }}>
-                        <h4 className="text-xl md:text-[22px] font-medium leading-[1.4]">Kinésithérapie</h4>
-                        <p className="font-[Outfit] text-sm leading-[1.3]">Renforcer et rééduquer le corps</p>
+                    <div className="w-full h-[340px] md:h-[460px]">
+                        <Link to="/specialites#kinesitherapie-revalidation">
+                            <img src="/images/photos-figma/home-kine.png" alt="Service kinésithérapie" className="h-full w-full" />
+                        </Link>
                     </div>
 
                     {/* Box service 4 */}
-                    <div className="w-full h-[340px] md:h-[460px] flex flex-col gap-[8px] p-[24px] justify-end bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: "url('/images/service.jpg')" }}>
-                        <h4 className="text-xl md:text-[22px] font-medium leading-[1.4]">Revalidation fonctionnelle</h4>
-                        <p className="font-[Outfit] text-sm leading-[1.3]">Récupérer pleinement ses capacités</p>
+                    <div className="w-full h-[340px] md:h-[460px]">
+                        <Link to="/specialites#kinesitherapie-revalidation">
+                            <img src="/images/photos-figma/home-rehab.png" alt="Service revalidation fonctionnelle" className="h-full w-full" />
+                        </Link>
                     </div>
                 </div>
             </section>

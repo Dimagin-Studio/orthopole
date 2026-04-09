@@ -20,7 +20,7 @@ export default function Reeduc() {
                             </p>
                         </div>
                         {/* Bouton */}
-                        <div className="w-full md:w-fit px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] bg-[#0C1A2E] text-[#FBF8F3] font-medium text-center leading-[23.48px]">
+                        <div className="w-full md:w-fit px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] font-medium text-center leading-[23.48px]">
                             <Link to="/equipes">NOS ÉQUIPES</Link>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
-// PopUpDoctor.tsx
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 type PopUpDoctorProps = {
     isOpen: boolean;
@@ -115,8 +115,8 @@ export default function PopUp({
                             )}
 
                             <div className="pt-[24px]">
-                                <p className="bg-[#0C1A2E] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
-                                    <a href="">PRENDRE RDV</a>
+                                <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
+                                    <Link to="/infos#contact-form">PRENDRE RDV</Link>
                                 </p>
                             </div>
                         </div>

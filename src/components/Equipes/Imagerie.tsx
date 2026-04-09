@@ -1,8 +1,7 @@
-// Chirurgie.tsx
 import { useState } from "react";
 import PopUp from "./PopUp";
 
-export default function Chirurgie() {
+export default function Imagerie() {
     const [selectedDoctor, setSelectedDoctor] = useState<{
         imageSrc: string;
         name: string;
@@ -17,7 +16,7 @@ export default function Chirurgie() {
             name: "Dr. Lucien Martin",
             specialty: "TECHNICIEN EN IMAGERIE MÉDICALE",
             availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
+            imageSrc: "/images/photos-figma/marc-lefevre.png",
             paragraphs: [
                 "Le Dr. Fabre est spécialisé dans la chirurgie mini-invasive de la hanche et du genou, offrant des solutions personnalisées pour chaque patient.",
                 "Son approche combine expertise technique et suivi attentif pour assurer une récupération optimale.",
@@ -28,7 +27,7 @@ export default function Chirurgie() {
             name: "Dr. Émilie Dupont",
             specialty: "RADIOLOGUE SENIOR",
             availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
+            imageSrc: "/images/photos-figma/emilie-dupont.png",
             paragraphs: [
                 "Expert en chirurgie de l'épaule, notamment en arthroscopie et en réparation de la coiffe des rotateurs.",
                 "Assure un suivi personnalisé pour chaque patient, avec des protocoles de rééducation adaptés.",
@@ -38,7 +37,7 @@ export default function Chirurgie() {
             name: "Dr. Sophie Lefèvre",
             specialty: "INFIRMIÈRE SPÉCIALISTE EN RADIOLOGIE",
             availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
+            imageSrc: "/images/photos-figma/camille-robert.png",
             info: "Spécialiste des interventions sur la main, le poignet et le coude, avec une approche personnalisée pour chaque patient.",
         },
         {
@@ -51,7 +50,7 @@ export default function Chirurgie() {
     ];
 
     return (
-        <section className="relative px-[24px] md:px-[48px] py-[32px] md:py-[64px] flex flex-col gap-[48px]">
+        <section id="imagerie-radiologie" className="relative px-[24px] md:px-[48px] py-[32px] md:py-[64px] flex flex-col gap-[48px]">
             <div>
                 <h1 className="text-3xl md:text-5xl leading-[1.4] tracking-tight">
                     Imagerie & Radiologie

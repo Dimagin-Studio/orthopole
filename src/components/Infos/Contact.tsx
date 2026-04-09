@@ -9,7 +9,7 @@ export default function Contact() {
 
     return (
         <>
-            <section className="px-[24px] md:px-[48px] pt-[64px] md:pt-[128px] pb-[40px] md:pb-[96px] grid grid-cols-1 md:grid-cols-2 gap-[40px] lg:gap-[80px]">
+            <section id="contact-form" className="px-[24px] md:px-[48px] pt-[64px] md:pt-[128px] pb-[40px] md:pb-[96px] grid grid-cols-1 md:grid-cols-2 gap-[40px] lg:gap-[80px]">
                 {/* Image (sauf sur mobiles) */}
                 <img
                     src="/images/form.png"
@@ -97,8 +97,8 @@ export default function Contact() {
                                 </textarea>
                             </div>
 
-                            {/* Bouton */}
-                            <input type="submit" value="ENVOYER LE MESSAGE" className="bg-[#0C1A2E] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" />
+                            {/* Submit */}
+                            <input type="submit" value="ENVOYER LE MESSAGE" className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" />
                         </div>
                     </form>
                 </div>

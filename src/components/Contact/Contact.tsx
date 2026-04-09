@@ -13,11 +13,11 @@ export default function Contact() {
                             Besoin d'un rendez-vous ou d'une information ?
                         </h2>
                         <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[16px] md:gap-[24px] font-medium">
-                            <p className="text-[#FBF8F3] bg-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
-                                <Link to="/infos">Contact/Infos</Link>
+                            <p className="text-[#FBF8F3] bg-[#0C1A2E] hover:bg-[#1e395e] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
+                                <Link to="/infos#contact-form">PRENDRE RENDEZ-VOUS</Link>
                             </p>
                             <p className="border border-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
-                                <Link to="/infos">Contact/Infos</Link>
+                                <Link to="/infos#contact-form">NOUS CONTACTER</Link>
                             </p>
                         </div>
                     </div>

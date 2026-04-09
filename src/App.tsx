@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom"
+import { useEffect } from "react"
+import { Routes, Route, useLocation } from "react-router-dom"
 import Home from "./pages/Home"
 import Specialites from "./pages/Specialites"
 import Equipes from "./pages/Equipes"
@@ -6,6 +7,17 @@ import Infos from "./pages/Infos"
 import NotFound from "./pages/NotFound"
 
 export function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <>
       <Routes>

@@ -19,8 +19,8 @@ export default function Header() {
                                 <li><Link to="/equipes">Nos équipes</Link></li>
                                 <li><Link to="/infos">Infos/Contact</Link></li>
                             </ul>
-                            <div className="text-[#0C1A2E] bg-[#C9BBA8] font-medium leading-[23.48px] px-[24px] py-[10px] w-full md:w-fit">
-                                <a href="">RENDEZ-VOUS</a>
+                            <div className="text-[#0C1A2E] bg-[#C9BBA8] hover:bg-[#ac9c86] font-medium leading-[23.48px] px-[24px] py-[10px] w-full md:w-fit">
+                                <Link to="/infos#contact-form">RENDEZ-VOUS</Link>
                             </div>
                         </div>
                     </>
@@ -39,8 +39,12 @@ export default function Header() {
                     </div>
 
                     <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-medium leading-[23.48px]">
-                        <p className="bg-[#2C4A6E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center"><a href="">Prendre rendez-vous</a></p>
-                        <Link to="/specialites" className="text-[#0C1A2E] bg-[#C9BBA8] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">Découvrir nos spécialités</Link>
+                        <p className="bg-[#2C4A6E] hover:bg-[#1e344f] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
+                            <Link to="/infos#contact-form">Prendre rendez-vous</Link>
+                        </p>
+                        <p className="text-[#0C1A2E] bg-[#C9BBA8] hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
+                            <Link to="/specialites">Découvrir nos spécialités</Link>
+                        </p>
                     </div>
                 </section>
             </header>

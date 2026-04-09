@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     return (
         <>
@@ -9,12 +11,12 @@ export default function Footer() {
                     <div className="flex flex-col gap-[16px] md:gap-[24px] md:text-left text-center">
                         <h5 className="font-[Geist] font-medium leading-[24px] text-[16px] md:text-[18px]">/ Liens</h5>
                         <ul className="list-none flex flex-col gap-[8px] md:gap-[16px] font-[Outfit] text-[14px] md:text-[16px] leading-[1.4]">
-                            <li>Chirurgie</li>
-                            <li>Radiologie</li>
-                            <li>Kinésithérapie</li>
+                            <li><Link to="/equipes#chirurgie-orthopedique">Chirurgie</Link></li>
+                            <li><Link to="/equipes#imagerie-radiologie">Radiologie</Link></li>
+                            <li><Link to="/equipes#kinesitherapie-reathletisation">Kinésithérapie</Link></li>
                             <li>À propos</li>
-                            <li>Aide & FAQ</li>
-                            <li>Contact</li>
+                            <li><Link to="/infos#faq">Aide & FAQ</Link></li>
+                            <Link to="/infos#contact-form">Contact</Link>
                         </ul>
                     </div>
 
@@ -42,11 +44,11 @@ export default function Footer() {
                                 type="email"
                                 name="email"
                                 placeholder="Entrez votre adresse e-mail"
-                                className="border-b border-gray-500 bg-transparent py-[12px] md:py-[24px] text-[14px] md:text-[16px] focus:outline-none w-full max-w-[300px]"
+                                className="border-b border-gray-500 py-[12px] md:py-[24px] text-[14px] md:text-[16px] focus:outline-none w-full max-w-[300px]"
                             />
                             <button
                                 type="submit"
-                                className="w-fit px-[12px] md:px-[16px] py-[6px] md:py-[8px] font-[Geist] font-medium bg-[#C9BBA8] text-[#0C1A2E] text-[14px] md:text-[16px]"
+                                className="w-fit px-[12px] md:px-[16px] py-[6px] md:py-[8px] font-[Geist] font-medium bg-[#C9BBA8] hover:bg-[#ac9c86] text-[#0C1A2E] text-[14px] md:text-[16px] cursor-pointer"
                             >
                                 S'abonner
                             </button>

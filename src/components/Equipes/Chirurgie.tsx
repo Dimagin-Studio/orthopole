@@ -1,4 +1,4 @@
-// Chirurgie.tsx
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import PopUp from "./PopUp";
 
@@ -17,41 +17,70 @@ export default function Chirurgie() {
             name: "Dr. Valery Fabre",
             specialty: "CHIRURGIE DE LA HANCHE ET DU GENOU",
             availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
+            imageSrc: "/images/photos-chirurgien/valery-fabre.jpeg",
             paragraphs: [
-                "Le Dr. Fabre est spécialisé dans la chirurgie mini-invasive de la hanche et du genou, offrant des solutions personnalisées pour chaque patient.",
-                "Son approche combine expertise technique et suivi attentif pour assurer une récupération optimale.",
-                "Il utilise les dernières technologies pour minimiser la douleur et accélérer la guérison. Chaque intervention est adaptée aux besoins spécifiques du patient, garantissant ainsi des résultats durables et satisfaisants.",
+                "Chirurgien orthopédique spécialisé en chirurgie de la hanche et du genou, avec plus de 10 ans d’expérience et une approche personnalisée de chaque intervention.",
+                "Domaines d’intervention :",
+                "• Prothèse de hanche",
+                "• Prothèse totale de genou (assistance robotique)",
+                "• Prothèse partielle de genou",
+                "• Chirurgie ménisco-ligamentaire (arthroscopie)",
+                "Formation :",
+                "• Diplôme de chirurgie orthopédique – UCL",
             ],
         },
         {
             name: "Dr. Louis Gossing",
             specialty: "CHIRURGIE DE L'ÉPAULE",
             availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
+            imageSrc: "/images/photos-chirurgien/louis-gossing.jpg",
             paragraphs: [
-                "Expert en chirurgie de l'épaule, notamment en arthroscopie et en réparation de la coiffe des rotateurs.",
-                "Assure un suivi personnalisé pour chaque patient, avec des protocoles de rééducation adaptés.",
+                "Chirurgien spécialisé en pathologies de l’épaule, avec une formation internationale et une expertise dédiée à la prise en charge des troubles de l’épaule.",
+                "Domaines d’intervention :",
+                "• Chirurgie de l’épaule",
+                "Formation :",
+                "• UCL",
+                "• Centre d’orthopédie Santy – Lyon",
+                "• Clinique Générale – Annecy",
+                "• DIU épaule et coude",
             ],
         },
         {
             name: "Dr. Denis Williame",
             specialty: "CHIRURGIE DE LA MAIN, DU POIGNET ET DU COUDE",
             availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
-            info: "Spécialiste des interventions sur la main, le poignet et le coude, avec une approche personnalisée pour chaque patient.",
+            imageSrc: "/images/photos-chirurgien/denis-willame.jpg",
+            paragraphs: [
+                "Chirurgien spécialisé dans la prise en charge des pathologies de la main, du poignet et du coude, avec une expertise en microchirurgie et en chirurgie des nerfs périphériques.",
+                "Domaines d’intervention :",
+                "• Chirurgie de la main",
+                "• Chirurgie du poignet",
+                "• Chirurgie du coude",
+                "• Microchirurgie et nerfs périphériques",
+                "Formation :",
+                "• Docteur en médecine – UCL",
+                "• Master en chirurgie orthopédique et traumatologie – UCL",
+                "• Certificat interuniversitaire en pathologie chirurgicale de la main et des nerfs périphériques (UCL – ULB – ULg – Lille)",
+            ],
         },
         {
             name: "Dr. Eric Manche",
             specialty: "CHIRURGIE DE LA COLONNE, HANCHE ET DU GENOU",
             availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
-            info: "Chirurgien orthopédique spécialisé dans la colonne vertébrale, les prothèses de hanche et de genou.",
+            imageSrc: "/images/photos-chirurgien/eric-manche.jpeg",
+            paragraphs: [
+                "Chirurgien orthopédique spécialisé dans la prise en charge des pathologies de la colonne et des membres inférieurs, avec une approche centrée sur un diagnostic précis et des solutions adaptées à chaque patient.",
+                "Domaines d’intervention :",
+                "• Chirurgie de la colonne",
+                "• Chirurgie de la hanche",
+                "• Chirurgie du genou",
+                "• Chirurgie traumatologique",
+            ],
         },
     ];
 
     return (
-        <section className="relative px-[24px] md:px-[48px] py-[32px] md:py-[64px] flex flex-col gap-[48px]">
+        <section id="chirurgie-orthopedique" className="relative px-[24px] md:px-[48px] py-[32px] md:py-[64px] flex flex-col gap-[48px]">
             <div>
                 <h1 className="text-3xl md:text-5xl leading-[1.4] tracking-tight">
                     Chirurgie Orthopédique
@@ -72,8 +101,8 @@ export default function Chirurgie() {
                             <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">
                                 {doctor.specialty}
                             </p>
-                            <p className="bg-[#0C1A2E] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer">
-                                <a href="">PRENDRE RDV</a>
+                            <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer">
+                                <Link to="/infos#contact-form">PRENDRE RDV</Link>
                             </p>
                         </div>
                     </div>

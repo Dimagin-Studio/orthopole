@@ -20,7 +20,7 @@ export default function Equipe() {
                     {/* Card 1 */}
                     <div className="flex flex-col gap-[16px] md:max-w-[324px]">
                         <img
-                            src="/images/equipe.png"
+                            src="/images/photos-chirurgien/valery-fabre.jpeg"
                             alt="Dr. Valery Fabre"
                             className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
                         />
@@ -33,7 +33,7 @@ export default function Equipe() {
                     {/* Card 2 */}
                     <div className="flex flex-col gap-[16px] md:max-w-[324px] mt-0 md:mt-[40px]">
                         <img
-                            src="/images/equipe.png"
+                            src="/images/photos-chirurgien/louis-gossing.jpg"
                             alt="Dr. Louis Gossing"
                             className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
                         />
@@ -46,7 +46,7 @@ export default function Equipe() {
                     {/* Card 3 */}
                     <div className="flex flex-col gap-[16px] md:max-w-[324px] mt-0 md:mt-[80px]">
                         <img
-                            src="/images/equipe.png"
+                            src="/images/photos-chirurgien/denis-willame.jpg"
                             alt="Dr. Denis Williame"
                             className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
                         />
@@ -59,7 +59,7 @@ export default function Equipe() {
                     {/* Card 4 */}
                     <div className="flex flex-col gap-[16px] md:max-w-[324px] mt-0 md:mt-[40px]">
                         <img
-                            src="/images/equipe.png"
+                            src="/images/photos-chirurgien/eric-manche.jpeg"
                             alt="Dr. Eric Manche"
                             className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
                         />
@@ -72,7 +72,7 @@ export default function Equipe() {
                     {/* Card 5 */}
                     <div className="flex flex-col gap-[16px] md:max-w-[324px]">
                         <img
-                            src="/images/equipe.png"
+                            src="/images/photos-figma/camille-robert.png"
                             alt="Dr. Camille Robert"
                             className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
                         />
@@ -85,7 +85,7 @@ export default function Equipe() {
                     {/* Card 6 */}
                     <div className="flex flex-col gap-[16px] md:max-w-[324px] mt-0 md:mt-[80px]">
                         <img
-                            src="/images/equipe.png"
+                            src="/images/photos-figma/marc-lefevre.png"
                             alt="Dr. Marc Lefevre"
                             className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
                         />
@@ -97,7 +97,7 @@ export default function Equipe() {
                 </div>
 
                 {/* Button */}
-                <div className="w-full md:w-fit mx-auto px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-[#FBF8F3] bg-[#0C1A2E] font-medium text-center leading-[23.48px]">
+                <div className="w-full md:w-fit mx-auto px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-[#FBF8F3] bg-[#0C1A2E] hover:bg-[#1e395e] font-medium text-center leading-[23.48px]">
                     <Link to="/equipes">DÉCOUVRIR L'ÉQUIPE</Link>
                 </div>
             </section>

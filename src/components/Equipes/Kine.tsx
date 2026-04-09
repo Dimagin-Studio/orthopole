@@ -1,8 +1,8 @@
-// Chirurgie.tsx
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import PopUp from "./PopUp";
 
-export default function Chirurgie() {
+export default function Kine() {
     const [selectedDoctor, setSelectedDoctor] = useState<{
         imageSrc: string;
         name: string;
@@ -16,42 +16,71 @@ export default function Chirurgie() {
         {
             name: "Dr. Alexis De Wael",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
-            availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
+            availability: "Disponible lundi, mardi, mercredi après-midi, jeudi, vendredi matin",
+            imageSrc: "/images/photos-kines/alexis-de-wael.jpeg",
             paragraphs: [
-                "Le Dr. Fabre est spécialisé dans la chirurgie mini-invasive de la hanche et du genou, offrant des solutions personnalisées pour chaque patient.",
-                "Son approche combine expertise technique et suivi attentif pour assurer une récupération optimale.",
-                "Il utilise les dernières technologies pour minimiser la douleur et accélérer la guérison. Chaque intervention est adaptée aux besoins spécifiques du patient, garantissant ainsi des résultats durables et satisfaisants.",
+                "Domaines d’intervention :",
+                "• Troubles musculo-squelettiques",
+                "• Rééducation pré et post-opératoire",
+                "• Troubles de la marche et de l’équilibre",
+                "• Reconditionnement physique",
+                "Formation :",
+                "• Master en kinésithérapie – ISEK",
+                "• Formation KINÉSPORT Expert (en cours)",
             ],
         },
         {
             name: "Dr. François Dessart",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
-            availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
+            availability: "Disponible lundi, mercredi, jeudi (8h–17h) – samedi (10h–14h)",
+            imageSrc: "/images/photos-kines/françois-dessart.JPG",
             paragraphs: [
-                "Expert en chirurgie de l'épaule, notamment en arthroscopie et en réparation de la coiffe des rotateurs.",
-                "Assure un suivi personnalisé pour chaque patient, avec des protocoles de rééducation adaptés.",
+                "Domaines d’intervention :",
+                "• Blessures en course à pied",
+                "• Rééducation de la main",
+                "• Rééducation post-opératoire",
+                "• Pathologies musculo-squelettiques",
+                "Formation :",
+                "• Master en kinésithérapie et réadaptation – ULB",
+                "• Spécialisation en course à pied",
+                "• Formations en kinésithérapie de la main",
             ],
         },
         {
             name: "Dr. Vanina Ullens",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
-            availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
-            info: "Spécialiste des interventions sur la main, le poignet et le coude, avec une approche personnalisée pour chaque patient.",
+            availability: "Disponible mardi, mercredi, vendredi après-midi",
+            imageSrc: "/images/photos-kines/vanina-ullens.jpeg",
+            paragraphs: [
+                "Domaines d’intervention :",
+                "• Pathologies du sport",
+                "• Rééducation post-opératoire",
+                "• Rééducation fonctionnelle",
+                "Formation :",
+                "• Master en kinésithérapie – Haute École Léonard de Vinci",
+            ],
         },
         {
             name: "Dr. Sylvie Machiels",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
-            availability: "Disponible dès 13h",
-            imageSrc: "/images/equipe.png",
-            info: "Chirurgien orthopédique spécialisé dans la colonne vertébrale, les prothèses de hanche et de genou.",
+            availability: "Disponible lundi, mardi, jeudi (7h30–18h) – vendredi (7h30–13h)",
+            imageSrc: "/images/photos-figma/sylvie-machiels.png",
+            paragraphs: [
+                "Domaines d’intervention :",
+                "• Rééducation postopératoire(membre inférieur, épaule)",
+                "• Pathologies du sport",
+                "• Course à pied",
+                "• Dry Needling",
+                "Formation :",
+                "• Master en kinésithérapie et réadaptation – UCL",
+                "• Thérapie manuelle (IFOMPT) – UCL",
+                "• Kinésithérapeute du sport (Kinesport Expert)",
+            ],
         },
     ];
 
     return (
-        <section className="relative px-[24px] md:px-[48px] py-[32px] md:py-[64px] flex flex-col gap-[48px]">
+        <section id="kinesitherapie-reathletisation" className="relative px-[24px] md:px-[48px] py-[32px] md:py-[64px] flex flex-col gap-[48px]">
             <div>
                 <h1 className="text-3xl md:text-5xl leading-[1.4] tracking-tight">
                     Kinésithérapie & Reathlétisation
@@ -72,8 +101,8 @@ export default function Chirurgie() {
                             <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">
                                 {doctor.specialty}
                             </p>
-                            <p className="bg-[#0C1A2E] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer">
-                                <a href="">PRENDRE RDV</a>
+                            <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer">
+                                <Link to="/infos#contact-form">PRENDRE RDV</Link>
                             </p>
                         </div>
                     </div>
