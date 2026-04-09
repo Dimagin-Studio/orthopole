@@ -1,0 +1,4 @@
+services:
+  orthopole:
+    build: .
+    restart: unless-stopped
