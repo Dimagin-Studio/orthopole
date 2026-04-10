@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <>
             <header
-                className="w-full h-screen px-[24px] md:px-[48px] pt-[16px] pb-[48px] text-[#FBF8F3] flex flex-col gap-[24px] md:gap-0 bg-cover bg-no-repeat overflow-hidden"
+                className="w-full h-screen text-[#FBF8F3] flex flex-col gap-[24px] md:gap-0 bg-cover bg-no-repeat overflow-hidden"
                 style={{ backgroundImage: "url('/images/hero-section.png')" }}
             >
                 {/* Contenu du menu */}
@@ -27,7 +27,7 @@ export default function Header() {
                 </Hamburger>
 
                 {/* Section centre */}
-                <section className="max-w-[781px] h-full flex flex-col gap-[24px] md:gap-[48px] justify-center text-center md:text-left">
+                <section className="max-w-[781px] px-[24px] md:px-[48px] pb-[48px] h-full flex flex-col gap-[24px] md:gap-[48px] justify-center text-center md:text-left">
                     <div className="flex flex-col gap-[16px] place-items-center md:place-items-start">
                         <p className="w-fit px-[8px] py-[4px] font-[Outfit] text-sm bg-[#FBF8F314] leading-[1.4]">Centre privé</p>
 

@@ -8,8 +8,10 @@ export default function Chirurgie() {
         name: string;
         specialty: string;
         availability: string;
-        info?: string;
-        paragraphs?: string[];
+        sections: {
+            title: string;
+            items: string[];
+        }[];
     } | null>(null);
 
     const doctors = [
@@ -18,15 +20,22 @@ export default function Chirurgie() {
             specialty: "CHIRURGIE DE LA HANCHE ET DU GENOU",
             availability: "Disponible dès 13h",
             imageSrc: "/images/photos-chirurgien/valery-fabre.jpeg",
-            paragraphs: [
-                "Chirurgien orthopédique spécialisé en chirurgie de la hanche et du genou, avec plus de 10 ans d’expérience et une approche personnalisée de chaque intervention.",
-                "Domaines d’intervention :",
-                "• Prothèse de hanche",
-                "• Prothèse totale de genou (assistance robotique)",
-                "• Prothèse partielle de genou",
-                "• Chirurgie ménisco-ligamentaire (arthroscopie)",
-                "Formation :",
-                "• Diplôme de chirurgie orthopédique – UCL",
+            sections: [
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Prothèse de hanche",
+                        "Prothèse totale de genou (assistance robotique)",
+                        "Prothèse partielle de genou",
+                        "Chirurgie ménisco-ligamentaire (arthroscopie)",
+                    ],
+                },
+                {
+                    title: "Formations",
+                    items: [
+                        "Diplôme de chirurgie orthopédique – UCL",
+                    ],
+                },
             ],
         },
         {
@@ -34,15 +43,22 @@ export default function Chirurgie() {
             specialty: "CHIRURGIE DE L'ÉPAULE",
             availability: "Disponible dès 13h",
             imageSrc: "/images/photos-chirurgien/louis-gossing.jpg",
-            paragraphs: [
-                "Chirurgien spécialisé en pathologies de l’épaule, avec une formation internationale et une expertise dédiée à la prise en charge des troubles de l’épaule.",
-                "Domaines d’intervention :",
-                "• Chirurgie de l’épaule",
-                "Formation :",
-                "• UCL",
-                "• Centre d’orthopédie Santy – Lyon",
-                "• Clinique Générale – Annecy",
-                "• DIU épaule et coude",
+            sections: [
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Chirurgie de l’épaule",
+                    ],
+                },
+                {
+                    title: "Formations",
+                    items: [
+                        "UCL",
+                        "Centre d’orthopédie Santy – Lyon",
+                        "Clinique Générale – Annecy",
+                        "DIU épaule et coude",
+                    ],
+                },
             ],
         },
         {
@@ -50,17 +66,24 @@ export default function Chirurgie() {
             specialty: "CHIRURGIE DE LA MAIN, DU POIGNET ET DU COUDE",
             availability: "Disponible dès 13h",
             imageSrc: "/images/photos-chirurgien/denis-willame.jpg",
-            paragraphs: [
-                "Chirurgien spécialisé dans la prise en charge des pathologies de la main, du poignet et du coude, avec une expertise en microchirurgie et en chirurgie des nerfs périphériques.",
-                "Domaines d’intervention :",
-                "• Chirurgie de la main",
-                "• Chirurgie du poignet",
-                "• Chirurgie du coude",
-                "• Microchirurgie et nerfs périphériques",
-                "Formation :",
-                "• Docteur en médecine – UCL",
-                "• Master en chirurgie orthopédique et traumatologie – UCL",
-                "• Certificat interuniversitaire en pathologie chirurgicale de la main et des nerfs périphériques (UCL – ULB – ULg – Lille)",
+            sections: [
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Chirurgie de la main",
+                        "Chirurgie du poignet",
+                        "Chirurgie du coude",
+                        "Microchirurgie et nerfs périphériques",
+                    ],
+                },
+                {
+                    title: "Formations",
+                    items: [
+                        "Docteur en médecine – UCL",
+                        "Master en chirurgie orthopédique et traumatologie – UCL",
+                        "Certificat interuniversitaire en pathologie chirurgicale de la main et des nerfs périphériques (UCL – ULB – ULg – Lille)",
+                    ],
+                },
             ],
         },
         {
@@ -68,13 +91,16 @@ export default function Chirurgie() {
             specialty: "CHIRURGIE DE LA COLONNE, HANCHE ET DU GENOU",
             availability: "Disponible dès 13h",
             imageSrc: "/images/photos-chirurgien/eric-manche.jpeg",
-            paragraphs: [
-                "Chirurgien orthopédique spécialisé dans la prise en charge des pathologies de la colonne et des membres inférieurs, avec une approche centrée sur un diagnostic précis et des solutions adaptées à chaque patient.",
-                "Domaines d’intervention :",
-                "• Chirurgie de la colonne",
-                "• Chirurgie de la hanche",
-                "• Chirurgie du genou",
-                "• Chirurgie traumatologique",
+            sections: [
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Chirurgie de la colonne",
+                        "Chirurgie de la hanche",
+                        "Chirurgie du genou",
+                        "Chirurgie traumatologique",
+                    ],
+                },
             ],
         },
     ];
@@ -116,8 +142,7 @@ export default function Chirurgie() {
                 name={selectedDoctor?.name || ""}
                 specialty={selectedDoctor?.specialty || ""}
                 availability={selectedDoctor?.availability || ""}
-                info={selectedDoctor?.info}
-                paragraphs={selectedDoctor?.paragraphs}
+                sections={selectedDoctor?.sections ?? []}
             />
         </section>
     );

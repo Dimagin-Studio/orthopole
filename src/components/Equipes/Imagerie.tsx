@@ -7,8 +7,10 @@ export default function Imagerie() {
         name: string;
         specialty: string;
         availability: string;
-        info?: string;
-        paragraphs?: string[];
+        sections: {
+            title: string;
+            items: string[];
+        }[];
     } | null>(null);
 
     const doctors = [
@@ -17,10 +19,22 @@ export default function Imagerie() {
             specialty: "TECHNICIEN EN IMAGERIE MÉDICALE",
             availability: "Disponible dès 13h",
             imageSrc: "/images/photos-figma/marc-lefevre.png",
-            paragraphs: [
-                "Le Dr. Fabre est spécialisé dans la chirurgie mini-invasive de la hanche et du genou, offrant des solutions personnalisées pour chaque patient.",
-                "Son approche combine expertise technique et suivi attentif pour assurer une récupération optimale.",
-                "Il utilise les dernières technologies pour minimiser la douleur et accélérer la guérison. Chaque intervention est adaptée aux besoins spécifiques du patient, garantissant ainsi des résultats durables et satisfaisants.",
+            sections: [ // Pas d'infos disponibles
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Prothèse de hanche",
+                        "Prothèse totale de genou (assistance robotique)",
+                        "Prothèse partielle de genou",
+                        "Chirurgie ménisco-ligamentaire (arthroscopie)",
+                    ],
+                },
+                {
+                    title: "Formations",
+                    items: [
+                        "Diplôme de chirurgie orthopédique – UCL",
+                    ],
+                },
             ],
         },
         {
@@ -28,9 +42,22 @@ export default function Imagerie() {
             specialty: "RADIOLOGUE SENIOR",
             availability: "Disponible dès 13h",
             imageSrc: "/images/photos-figma/emilie-dupont.png",
-            paragraphs: [
-                "Expert en chirurgie de l'épaule, notamment en arthroscopie et en réparation de la coiffe des rotateurs.",
-                "Assure un suivi personnalisé pour chaque patient, avec des protocoles de rééducation adaptés.",
+            sections: [ // Pas d'infos disponibles
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Prothèse de hanche",
+                        "Prothèse totale de genou (assistance robotique)",
+                        "Prothèse partielle de genou",
+                        "Chirurgie ménisco-ligamentaire (arthroscopie)",
+                    ],
+                },
+                {
+                    title: "Formations",
+                    items: [
+                        "Diplôme de chirurgie orthopédique – UCL",
+                    ],
+                },
             ],
         },
         {
@@ -38,14 +65,46 @@ export default function Imagerie() {
             specialty: "INFIRMIÈRE SPÉCIALISTE EN RADIOLOGIE",
             availability: "Disponible dès 13h",
             imageSrc: "/images/photos-figma/camille-robert.png",
-            info: "Spécialiste des interventions sur la main, le poignet et le coude, avec une approche personnalisée pour chaque patient.",
+            sections: [ // Pas d'infos disponibles
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Prothèse de hanche",
+                        "Prothèse totale de genou (assistance robotique)",
+                        "Prothèse partielle de genou",
+                        "Chirurgie ménisco-ligamentaire (arthroscopie)",
+                    ],
+                },
+                {
+                    title: "Formations",
+                    items: [
+                        "Diplôme de chirurgie orthopédique – UCL",
+                    ],
+                },
+            ],
         },
         {
             name: "Dr. Pierre Moreau",
             specialty: "RESPONSABLE DE LA SÉCURITÉ RADIOLOGIQUE",
             availability: "Disponible dès 13h",
             imageSrc: "/images/equipe.png",
-            info: "Chirurgien orthopédique spécialisé dans la colonne vertébrale, les prothèses de hanche et de genou.",
+            sections: [ // Pas d'infos disponibles
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Prothèse de hanche",
+                        "Prothèse totale de genou (assistance robotique)",
+                        "Prothèse partielle de genou",
+                        "Chirurgie ménisco-ligamentaire (arthroscopie)",
+                    ],
+                },
+                {
+                    title: "Formations",
+                    items: [
+                        "Diplôme de chirurgie orthopédique – UCL",
+                    ],
+                },
+            ],
         },
     ];
 
@@ -83,8 +142,7 @@ export default function Imagerie() {
                 name={selectedDoctor?.name || ""}
                 specialty={selectedDoctor?.specialty || ""}
                 availability={selectedDoctor?.availability || ""}
-                info={selectedDoctor?.info}
-                paragraphs={selectedDoctor?.paragraphs}
+                sections={selectedDoctor?.sections ?? []}
             />
         </section>
     );

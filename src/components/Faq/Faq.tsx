@@ -2,7 +2,7 @@ import { useState } from "react";
 
 type FAQItem = {
     question: string;
-    answer: string;
+    answer: string[];
 };
 
 type FAQSection = {
@@ -16,19 +16,19 @@ const faqSections: FAQSection[] = [
         items: [
             {
                 question: "Comment se déroule une première consultation ?",
-                answer: "Exemple réponse.",
+                answer: ["La consultation débute par un interrogatoire complet (antécédents, symptômes), suivi d’un examen clinique. Le praticien analyse votre imagerie afin de poser un diagnostic précis et discuter avec vous des différentes options thérapeutiques."],
             },
             {
                 question: "Dois-je réaliser des examens avant la consultation ?",
-                answer: "Oui, un bilan radiographique récent (moins de 6 mois) est recommandé. Si nécessaire, celui-ci peut-être réalisé sur place avant votre rendez-vous.",
+                answer: ["Oui, un bilan radiographique récent (moins de 6 mois) est recommandé. Si nécessaire, celui-ci peut-être réalisé sur place avant votre rendez-vous."],
             },
             {
                 question: "Dois-je passer par mon médecin traitant avant de consulter ?",
-                answer: "Exemple réponse.",
+                answer: ["Il est recommandé d’avoir été orienté par votre médecin traitant et d’avoir débuté une prise en charge médicale."],
             },
             {
                 question: "L'imagerie est-elle accessible uniquement aux patients du centre ?",
-                answer: "Exemple réponse.",
+                answer: ["Non, l’imagerie est accessible à tous, y compris aux patients externes. Un examen peut également être réalisé avant la consultation si nécessaire."],
             },
         ],
     },
@@ -37,15 +37,20 @@ const faqSections: FAQSection[] = [
         items: [
             {
                 question: "Comment prendre rendez-vous ?",
-                answer: "Exemple test 2.",
+                answer: ["Les rendez-vous peuvent être pris :",
+                    "• En ligne via le secrétariat électronique",
+                    "• Par téléphone auprès du secrétariat."],
             },
             {
                 question: "Quels documents dois-je apporter ?",
-                answer: "Exemple test 2.",
+                answer: ["• Carte d’identité",
+                    "• Prescription médicale (si applicable)",
+                    "• Examens récents (radiographie, IRM, scanner, compte-rendu opératoire…)"],
             },
             {
                 question: "Quels sont les horaires du secrétariat physique ?",
-                answer: "Exemple test 2.",
+                answer: ["<strong>• Mercredi, jeudi, vendredi</strong>",
+                    "<strong>• 08h30 – 12h30 / 13h30 – 17h30</strong>"],
             },
         ],
     },
@@ -54,23 +59,23 @@ const faqSections: FAQSection[] = [
         items: [
             {
                 question: "Ai-je besoin d'une prescription pour la kinésithérapie ?",
-                answer: "Exemple test 3.",
+                answer: ["Oui, une prescription médicale est obligatoire pour débuter un traitement."],
             },
             {
                 question: "Comment se déroule la prise en charge en kinésithérapie ?",
-                answer: "Exemple test 3.",
+                answer: ["Un bilan initial est réalisé afin d’évaluer votre condition et définir un programme personnalisé. La rééducation combine exercices ciblés et travail en salle afin de favoriser un retour progressif aux activités quotidiennes et sportives."],
             },
             {
                 question: "Quelle tenue dois-je prévoir ?",
-                answer: "Exemple test 3.",
+                answer: ["Une tenue confortable permettant de bouger facilement est recommandée."],
             },
             {
                 question: "Combien de temps dure une séance ?",
-                answer: "Exemple test 3.",
+                answer: ["Une séance dure environ 30 minutes, avec possibilité d’exercices complémentaires en salle selon votre programme."],
             },
             {
                 question: "Combien de séances seront nécessaires ?",
-                answer: "Exemple test 3.",
+                answer: ["Le nombre de séances dépend de votre pathologie et de votre évolution. Un plan de traitement est défini dès le bilan initial."],
             },
         ],
     },
@@ -79,11 +84,14 @@ const faqSections: FAQSection[] = [
         items: [
             {
                 question: "Quels moyens de paiement sont acceptés ?",
-                answer: "Exemple test 4.",
+                answer: ["• QR code / paiement mobile",
+                    "• Espèces",
+                    "• Bancontact (radiologie)",
+                    "(Pour la kinésithérapie, les modalités peuvent varier selon le praticien)"],
             },
             {
                 question: "Comment annuler un rendez-vous ?",
-                answer: "Exemple test 4.",
+                answer: ["Merci de prévenir au moins <strong>24h à l’avance</strong>. Toute séance non annulée dans ce délai pourra être facturée."],
             },
         ],
     },
@@ -92,7 +100,9 @@ const faqSections: FAQSection[] = [
         items: [
             {
                 question: "Pourquoi choisir Orthopole ?",
-                answer: "Exemple réponse.",
+                answer: ["Orthopole propose une prise en charge globale de l’appareil locomoteur, réunissant chirurgiens orthopédiques, kinésithérapeutes et imagerie au sein d’un même centre.",
+                    "Cette organisation permet un diagnostic rapide, un suivi coordonné et une rééducation adaptée, dans un environnement structuré et efficace.",
+                    "Chaque patient bénéficie d’un accompagnement personnalisé, avec pour objectif un retour optimal aux activités du quotidien comme aux activités sportives."],
             },
         ],
     },
@@ -160,7 +170,7 @@ function FAQSection({ title, items, sectionIndex, openItem, toggleItem }: {
 
 function FAQItem({ question, answer, isOpen, onToggle }: {
     question: string;
-    answer: string;
+    answer: string[];
     isOpen: boolean;
     onToggle: () => void;
 }) {
@@ -174,8 +184,10 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
                 <span className="text-4xl">{isOpen ? "-" : "+"}</span>
             </button>
             {isOpen && (
-                <div className="px-[24px] py-[24px] text-sm md:text-base font-[Outfit] font-light leading-[1.4]">
-                    {answer}
+                <div className="px-[24px] py-[24px] text-sm md:text-base font-[Outfit] font-light leading-[1.4] flex flex-col gap-2">
+                    {answer.map((paragraph, index) => (
+                        <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
+                    ))}
                 </div>
             )}
         </div>
