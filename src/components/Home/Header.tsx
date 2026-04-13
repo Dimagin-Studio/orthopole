@@ -11,8 +11,8 @@ export default function Header() {
                 {/* Contenu du menu */}
                 <Hamburger>
                     {/* Container ul + bouton rdv */}
-                    <div className="flex flex-col lg:flex-row gap-6 items-center w-full">
-                        <ul className="flex flex-col lg:flex-row gap-[24px] justify-center items-center font-semibold leading-[1.4] list-none text-center w-full mx-auto">
+                    <div className="flex flex-col lg:flex-row gap-[72px] lg:gap-6 items-center w-full h-full pt-[24px] lg:pt-0">
+                        <ul className="flex flex-col lg:flex-row gap-[72px] lg:gap-[24px] justify-center items-center font-semibold leading-[1.4] list-none text-center w-full mx-auto">
                             <li><Link to="/" className="lg:hover:text-[#2d5183]">Accueil</Link></li>
                             <li><Link to="/specialites" className="lg:hover:text-[#2d5183]">Nos spécialités</Link></li>
                             <li><Link to="/equipes" className="lg:hover:text-[#2d5183]">Nos équipes</Link></li>

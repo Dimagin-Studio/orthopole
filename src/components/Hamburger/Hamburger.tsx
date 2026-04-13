@@ -58,7 +58,7 @@ export function Hamburger({ children }: { children: React.ReactNode }) {
                 className={`fixed inset-0 bg-[#0C1A2E] p-4 z-10 transition-all duration-300 ease-in-out overflow-y-auto ${isOpen ? "block" : "hidden"
                     }`}
             >
-                <div className="flex flex-col items-center w-full pt-12">
+                <div className="flex flex-col items-center w-full h-full pt-12">
                     {children}
                 </div>
             </div>
