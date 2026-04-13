@@ -13,23 +13,27 @@ export default function Contact() {
                             Besoin d'un rendez-vous ou d'une information ?
                         </h2>
                         <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[16px] md:gap-[24px] font-medium">
-                            <p className="text-[#FBF8F3] bg-[#0C1A2E] hover:bg-[#1e395e] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
-                                <Link to="/infos#contact-form">PRENDRE RENDEZ-VOUS</Link>
-                            </p>
-                            <p className="border border-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
-                                <Link to="/infos#contact-form">NOUS CONTACTER</Link>
-                            </p>
+                            <Link to="/infos#contact-form" className="w-full md:w-fit">
+                                <p className="text-[#FBF8F3] bg-[#0C1A2E] hover:bg-[#1e395e] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
+                                    PRENDRE RENDEZ-VOUS
+                                </p>
+                            </Link>
+                            <Link to="/infos#contact-form" className="w-full md:w-fit">
+                                <p className="border border-[#0C1A2E] hover:bg-[#EAE2D7] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
+                                    NOUS CONTACTER
+                                </p>
+                            </Link>
                         </div>
                     </div>
 
                     {/* Téléphone */}
                     <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[8px] font-[Outfit] text-center lg:text-left">
                         <p className="font-light leading-[1.2]">Ou par téléphone sur</p>
-                        <div className="px-[12px] py-[8px] flex items-center gap-[8px] bg-[#0C1A2E0D]">
+                        <div className="px-[12px] py-[8px] flex items-center gap-[8px] bg-[#0C1A2E0D] hover:bg-[#3356870D]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
                                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                             </svg>
-                            <p>01 89 29 18 85</p>
+                            <p><a href="tel:0189291885">01 89 29 18 85</a></p>
                         </div>
                     </div>
                 </div>

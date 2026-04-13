@@ -116,12 +116,12 @@ export default function Kine() {
     return (
         <section id="kinesitherapie-reathletisation" className="relative px-[24px] md:px-[48px] py-[32px] md:py-[64px] flex flex-col gap-[48px]">
             <div>
-                <h1 className="text-3xl md:text-5xl leading-[1.4] tracking-tight">
+                <h1 className="text-center md:text-left text-3xl md:text-5xl leading-[1.4] tracking-tight">
                     Kinésithérapie & Reathlétisation
                 </h1>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px] md:gap-[48px] justify-items-center text-center md:text-left">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px] md:gap-[48px] justify-items-center text-center md:text-left">
                 {doctors.map((doctor, index) => (
                     <div key={index} className="flex flex-col gap-[16px] md:max-w-[324px]">
                         <img

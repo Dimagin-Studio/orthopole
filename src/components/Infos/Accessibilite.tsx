@@ -14,22 +14,22 @@ export default function Accessibilite() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]">
                         {/* Image 1 */}
                         <div>
-                            <img src="/images/photos-accessibilite/photo1.png" alt="Ascenseur accessible" height="280px" />
+                            <img src="/images/photos-accessibilite/photo1.png" alt="Ascenseur accessible" width="100%" height="100%" />
                         </div>
 
                         {/* Texte 1 */}
-                        <div className="h-[235px] md:h-[280px] p-[12px] md:p-[24px] flex flex-col justify-between text-center md:text-left bg-[#F9F9F9]">
+                        <div className="h-[235px] md:h-full p-[12px] md:p-[24px] flex flex-col justify-between text-center md:text-left bg-[#F9F9F9]">
                             <h4 className="text-[32px] leading-[1.4] tracking-tight">Ascenseur accessible</h4>
                             <p className="font-[Outfit] leading-[1.4]">Ascenseurs accessibles permettant un accès facile à tous les étages.</p>
                         </div>
 
                         {/* Image 2 */}
                         <div>
-                            <img src="/images/photos-accessibilite/photo2.png" alt="Rampes d'accès" height="280px" />
+                            <img src="/images/photos-accessibilite/photo2.png" alt="Rampes d'accès" width="100%" />
                         </div>
 
                         {/* Texte 2 */}
-                        <div className="h-[235px] md:h-[280px] p-[12px] md:p-[24px] flex flex-col justify-between text-center md:text-left bg-[#F9F9F9]">
+                        <div className="h-[235px] md:h-full p-[12px] md:p-[24px] flex flex-col justify-between text-center md:text-left bg-[#F9F9F9]">
                             <h4 className="text-[32px] leading-[1.4] tracking-tight">Rampes d'accès</h4>
                             <p className="font-[Outfit] leading-[1.4]">Rampes d'accès sécurisées facilitant la circulation des fauteuils roulants.</p>
                         </div>
@@ -38,25 +38,25 @@ export default function Accessibilite() {
                     {/* Row images 2 */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]">
                         {/* Texte 3 */}
-                        <div className="h-[235px] md:h-[280px] p-[12px] md:p-[24px] flex flex-col justify-between text-center md:text-left bg-[#F9F9F9]">
+                        <div className="h-[235px] md:h-full p-[12px] md:p-[24px] flex flex-col justify-between text-center md:text-left bg-[#F9F9F9]">
                             <h4 className="text-[32px] leading-[1.4] tracking-tight">Toilettes adaptées</h4>
                             <p className="font-[Outfit] leading-[1.4]">Sanitaires spécialement aménagés pour garantir confort et autonomie.</p>
                         </div>
 
                         {/* Image 3 */}
                         <div>
-                            <img src="/images/photos-accessibilite/photo3.png" alt="Toilettes adaptées" height="280px" />
+                            <img src="/images/photos-accessibilite/photo3.png" alt="Toilettes adaptées" width="100%" />
                         </div>
 
                         {/* Texte 4 */}
-                        <div className="h-[235px] md:h-[280px] p-[12px] md:p-[24px] flex flex-col justify-between text-center md:text-left bg-[#F9F9F9]">
+                        <div className="h-[235px] md:h-full p-[12px] md:p-[24px] flex flex-col justify-between text-center md:text-left bg-[#F9F9F9]">
                             <h4 className="text-[32px] leading-[1.4] tracking-tight">Parking gratuit et accessible en face</h4>
                             <p className="font-[Outfit] leading-[1.4]">Places de stationnement réservées à proximité de l'entrée.</p>
                         </div>
 
                         {/* Image 4 */}
                         <div>
-                            <img src="/images/photos-accessibilite/photo1.png" alt="Parking gratuit et accessible en face" height="280px" />
+                            <img src="/images/photos-accessibilite/photo4.png" alt="Parking gratuit et accessible en face" width="100%" />
                         </div>
                     </div>
                 </div>

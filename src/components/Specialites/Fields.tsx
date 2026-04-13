@@ -4,7 +4,7 @@ export default function Fields() {
     return (
         <>
             <section className="px-[24px] md:px-[48px] py-[40px] md:pt-[96px] md:pb-[128px] flex flex-col gap-[32px] md:gap-[64px]">
-                {/* Box + image 1 */}
+                {/* Box + image 1 - Chirurgie orthopédique */}
                 <div id="chirurgie-orthopedique" className="w-full p-[20px] md:p-[40px] flex justify-center lg:justify-end bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/chirurgie.png')" }}>
                     {/* Zone de texte */}
                     <div className="w-full md:w-[608px] flex flex-col gap-[24px] px-[16px] md:px-[32px] py-[16px] md:pt-[48px] md:pb-[32px] bg-[#F9F9F9F2] font-[Outfit] leading-[1.4]">
@@ -28,15 +28,21 @@ export default function Fields() {
 
                         {/* Boutons */}
                         <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-[Raleway] font-medium leading-[23.48px]">
-                            <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
-                                <Link to="/infos#contact-form">PRENDRE RDV</Link>
-                            </p>
-                            <p className="bg-[#0C1A2E1A] hover:bg-[#3356871a]  px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center"><a href="">VOIR L'ÉQUIPE</a></p>
+                            <Link to="/infos#contact-form" className="w-full md:w-fit">
+                                <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                    PRENDRE RDV
+                                </p>
+                            </Link>
+                            <Link to="/equipes#chirurgie-orthopedique" className="w-full md:w-fit">
+                                <p className="bg-[#0C1A2E1A] hover:bg-[#3356871a] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
+                                    VOIR L'ÉQUIPE
+                                </p>
+                            </Link>
                         </div>
                     </div>
                 </div>
 
-                {/* Box + image 2 */}
+                {/* Box + image 2 - Imagerie & Radiologie */}
                 <div id="imagerie-radiologie" className="w-full p-[20px] md:p-[40px] flex justify-center lg:justify-end bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/imagerie.png')" }}>
                     {/* Zone de texte */}
                     <div className="w-full md:w-[608px] flex flex-col gap-[24px] px-[16px] md:px-[32px] py-[16px] md:pt-[48px] md:pb-[32px] bg-[#F9F9F9F2] font-[Outfit] leading-[1.4]">
@@ -52,19 +58,25 @@ export default function Fields() {
 
                         {/* Boutons */}
                         <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-[Raleway] font-medium leading-[23.48px]">
-                            <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
-                                <Link to="/infos#contact-form">PRENDRE RDV</Link>
-                            </p>
-                            <p className="bg-[#0C1A2E1A] hover:bg-[#3356871a]  px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center"><a href="">VOIR L'ÉQUIPE</a></p>
+                            <Link to="/infos#contact-form" className="w-full md:w-fit">
+                                <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                    PRENDRE RDV
+                                </p>
+                            </Link>
+                            <Link to="/equipes#imagerie-radiologie" className="w-full md:w-fit">
+                                <p className="bg-[#0C1A2E1A] hover:bg-[#3356871a] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
+                                    VOIR L'ÉQUIPE
+                                </p>
+                            </Link>
                         </div>
                     </div>
                 </div>
 
-                {/* Box + image 3 */}
-                <div id="kinesitherapie-revalidation" className="w-full p-[20px] md:p-[40px] flex justify-center lg:justify-end bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/kine.png')" }}>
+                {/* Box + image 3 - Kinésithérapie & Réathlétisation */}
+                <div id="kinesitherapie-reathletisation" className="w-full p-[20px] md:p-[40px] flex justify-center lg:justify-end bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/kine.png')" }}>
                     {/* Zone de texte */}
                     <div className="w-full md:w-[608px] flex flex-col gap-[24px] px-[16px] md:px-[32px] py-[16px] md:pt-[48px] md:pb-[32px] bg-[#F9F9F9F2] font-[Outfit] leading-[1.4]">
-                        <h2 className="text-[26px] md:text-[40px] text-center md:text-left font-[Raleway] leading-[1.2]">Kinésithérapie & Revalidation</h2>
+                        <h2 className="text-[26px] md:text-[40px] text-center md:text-left font-[Raleway] leading-[1.2]">Kinésithérapie & Réathlétisation</h2>
 
                         <p>En collaboration avec les chirurgiens orthopédiques, nous proposons une prise en charge personnalisée basée sur un bilan précis.</p>
 
@@ -83,10 +95,16 @@ export default function Fields() {
 
                         {/* Boutons */}
                         <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-[Raleway] font-medium leading-[23.48px]">
-                            <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
-                                <Link to="/infos#contact-form">PRENDRE RDV</Link>
-                            </p>
-                            <p className="bg-[#0C1A2E1A] hover:bg-[#3356871a] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center"><a href="">VOIR L'ÉQUIPE</a></p>
+                            <Link to="/infos#contact-form" className="w-full md:w-fit">
+                                <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                    PRENDRE RDV
+                                </p>
+                            </Link>
+                            <Link to="/equipes#kinesitherapie-reathletisation" className="w-full md:w-fit">
+                                <p className="bg-[#0C1A2E1A] hover:bg-[#3356871a] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
+                                    VOIR L'ÉQUIPE
+                                </p>
+                            </Link>
                         </div>
                     </div>
                 </div>

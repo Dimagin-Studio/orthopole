@@ -2,7 +2,7 @@ export default function Centre() {
     return (
         <>
             <section className="px-[24px] md:px-[48px] py-[40px] md:py-[96px]">
-                <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px] md:gap-0">
                     <img
                         src="/images/centre.png"
                         alt="Centre Orthopole"

@@ -45,7 +45,7 @@ export default function Rdv() {
 
                         {/* Bouton */}
                         <p className="font-[Outfit] font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#1e395e] leading-[23px] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
-                            <a href="" className="flex gap-[8px] items-center justify-center">
+                            <a href="tel:0189291885" className="flex gap-[8px] items-center justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
                                     <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                                 </svg>
@@ -83,14 +83,14 @@ export default function Rdv() {
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0C1A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-calendar-plus2-icon lucide-calendar-plus-2"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="M10 16h4" /><path d="M12 14v4" /></svg>
                                     </Link>
 
-                                    <p className="font-[Outfit] font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#1e395e] leading-[23px] px-[12px] py-[8px] md:py-[10px] w-fit">
-                                        <a href="" className="flex gap-[8px] items-center">
+                                    <div className="font-[Outfit] font-medium text-[#FBF8F3] text-center text-sm bg-[#0C1A2E] hover:bg-[#1e395e] leading-[23px] px-[12px] py-[8px] md:py-[10px] w-fit">
+                                        <a href="tel:0189292598" className="flex gap-[8px] items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
                                                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                                             </svg>
                                             01 89 29 25 98
                                         </a>
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -108,14 +108,14 @@ export default function Rdv() {
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0C1A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-calendar-plus2-icon lucide-calendar-plus-2"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="M10 16h4" /><path d="M12 14v4" /></svg>
                                     </Link>
 
-                                    <p className="font-[Outfit] font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#1e395e] leading-[23px] px-[12px] py-[8px] md:py-[10px] w-fit">
-                                        <a href="" className="flex gap-[8px] items-center">
+                                    <div className="font-[Outfit] font-medium text-[#FBF8F3] text-center text-sm bg-[#0C1A2E] hover:bg-[#1e395e] leading-[23px] px-[12px] py-[8px] md:py-[10px] w-fit">
+                                        <a href="tel:0189101800" className="flex gap-[8px] items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
                                                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                                             </svg>
                                             01 89 10 18 00
                                         </a>
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -133,27 +133,29 @@ export default function Rdv() {
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0C1A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-calendar-plus2-icon lucide-calendar-plus-2"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="M10 16h4" /><path d="M12 14v4" /></svg>
                                     </Link>
 
-                                    <p className="font-[Outfit] font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#1e395e] leading-[23px] px-[12px] py-[8px] md:py-[10px] w-fit">
-                                        <a href="" className="flex gap-[8px] items-center">
+                                    <div className="font-[Outfit] font-medium text-[#FBF8F3] text-center text-sm bg-[#0C1A2E] hover:bg-[#1e395e] leading-[23px] px-[12px] py-[8px] md:py-[10px] w-fit">
+                                        <a href="tel:0189292598" className="flex gap-[8px] items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
                                                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                                             </svg>
                                             01 89 29 25 98
                                         </a>
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Bouton */}
-                        <div className="flex flex-col md:flex-row items-center justify-between gap-2 font-[Outfit] text-center md:text-left text-sm">
+                        <div className="flex flex-col md:flex-row justify-between gap-2 font-[Outfit] text-sm">
                             <p>Ou par appel téléphonique auprès du secrétariat</p>
 
-                            <div className="px-[12px] py-[8px] flex items-center gap-2 bg-[#0C1A2E0D] w-fit">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
-                                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
-                                </svg>
-                                <p className="text-xs w-full">01 89 42 23 85</p>
+                            <div className="px-[12px] py-[8px] bg-[#0C1A2E1A] hover:bg-[#3356871A] w-fit">
+                                <a href="tel:0189422385" className="flex items-center gap-[6px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
+                                        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                                    </svg>
+                                    <p className="text-sm w-full whitespace-nowrap">01 89 42 23 85</p>
+                                </a>
                             </div>
                         </div>
                     </div>

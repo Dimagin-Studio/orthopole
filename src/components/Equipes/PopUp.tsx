@@ -26,9 +26,8 @@ export default function PopUp({
     const popupRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Applique le blur sur le body quand le popup est ouvert
         if (isOpen) {
-            document.body.style.overflow = "hidden"; // Empêche le scroll
+            document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "auto";
         }

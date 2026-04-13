@@ -10,20 +10,21 @@ export default function Header() {
             >
                 {/* Contenu du menu */}
                 <Hamburger>
-                    <>
-                        {/* Container ul + bouton rdv */}
-                        <div className="flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                            <ul className="flex flex-col md:flex-row gap-[24px] md:justify-between font-semibold leading-[1.4] list-none w-fit text-center">
-                                <li><Link to="/">Accueil</Link></li>
-                                <li><Link to="/specialites">Nos spécialités</Link></li>
-                                <li><Link to="/equipes">Nos équipes</Link></li>
-                                <li><Link to="/infos">Infos/Contact</Link></li>
-                            </ul>
-                            <div className="text-[#0C1A2E] bg-[#C9BBA8] hover:bg-[#ac9c86] font-medium leading-[23.48px] px-[24px] py-[10px] w-full md:w-fit">
-                                <Link to="/infos#contact-form">RENDEZ-VOUS</Link>
+                    {/* Container ul + bouton rdv */}
+                    <div className="flex flex-col lg:flex-row gap-6 items-center w-full">
+                        <ul className="flex flex-col lg:flex-row gap-[24px] justify-center items-center font-semibold leading-[1.4] list-none text-center w-full max-w-[1200px]">
+                            <li><Link to="/" className="lg:hover:text-[#2d5183]">Accueil</Link></li>
+                            <li><Link to="/specialites" className="lg:hover:text-[#2d5183]">Nos spécialités</Link></li>
+                            <li><Link to="/equipes" className="lg:hover:text-[#2d5183]">Nos équipes</Link></li>
+                            <li><Link to="/infos" className="lg:hover:text-[#2d5183]">Infos/Contact</Link></li>
+                        </ul>
+                        {/* Bouton "RENDEZ-VOUS" */}
+                        <Link to="/infos#contact-form" className="w-fit">
+                            <div className="text-[#0C1A2E] bg-[#C9BBA8] hover:bg-[#ac9c86] font-medium leading-[23.48px] px-[24px] py-[10px] whitespace-nowrap">
+                                RENDEZ-VOUS
                             </div>
-                        </div>
-                    </>
+                        </Link>
+                    </div>
                 </Hamburger>
 
                 {/* Section centre */}
@@ -39,12 +40,16 @@ export default function Header() {
                     </div>
 
                     <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-medium leading-[23.48px]">
-                        <p className="bg-[#2C4A6E] hover:bg-[#1e344f] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
-                            <Link to="/infos#contact-form">Prendre rendez-vous</Link>
-                        </p>
-                        <p className="text-[#0C1A2E] bg-[#C9BBA8] hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
-                            <Link to="/specialites">Découvrir nos spécialités</Link>
-                        </p>
+                        <Link to="/infos#contact-form" className="w-full md:w-fit">
+                            <p className="bg-[#2C4A6E] hover:bg-[#1e344f] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                Prendre rendez-vous
+                            </p>
+                        </Link>
+                        <Link to="/specialites" className="w-full md:w-fit">
+                            <p className="text-[#0C1A2E] bg-[#C9BBA8] hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                Découvrir nos spécialités
+                            </p>
+                        </Link>
                     </div>
                 </section>
             </header>
