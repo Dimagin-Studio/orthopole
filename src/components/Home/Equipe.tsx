@@ -18,7 +18,7 @@ export default function Equipe() {
                 {/* Container */}
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] md:gap-[40px] lg:gap-[48px] justify-items-center text-center md:text-left">
                     {/* Card 1 */}
-                    <div className="flex flex-col gap-[16px] md:max-w-[324px]">
+                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px]">
                         <img
                             src="/images/photos-chirurgien/valery-fabre.jpeg"
                             alt="Dr. Valery Fabre"
@@ -31,7 +31,7 @@ export default function Equipe() {
                     </div>
 
                     {/* Card 2 */}
-                    <div className="flex flex-col gap-[16px] md:max-w-[324px] mt-0 md:mt-[40px]">
+                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px] mt-0 md:mt-[40px]">
                         <img
                             src="/images/photos-chirurgien/louis-gossing.jpg"
                             alt="Dr. Louis Gossing"
@@ -44,7 +44,7 @@ export default function Equipe() {
                     </div>
 
                     {/* Card 3 */}
-                    <div className="flex flex-col gap-[16px] md:max-w-[324px] mt-0 md:mt-[80px]">
+                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px] mt-0 md:mt-[80px]">
                         <img
                             src="/images/photos-chirurgien/denis-willame.jpg"
                             alt="Dr. Denis Williame"
@@ -57,7 +57,7 @@ export default function Equipe() {
                     </div>
 
                     {/* Card 4 */}
-                    <div className="flex flex-col gap-[16px] md:max-w-[324px] mt-0 md:mt-[40px]">
+                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px] mt-0 md:mt-[40px]">
                         <img
                             src="/images/photos-chirurgien/eric-manche.jpeg"
                             alt="Dr. Eric Manche"
@@ -70,7 +70,7 @@ export default function Equipe() {
                     </div>
 
                     {/* Card 5 */}
-                    <div className="flex flex-col gap-[16px] md:max-w-[324px]">
+                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px]">
                         <img
                             src="/images/photos-figma/camille-robert.png"
                             alt="Dr. Camille Robert"
@@ -83,7 +83,7 @@ export default function Equipe() {
                     </div>
 
                     {/* Card 6 */}
-                    <div className="flex flex-col gap-[16px] md:max-w-[324px] mt-0 md:mt-[80px]">
+                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px] mt-0 md:mt-[80px]">
                         <img
                             src="/images/photos-figma/marc-lefevre.png"
                             alt="Dr. Marc Lefevre"

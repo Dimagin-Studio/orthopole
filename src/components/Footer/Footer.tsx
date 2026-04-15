@@ -14,7 +14,7 @@ export default function Footer() {
                             <li><Link to="/equipes#chirurgie-orthopedique">Chirurgie</Link></li>
                             <li><Link to="/equipes#imagerie-radiologie">Radiologie</Link></li>
                             <li><Link to="/equipes#kinesitherapie-reathletisation">Kinésithérapie</Link></li>
-                            <li>À propos</li>
+                            <li><Link to="/infos">À propos</Link></li>
                             <li><Link to="/infos#faq">Aide & FAQ</Link></li>
                             <Link to="/infos#contact-form">Contact</Link>
                         </ul>

@@ -118,7 +118,7 @@ export default function Imagerie() {
 
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px] md:gap-[48px] justify-items-center text-center md:text-left">
                 {doctors.map((doctor, index) => (
-                    <div key={index} className="flex flex-col gap-[16px] md:max-w-[324px]">
+                    <div key={index} className="flex flex-col gap-[16px] w-full md:max-w-[324px]">
                         <img
                             src={doctor.imageSrc}
                             alt={doctor.name}

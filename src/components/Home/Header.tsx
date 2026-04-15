@@ -11,12 +11,12 @@ export default function Header() {
                 {/* Contenu du menu */}
                 <Hamburger>
                     {/* Container ul + bouton rdv */}
-                    <div className="flex flex-col lg:flex-row gap-[72px] lg:gap-6 items-center w-full h-full pt-[24px] lg:pt-0">
-                        <ul className="flex flex-col lg:flex-row gap-[72px] lg:gap-[24px] justify-center items-center font-semibold leading-[1.4] list-none text-center w-full mx-auto">
-                            <li><Link to="/" className="lg:hover:text-[#2d5183]">Accueil</Link></li>
-                            <li><Link to="/specialites" className="lg:hover:text-[#2d5183]">Nos spécialités</Link></li>
-                            <li><Link to="/equipes" className="lg:hover:text-[#2d5183]">Nos équipes</Link></li>
-                            <li><Link to="/infos" className="lg:hover:text-[#2d5183]">Infos/Contact</Link></li>
+                    <div className="flex flex-col lg:flex-row gap-[32px] lg:gap-6 items-center w-full h-full pt-[24px] lg:pt-0">
+                        <ul className="flex flex-col lg:flex-row gap-[32px] lg:gap-[24px] justify-center items-center font-semibold leading-[1.4] list-none text-center w-full mx-auto">
+                            <li><Link to="/" className="lg:hover:text-[#b8cae2]">Accueil</Link></li>
+                            <li><Link to="/specialites" className="lg:hover:text-[#b8cae2]">Nos spécialités</Link></li>
+                            <li><Link to="/equipes" className="lg:hover:text-[#b8cae2]">Nos équipes</Link></li>
+                            <li><Link to="/infos" className="lg:hover:text-[#b8cae2]">Infos/Contact</Link></li>
                         </ul>
                         {/* Bouton "RENDEZ-VOUS" */}
                         <Link to="/infos#contact-form" className="w-fit">
