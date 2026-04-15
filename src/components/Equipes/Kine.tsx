@@ -127,7 +127,7 @@ export default function Kine() {
                         <img
                             src={doctor.imageSrc}
                             alt={doctor.name}
-                            className="w-full md:w-[324px] md:h-[375px] object-cover object-center cursor-pointer"
+                            className="w-full h-[500px] md:h-[375px] object-cover object-center cursor-pointer"
                             onClick={() => setSelectedDoctor(doctor)}
                         />
                         <div className="flex flex-col gap-[8px]">
@@ -135,9 +135,10 @@ export default function Kine() {
                             <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">
                                 {doctor.specialty}
                             </p>
-                            <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer">
-                                <Link to="/infos#contact-form">PRENDRE RDV</Link>
-                            </p>
+                            {/* <Link to="/infos#contact-form">PRENDRE RDV</Link> */}
+                            <button className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" onClick={() => setSelectedDoctor(doctor)}>
+                                PRENDRE RDV
+                            </button>
                         </div>
                     </div>
                 ))}

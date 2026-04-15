@@ -37,7 +37,7 @@ export default function Footer() {
                     <div className="hidden md:block border-l border-[#F5F3EF14] h-auto self-stretch"></div>
 
                     {/* Newsletter */}
-                    <div className="flex flex-col justify-self-end gap-[16px] md:gap-[24px] text-center md:text-left leading-[1.4]">
+                    <div className="flex flex-col gap-[16px] md:gap-[24px] text-center md:text-left leading-[1.4]">
                         <form action="" className="font-[Outfit] flex flex-col gap-[16px] md:gap-[24px] items-center md:items-start">
                             <p className="text-[14px] md:text-[16px] max-w-[300px] md:max-w-none">Recevez des mises à jour, des conseils de santé et des informations exclusives.</p>
                             <input

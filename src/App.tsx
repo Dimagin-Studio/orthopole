@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { Routes, Route, useLocation } from "react-router-dom"
+import ScrollToTop from "./components/Scroll/ScrollToTop"
 import Home from "./pages/Home"
 import Specialites from "./pages/Specialites"
 import Equipes from "./pages/Equipes"
@@ -20,6 +21,7 @@ export function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/specialites" element={<Specialites />} />

@@ -122,7 +122,7 @@ export default function Imagerie() {
                         <img
                             src={doctor.imageSrc}
                             alt={doctor.name}
-                            className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center cursor-pointer"
+                            className="w-full h-[500px] md:h-[375px] object-cover object-center cursor-pointer"
                             onClick={() => setSelectedDoctor(doctor)}
                         />
                         <div className="flex flex-col gap-[8px]">

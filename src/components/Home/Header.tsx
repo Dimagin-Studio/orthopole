@@ -1,5 +1,6 @@
-import { Hamburger } from "../Hamburger/Hamburger";
-import { Link } from "react-router-dom";
+import { Hamburger } from "../Hamburger/Hamburger"
+import { Link } from "react-router-dom"
+import NavBar from "../NavBar/NavBar"
 
 export default function Header() {
     return (
@@ -9,23 +10,24 @@ export default function Header() {
                 style={{ backgroundImage: "url('/images/hero-section.png')" }}
             >
                 {/* Contenu du menu */}
-                <Hamburger>
-                    {/* Container ul + bouton rdv */}
-                    <div className="flex flex-col lg:flex-row gap-[32px] lg:gap-6 items-center w-full h-full pt-[24px] lg:pt-0">
-                        <ul className="flex flex-col lg:flex-row gap-[32px] lg:gap-[24px] justify-center items-center font-semibold leading-[1.4] list-none text-center w-full mx-auto">
+                <NavBar />
+                {/* <Hamburger>
+                    Container ul + bouton rdv
+                    <div className="flex flex-col lg:flex-row gap-[80px] lg:gap-6 items-center w-full h-full pb-[48px] lg:pb-0">
+                        <ul className="flex flex-col lg:flex-row lg:gap-[24px] justify-between lg:justify-center items-center font-semibold leading-[1.4] list-none text-center w-full h-full mx-auto">
                             <li><Link to="/" className="lg:hover:text-[#b8cae2]">Accueil</Link></li>
                             <li><Link to="/specialites" className="lg:hover:text-[#b8cae2]">Nos spécialités</Link></li>
                             <li><Link to="/equipes" className="lg:hover:text-[#b8cae2]">Nos équipes</Link></li>
                             <li><Link to="/infos" className="lg:hover:text-[#b8cae2]">Infos/Contact</Link></li>
                         </ul>
-                        {/* Bouton "RENDEZ-VOUS" */}
+                        Bouton "RENDEZ-VOUS"
                         <Link to="/infos#contact-form" className="w-fit">
                             <div className="text-[#0C1A2E] bg-[#C9BBA8] hover:bg-[#ac9c86] font-medium leading-[23.48px] px-[24px] py-[10px] whitespace-nowrap">
                                 RENDEZ-VOUS
                             </div>
                         </Link>
                     </div>
-                </Hamburger>
+                </Hamburger> */}
 
                 {/* Section centre */}
                 <section className="max-w-[781px] px-[24px] md:px-[48px] pb-[48px] h-full flex flex-col gap-[24px] md:gap-[48px] justify-center text-center md:text-left">

@@ -29,12 +29,12 @@ export default function Contact() {
                     {/* Téléphone */}
                     <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[8px] font-[Outfit] text-center lg:text-left">
                         <p className="font-light leading-[1.2]">Ou par téléphone sur</p>
-                        <div className="px-[12px] py-[8px] flex items-center gap-[8px] bg-[#0C1A2E0D] hover:bg-[#d9d2c8]">
+                        <a href="tel:0189422385" className="flex items-center gap-[8px] px-[12px] py-[8px] bg-[#0C1A2E1A] hover:bg-[#d9d2c8] w-fit h-fit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
                                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                             </svg>
-                            <p><a href="tel:0189291885">01 89 29 18 85</a></p>
-                        </div>
+                            <p className="w-full whitespace-nowrap">01 89 42 23 85</p>
+                        </a>
                     </div>
                 </div>
 

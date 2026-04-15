@@ -37,7 +37,7 @@ export function Hamburger({ children }: { children: React.ReactNode }) {
     return (
         <nav className="w-full px-[24px] md:px-[48px] py-[16px] text-lg flex flex-col lg:flex-row gap-y-[16px] lg:gap-y-0 gap-x-[16px] lg:gap-x-[32px] lg:items-center justify-items-start text-center">
             <div className="flex justify-between items-center w-full lg:w-fit">
-                <Link to="/" className="lg:hover:text-[#2d5183]">
+                <Link to="/">
                     <img
                         src={`/images/photos-site-web/${isHome ? "LOGO-blanc" : "LOGO"}.png`}
                         alt="Logo Orthopole"
@@ -57,7 +57,7 @@ export function Hamburger({ children }: { children: React.ReactNode }) {
                 </button>
             </div>
 
-            {/* Menu déroulant (pour mobile) */}
+            {/* Menu déroulant (mobile + md) */}
             <div
                 className={`fixed inset-0 bg-[#0C1A2E] p-4 z-10 transition-all duration-300 ease-in-out overflow-y-auto ${isOpen ? "block" : "hidden"
                     }`}
@@ -67,7 +67,7 @@ export function Hamburger({ children }: { children: React.ReactNode }) {
                 </div>
             </div>
 
-            {/* Contenu du menu (visible sur desktop) */}
+            {/* Menu de navigation (desktop) */}
             <div className="hidden lg:flex justify-center w-full">
                 {children}
             </div>
