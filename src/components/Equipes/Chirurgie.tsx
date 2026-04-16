@@ -1,6 +1,13 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import PopUp from "./PopUp";
+import { Link } from "react-router-dom"
+import { useState } from "react"
+import PopUp from "./PopUp"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export default function Chirurgie() {
     const [selectedDoctor, setSelectedDoctor] = useState<{
@@ -107,33 +114,52 @@ export default function Chirurgie() {
 
     return (
         <section id="chirurgie-orthopedique" className="relative px-[24px] md:px-[48px] py-[32px] md:py-[64px] flex flex-col gap-[48px]">
-            <div>
-                <h1 className="text-center md:text-left text-3xl md:text-5xl leading-[1.4] tracking-tight">
-                    Chirurgie Orthopédique
-                </h1>
-            </div>
+            <Carousel
+                opts={{ align: "start", dragFree: true }}
+                className="w-full"
+            >
+                <div className="flex items-center justify-between">
+                    <h1 className="text-center md:text-left text-3xl md:text-5xl leading-[1.4] tracking-tight">
+                        Chirurgie Orthopédique
+                    </h1>
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px] md:gap-[48px] justify-items-center text-center md:text-left">
-                {doctors.map((doctor, index) => (
-                    <div key={index} className="flex flex-col gap-[16px] w-full md:max-w-[324px]">
-                        <img
-                            src={doctor.imageSrc}
-                            alt={doctor.name}
-                            className="w-full h-[500px] md:h-[375px] object-cover object-center cursor-pointer"
-                            onClick={() => setSelectedDoctor(doctor)}
-                        />
-                        <div className="flex flex-col gap-[8px]">
-                            <h6 className="text-lg leading-[1.4]">{doctor.name}</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">
-                                {doctor.specialty}
-                            </p>
-                            <button className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" onClick={() => setSelectedDoctor(doctor)}>
-                                PRENDRE RDV
-                            </button>
-                        </div>
+                    {/* Flèches — visibles uniquement si nécessaire */}
+                    <div className="flex gap-[16px] justify-center md:justify-start">
+                        <CarouselPrevious className="static translate-y-0" />
+                        <CarouselNext className="static translate-y-0" />
                     </div>
-                ))}
-            </div>
+                </div>
+
+                <CarouselContent className="-ml-[32px] md:-ml-[48px] pt-[48px]">
+                    {doctors.map((doctor, index) => (
+                        <CarouselItem
+                            key={index}
+                            className="pl-[32px] md:pl-[48px] basis-[85%] md:basis-1/2 lg:basis-1/4"
+                        >
+                            <div className="flex flex-col gap-[16px] text-center md:text-left">
+                                <img
+                                    src={doctor.imageSrc}
+                                    alt={doctor.name}
+                                    className="w-full h-[500px] md:h-[375px] object-cover object-center cursor-pointer"
+                                    onClick={() => setSelectedDoctor(doctor)}
+                                />
+                                <div className="flex flex-col gap-[8px]">
+                                    <h6 className="text-lg leading-[1.4]">{doctor.name}</h6>
+                                    <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">
+                                        {doctor.specialty}
+                                    </p>
+                                    <button
+                                        className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer"
+                                        onClick={() => setSelectedDoctor(doctor)}
+                                    >
+                                        PRENDRE RDV
+                                    </button>
+                                </div>
+                            </div>
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+            </Carousel>
 
             <PopUp
                 isOpen={!!selectedDoctor}

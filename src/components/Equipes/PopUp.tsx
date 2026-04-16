@@ -97,8 +97,8 @@ export default function PopUp({
                                     <p className="font-[Outfit] text-[16px] text-[#2C4A6EBF]">
                                         {specialty}
                                     </p>
-                                    <div className="px-[8px] py-[4px] max-w-[409px] flex items-center gap-[8px] bg-[#EEEEEE] font-[Outfit] text-sm leading-[1.4]">
-                                        <div className="h-[5px] w-[8px] md:h-[7px] bg-[#4CDE78] rounded-full flex items-center justify-center text-[#4CDE78] text-xs">
+                                    <div className="px-[8px] py-[4px] w-fit md:max-w-[409px] flex items-center gap-[8px] bg-[#EEEEEE] font-[Outfit] text-sm leading-[1.4]">
+                                        <div className="h-[5px] w-[5px] md:h-[7px] md:w-[8px] bg-[#4CDE78] rounded-full flex items-center justify-center text-[#4CDE78] text-xs">
                                             •
                                         </div>
                                         <p>{availability}</p>

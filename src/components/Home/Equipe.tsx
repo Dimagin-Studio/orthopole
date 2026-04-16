@@ -22,7 +22,7 @@ export default function Equipe() {
                         <img
                             src="/images/photos-chirurgien/valery-fabre.jpeg"
                             alt="Dr. Valery Fabre"
-                            className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
+                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Valery Fabre</h6>
@@ -35,7 +35,7 @@ export default function Equipe() {
                         <img
                             src="/images/photos-chirurgien/louis-gossing.jpg"
                             alt="Dr. Louis Gossing"
-                            className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
+                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Louis Gossing</h6>
@@ -48,7 +48,7 @@ export default function Equipe() {
                         <img
                             src="/images/photos-chirurgien/denis-willame.jpg"
                             alt="Dr. Denis Williame"
-                            className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
+                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Denis Williame</h6>
@@ -61,7 +61,7 @@ export default function Equipe() {
                         <img
                             src="/images/photos-chirurgien/eric-manche.jpeg"
                             alt="Dr. Eric Manche"
-                            className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
+                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Eric Manche</h6>
@@ -74,7 +74,7 @@ export default function Equipe() {
                         <img
                             src="/images/photos-figma/camille-robert.png"
                             alt="Dr. Camille Robert"
-                            className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
+                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Camille Robert</h6>
@@ -87,7 +87,7 @@ export default function Equipe() {
                         <img
                             src="/images/photos-figma/marc-lefevre.png"
                             alt="Dr. Marc Lefevre"
-                            className="w-full h-full md:w-[324px] md:h-[375px] object-cover object-center"
+                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Marc Lefevre</h6>
