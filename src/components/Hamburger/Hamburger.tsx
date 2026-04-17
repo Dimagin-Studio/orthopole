@@ -1,11 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 
-export function Hamburger({ children }: { children: React.ReactNode }) {
+export function Hamburger({
+    children,
+    isDark,
+}: {
+    children: React.ReactNode;
+    isDark: boolean;
+}) {
     const [isOpen, setIsOpen] = useState(false);
     const { pathname } = useLocation();
     const isHome = pathname === "/";
     const spanColor = isHome ? "bg-[#FBF8F3]" : "bg-[#0C1A2E]";
+
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -39,7 +46,8 @@ export function Hamburger({ children }: { children: React.ReactNode }) {
             <div className="flex justify-between items-center w-full lg:w-fit">
                 <Link to="/">
                     <img
-                        src={`/images/photos-site-web/${isHome ? "LOGO-blanc" : "LOGO"}.png`}
+                        key={`${isHome}-${isDark}`}
+                        src={`/images/photos-site-web/${isHome ? "LOGO-blanc" : (isDark ? "LOGO-blanc" : "LOGO")}.png`}
                         alt="Logo Orthopole"
                         className="w-[185px] h-fit object-cover object-center"
                     />

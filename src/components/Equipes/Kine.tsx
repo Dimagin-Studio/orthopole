@@ -152,7 +152,7 @@ export default function Kine() {
                 className="w-full"
             >
                 <div className="flex items-center justify-between">
-                    <h1 className="text-center md:text-left text-3xl md:text-5xl leading-[1.4] tracking-tight">
+                    <h1 className="text-left text-2xl md:text-5xl leading-[1.4] tracking-tight">
                         Kinésithérapie & Reathlétisation
                     </h1>
 
@@ -163,26 +163,26 @@ export default function Kine() {
                     </div>
                 </div>
 
-                <CarouselContent className="-ml-[32px] md:-ml-[48px] pt-[48px]">
+                <CarouselContent className="-ml-[32px] md:-ml-[48px] pt-[24px] md:pt-[48px]">
                     {doctors.map((doctor, index) => (
                         <CarouselItem
                             key={index}
                             className="pl-[32px] md:pl-[48px] basis-[85%] md:basis-1/2 lg:basis-1/4"
                         >
-                            <div className="flex flex-col gap-[16px] text-center md:text-left">
+                            <div className="flex flex-col gap-[16px] text-center md:text-left h-full">
                                 <img
                                     src={doctor.imageSrc}
                                     alt={doctor.name}
-                                    className="w-full h-[500px] md:h-[375px] object-cover object-center cursor-pointer"
+                                    className="w-full h-[400px] md:h-[375px] object-cover object-center cursor-pointer"
                                     onClick={() => setSelectedDoctor(doctor)}
                                 />
-                                <div className="flex flex-col gap-[8px]">
+                                <div className="flex flex-col gap-[8px] flex-1">
                                     <h6 className="text-lg leading-[1.4]">{doctor.name}</h6>
                                     <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">
                                         {doctor.specialty}
                                     </p>
                                     <button
-                                        className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer"
+                                        className="mt-auto bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer"
                                         onClick={() => setSelectedDoctor(doctor)}
                                     >
                                         PRENDRE RDV

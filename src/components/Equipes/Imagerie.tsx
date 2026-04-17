@@ -122,7 +122,7 @@ export default function Imagerie() {
                 className="w-full"
             >
                 <div className="flex items-center justify-between">
-                    <h1 className="text-center md:text-left text-3xl md:text-5xl leading-[1.4] tracking-tight">
+                    <h1 className="text-left text-2xl md:text-5xl leading-[1.4] tracking-tight">
                         Imagerie & Radiologie
                     </h1>
 
@@ -133,7 +133,7 @@ export default function Imagerie() {
                     </div>
                 </div>
 
-                <CarouselContent className="-ml-[32px] md:-ml-[48px] pt-[48px]">
+                <CarouselContent className="-ml-[32px] md:-ml-[48px] pt-[24px] md:pt-[48px]">
                     {doctors.map((doctor, index) => (
                         <CarouselItem
                             key={index}
@@ -143,7 +143,7 @@ export default function Imagerie() {
                                 {/* <img
                                     src={doctor.imageSrc}
                                     alt={doctor.name}
-                                    className="w-full h-[500px] md:h-[375px] object-cover object-center cursor-pointer"
+                                    className="w-full h-[400px] md:h-[375px] object-cover object-center cursor-pointer"
                                     onClick={() => setSelectedDoctor(doctor)}
                                 /> */}
                                 <div className="flex flex-col gap-[8px]">
