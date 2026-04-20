@@ -148,11 +148,11 @@ export default function Imagerie() {
                                 /> */}
                                 <div className="flex flex-col gap-[8px]">
                                     <h6 className="text-lg leading-[1.4]">{doctor.name}</h6>
-                                    <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">
+                                    <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">
                                         {doctor.specialty}
                                     </p>
                                     <button
-                                        className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer"
+                                        className="bg-[#0C1A2E] hover:bg-[#1e395e] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] text-[#FBF8F3] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer"
                                         onClick={() => setSelectedDoctor(doctor)}
                                     >
                                         PRENDRE RDV

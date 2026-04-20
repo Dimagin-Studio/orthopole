@@ -16,7 +16,7 @@ export default function Avis() {
                 {/* Container */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-[16px] md:gap-[24px]">
                     {/* Card 1 */}
-                    <div className="p-[16px] md:p-[24px] bg-[#F9F9F9] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
+                    <div className="p-[16px] md:p-[24px] bg-[#F9F9F9] dark:bg-[#C9BBA8] dark:text-[#0C1A2E] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
 
                         {/* Content */}
                         <div className="flex flex-col gap-[12px] md:gap-[16px]">
@@ -29,12 +29,12 @@ export default function Avis() {
                         </div>
                         <div className="flex gap-2 leading-[24px]">
                             <p>— Éric B.</p>
-                            <p className="text-gray-400">Liège</p>
+                            <p className="text-gray-400 dark:text-gray-600">Liège</p>
                         </div>
                     </div>
 
                     {/* Card 2 */}
-                    <div className="p-[16px] md:p-[24px] bg-[#F9F9F9] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
+                    <div className="p-[16px] md:p-[24px] bg-[#F9F9F9] dark:bg-[#C9BBA8] dark:text-[#0C1A2E] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
 
                         {/* Content */}
                         <div className="flex flex-col gap-[12px] md:gap-[16px]">
@@ -47,12 +47,12 @@ export default function Avis() {
                         </div>
                         <div className="flex gap-2 leading-[24px]">
                             <p>— Sofie M.</p>
-                            <p className="text-gray-400">Liège</p>
+                            <p className="text-gray-400 dark:text-gray-600">Liège</p>
                         </div>
                     </div>
 
                     {/* Card 3 */}
-                    <div className="p-[16px] md:p-[24px] bg-[#F9F9F9] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
+                    <div className="p-[16px] md:p-[24px] bg-[#F9F9F9] dark:bg-[#C9BBA8] dark:text-[#0C1A2E] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
 
                         {/* Content */}
                         <div className="flex flex-col gap-[12px] md:gap-[16px]">
@@ -65,7 +65,7 @@ export default function Avis() {
                         </div>
                         <div className="flex gap-2 leading-[24px]">
                             <p>— Bernard A.</p>
-                            <p className="text-gray-400">Liège</p>
+                            <p className="text-gray-400 dark:text-gray-600">Liège</p>
                         </div>
                     </div>
                 </div>

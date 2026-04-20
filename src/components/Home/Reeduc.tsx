@@ -5,7 +5,7 @@ export default function Reeduc() {
         <>
             {/* Du diagnostique à la rééducation */}
             <section className="px-[24px] md:px-[48px] py-[40px] md:py-[80px]">
-                <div className="bg-[#F9F9F9] px-4 md:px-[48px] py-[32px] md:py-[64px] flex flex-col lg:flex-row gap-[32px] lg:gap-0 justify-between items-center lg:items-start md:text-center lg:text-left">
+                <div className="bg-[#F9F9F9] dark:bg-[#EAE2D7] px-4 md:px-[48px] py-[32px] md:py-[64px] flex flex-col lg:flex-row gap-[32px] lg:gap-0 justify-between items-center lg:items-start md:text-center lg:text-left dark:text-[#0C1A2E]">
                     {/* Zone text */}
                     <div className="md:max-w-[400px] lg:max-w-[580px] flex flex-col gap-[24px] md:gap-[40px] md:items-center lg:items-start">
                         <div className="flex flex-col gap-[16px] md:gap-[24px]">

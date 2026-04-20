@@ -72,16 +72,16 @@ export default function Contact() {
                                     name="specialite"
                                     id="specialite"
                                     className={`col-span-2 border-b border-[#D9D9D9] py-[12px] md:py-[24px] focus:outline-none w-full 
-                                        ${selectedOption === "Spécialité" ? "text-[#757575]" : "text-[#0C1A2E]"
+                                        ${selectedOption === "Spécialité" ? "text-[#757575]" : "text-[#0C1A2E] dark:text-[#FBF8F3]"
                                         }`}
                                     value={selectedOption}
                                     onChange={handleChange}
                                     required
                                 >
                                     <option value="Spécialité" disabled selected>Spécialité</option>
-                                    <option value="Chirurgie orthopédique" className="text-[#0C1A2E]">Chirurgie orthopédique</option>
-                                    <option value="Imagerie" className="text-[#0C1A2E]">Imagerie</option>
-                                    <option value="Kinésithérapie" className="text-[#0C1A2E]">Kinésithérapie</option>
+                                    <option value="Chirurgie orthopédique" className="text-[#0C1A2E] dark:text-[#FBF8F3]">Chirurgie orthopédique</option>
+                                    <option value="Imagerie" className="text-[#0C1A2E] dark:text-[#FBF8F3]">Imagerie</option>
+                                    <option value="Kinésithérapie" className="text-[#0C1A2E] dark:text-[#FBF8F3]">Kinésithérapie</option>
                                 </select>
 
                                 {/* Message */}
@@ -98,7 +98,7 @@ export default function Contact() {
                             </div>
 
                             {/* Submit */}
-                            <input type="submit" value="ENVOYER LE MESSAGE" className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" />
+                            <input type="submit" value="ENVOYER LE MESSAGE" className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#1e395e] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" />
                         </div>
                     </form>
                 </div>

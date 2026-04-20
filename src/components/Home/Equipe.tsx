@@ -26,7 +26,7 @@ export default function Equipe() {
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Valery Fabre</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">CHIRURGIE DE LA HANCHE ET DU GENOU</p>
+                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">CHIRURGIE DE LA HANCHE ET DU GENOU</p>
                         </div>
                     </div>
 
@@ -39,7 +39,7 @@ export default function Equipe() {
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Louis Gossing</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">CHIRURGIE DE L'ÉPAULE</p>
+                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">CHIRURGIE DE L'ÉPAULE</p>
                         </div>
                     </div>
 
@@ -52,7 +52,7 @@ export default function Equipe() {
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Denis Williame</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">CHIRURGIE DE LA MAIN, DU POIGNET ET DU COUDE</p>
+                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">CHIRURGIE DE LA MAIN, DU POIGNET ET DU COUDE</p>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@ export default function Equipe() {
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Eric Manche</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">CHIRURGIE DE LA COLONNE, HANCHE ET DU GENOU</p>
+                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">CHIRURGIE DE LA COLONNE, HANCHE ET DU GENOU</p>
                         </div>
                     </div>
 
@@ -78,7 +78,7 @@ export default function Equipe() {
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Camille Robert</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">OPHTALMOLOGIST</p>
+                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">OPHTALMOLOGIST</p>
                         </div>
                     </div>
 
@@ -91,14 +91,14 @@ export default function Equipe() {
                         />
                         <div className="flex flex-col gap-[8px]">
                             <h6 className="text-lg leading-[1.4]">Dr. Marc Lefevre</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] leading-[1.4]">ENDOCRINOLOGIST</p>
+                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">ENDOCRINOLOGIST</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Button */}
                 <Link to="/equipes">
-                    <div className="w-full md:w-fit mx-auto px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-[#FBF8F3] bg-[#0C1A2E] hover:bg-[#1e395e] font-medium text-center leading-[23.48px]">
+                    <div className="w-full md:w-fit mx-auto px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#1e395e] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] font-medium text-center leading-[23.48px]">
                         DÉCOUVRIR L'ÉQUIPE
                     </div>
                 </Link>

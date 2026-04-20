@@ -11,12 +11,12 @@ export default function Footer() {
                     <div className="flex flex-col gap-[16px] md:gap-[24px] md:text-left text-center">
                         <h5 className="font-[Geist] font-medium leading-[24px] text-[16px] md:text-[18px]">/ Liens</h5>
                         <ul className="list-none flex flex-col gap-[8px] md:gap-[16px] font-[Outfit] text-[14px] md:text-[16px] leading-[1.4]">
-                            <li><Link to="/equipes#chirurgie-orthopedique">Chirurgie</Link></li>
-                            <li><Link to="/equipes#imagerie-radiologie">Radiologie</Link></li>
-                            <li><Link to="/equipes#kinesitherapie-reathletisation">Kinésithérapie</Link></li>
-                            <li><Link to="/infos">À propos</Link></li>
-                            <li><Link to="/infos#faq">Aide & FAQ</Link></li>
-                            <Link to="/infos#contact-form">Contact</Link>
+                            <li><Link to="/equipes#chirurgie-orthopedique" className="hover:text-[#b8cae2]">Chirurgie</Link></li>
+                            <li><Link to="/equipes#imagerie-radiologie" className="hover:text-[#b8cae2]">Radiologie</Link></li>
+                            <li><Link to="/equipes#kinesitherapie-reathletisation" className="hover:text-[#b8cae2]">Kinésithérapie</Link></li>
+                            <li><Link to="/infos" className="hover:text-[#b8cae2]">À propos</Link></li>
+                            <li><Link to="/infos#faq" className="hover:text-[#b8cae2]">Aide & FAQ</Link></li>
+                            <Link to="/infos#contact-form" className="hover:text-[#b8cae2]">Contact</Link>
                         </ul>
                     </div>
 
@@ -71,11 +71,11 @@ export default function Footer() {
                     </div>
 
                     <ul className="list-none flex flex-wrap justify-center md:justify-end gap-[8px] lg:gap-[16px] w-full">
-                        <li><a href="" className="text-[12px] md:text-[13px]">Mentions légales</a></li>
+                        <li><a href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Mentions légales</a></li>
                         <span className="hidden md:inline">-</span>
-                        <li><a href="" className="text-[12px] md:text-[13px]">Politique de confidentialité</a></li>
+                        <li><a href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Politique de confidentialité</a></li>
                         <span className="hidden md:inline">-</span>
-                        <li><a href="" className="text-[12px] md:text-[13px]">Contact</a></li>
+                        <li><a href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Contact</a></li>
                     </ul>
                 </section>
             </footer>

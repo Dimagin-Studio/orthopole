@@ -76,7 +76,7 @@ export default function PopUp({
                         </div>
 
                         {/* Zone de texte */}
-                        <div className="w-full md:w-3/5 h-full p-[24px] flex flex-col justify-between min-h-0">
+                        <div className="w-full md:w-3/5 h-full p-[24px] flex flex-col justify-between min-h-0 dark:text-[#0C1A2E]">
 
                             {/* Header fixe avec X — hors de la zone scrollable */}
                             <div className="flex items-start justify-between gap-[8px] shrink-0 mb-[12px]">

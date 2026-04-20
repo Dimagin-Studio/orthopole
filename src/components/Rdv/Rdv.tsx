@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 export default function Rdv() {
     return (
         <>
-            <section className="px-[24px] py-[40px] md:px-[48px] md:py-[96px] flex flex-col gap-[32px] md:gap-[48px] items-center bg-[#EAE2D7]">
+            <section className="px-[24px] py-[40px] md:px-[48px] md:py-[96px] flex flex-col gap-[32px] md:gap-[48px] items-center bg-[#EAE2D7] dark:bg-[#172D47]">
                 {/* Header */}
                 <h1 className="text-3xl md:text-5xl text-center leading-[1.4] tracking-tight">
                     Prendre rendez-vous
                 </h1>
 
                 {/* Container */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-[16px]">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-[16px] dark:text-[#0C1A2E]">
                     {/* Box 1 Chirurgie */}
                     <div className="flex flex-col gap-[24px] p-[24px] bg-[#F9F9F9] h-fit">
                         {/* Texte */}

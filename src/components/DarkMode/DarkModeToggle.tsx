@@ -2,9 +2,13 @@ import { Moon, Sun } from "lucide-react"
 import { useDarkMode } from "../hooks/useDarkMode"
 import { Switch } from "../ui/switch"
 
-export function DarkModeToggle({ isHome }: { isHome: boolean }) {
-    const { isDark, toggle } = useDarkMode();
+type Props = {
+    isHome: boolean;
+    isDark: boolean;
+    toggle: () => void;
+}
 
+export function DarkModeToggle({ isHome, isDark, toggle }: Props) {
     return (
         <div className="flex items-center gap-2">
             {/* Icône Soleil (jaune en light, gris en dark) */}

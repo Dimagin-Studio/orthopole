@@ -4,14 +4,17 @@ import { Link, useLocation } from "react-router-dom"
 export function Hamburger({
     children,
     isDark,
+    isHome,
 }: {
     children: React.ReactNode;
     isDark: boolean;
+    isHome: boolean;
 }) {
     const [isOpen, setIsOpen] = useState(false);
     const { pathname } = useLocation();
-    const isHome = pathname === "/";
-    const spanColor = isHome ? "bg-[#FBF8F3]" : "bg-[#0C1A2E]";
+    // const isHome = pathname === "/";
+    const spanColor = isHome ? "bg-[#FBF8F3]" : "bg-[#0C1A2E] dark:bg-[#FBF8F3]";
+    const logoSrc = isHome || isDark ? "LOGO-blanc" : "LOGO";
 
 
     useEffect(() => {
@@ -46,8 +49,7 @@ export function Hamburger({
             <div className="flex justify-between items-center w-full lg:w-fit">
                 <Link to="/">
                     <img
-                        key={`${isHome}-${isDark}`}
-                        src={`/images/photos-site-web/${isHome ? "LOGO-blanc" : (isDark ? "LOGO-blanc" : "LOGO")}.png`}
+                        src={`/images/photos-site-web/${logoSrc}.png`}
                         alt="Logo Orthopole"
                         className="w-[185px] h-fit object-cover object-center"
                     />
@@ -70,7 +72,7 @@ export function Hamburger({
                 className={`fixed inset-0 bg-[#0C1A2E] p-4 z-10 transition-all duration-300 ease-in-out overflow-y-auto ${isOpen ? "block" : "hidden"
                     }`}
             >
-                <div className="flex flex-col items-center w-full h-full pt-12">
+                <div className="flex flex-col items-center justify-center w-full h-full pt-12">
                     {children}
                 </div>
             </div>

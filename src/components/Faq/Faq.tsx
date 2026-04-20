@@ -153,7 +153,7 @@ function FAQSection({ title, items, sectionIndex, openItem, toggleItem }: {
             <h3 className="text-sm italic font-medium leading-[1.4]">
                 {title}
             </h3>
-            <div className="flex flex-col gap-[8px]">
+            <div className="flex flex-col gap-[8px] dark:text-[#0C1A2E]">
                 {items.map((item, itemIndex) => (
                     <FAQItem
                         key={itemIndex}

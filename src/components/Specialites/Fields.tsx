@@ -69,7 +69,7 @@ export default function Fields() {
 
     return (
         <>
-            <section className="px-[24px] md:px-[48px] py-[40px] md:pt-[96px] md:pb-[128px] flex flex-col gap-[32px] md:gap-[64px]">
+            <section className="px-[24px] md:px-[48px] py-[40px] md:pt-[96px] md:pb-[128px] flex flex-col gap-[32px] md:gap-[64px] dark:text-[#0C1A2E]">
                 {fields.map((field, index) => (
                     <div
                         key={field.id}
