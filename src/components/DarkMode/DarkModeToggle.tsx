@@ -10,7 +10,7 @@ type Props = {
 
 export function DarkModeToggle({ isHome, isDark, toggle }: Props) {
     return (
-        <div className="flex items-center gap-2">
+        <div className="dark-mode-toggle flex items-center gap-2">
             {/* Icône Soleil (jaune en light, gris en dark) */}
             <Sun
                 size={20}

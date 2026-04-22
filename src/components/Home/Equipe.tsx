@@ -98,7 +98,7 @@ export default function Equipe() {
 
                 {/* Button */}
                 <Link to="/equipes">
-                    <div className="w-full md:w-fit mx-auto px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#1e395e] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] font-medium text-center leading-[23.48px]">
+                    <div className="w-full md:w-fit mx-auto px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] font-medium text-center leading-[23.48px]">
                         DÉCOUVRIR L'ÉQUIPE
                     </div>
                 </Link>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { useState } from "react"
 import PopUp from "./PopUp"
 import {
@@ -15,6 +14,8 @@ export default function Kine() {
         name: string;
         specialty: string;
         availability: string;
+        phone?: string;
+        progenda?: string;
         sections: {
             title: string;
             items: string[];
@@ -26,6 +27,7 @@ export default function Kine() {
             name: "Dr. Alexis De Wael",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
             availability: "Disponible lundi, mardi, mercredi après-midi, jeudi, vendredi matin",
+            phone: "+32 472 41 82 31",
             imageSrc: "/images/photos-kines/alexis-de-wael.jpeg",
             sections: [
                 {
@@ -50,7 +52,9 @@ export default function Kine() {
             name: "Dr. François Dessart",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
             availability: "Disponible lundi, mercredi, jeudi (8h–17h) – samedi (10h–14h)",
+            phone: "+32 489 10 18 00", // placeholder
             imageSrc: "/images/photos-kines/françois-dessart.JPG",
+            progenda: "https://progenda.be/calendars/dessart-francois-kinesitherapeute-ruisbroek",
             sections: [
                 {
                     title: "Domaines d'intervention",
@@ -75,6 +79,7 @@ export default function Kine() {
             name: "Dr. Vanina Ullens",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
             availability: "Disponible mardi, mercredi, vendredi après-midi",
+            phone: "+32 498 66 87 81 ",
             imageSrc: "/images/photos-kines/vanina-ullens.jpeg",
             sections: [
                 {
@@ -97,7 +102,9 @@ export default function Kine() {
             name: "Dr. Sylvie Machiels",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
             availability: "Disponible lundi, mardi, jeudi (7h30–18h) – vendredi (7h30–13h)",
+            phone: "+32 489 29 25 98", // placeholder
             imageSrc: "/images/photos-figma/sylvie-machiels.png",
+            progenda: "https://progenda.be/calendars/machiels-sylvie-kinesitherapeute-waterloo",
             sections: [
                 {
                     title: "Domaines d'intervention",
@@ -122,7 +129,9 @@ export default function Kine() {
             name: "Dr. Anne-Sophie",
             specialty: "KINÉSITHÉRAPEUTE DU SPORT",
             availability: "Disponible lundi, mardi, jeudi, vendredi",
+            phone: "+32 489 29 25 98", // placeholder
             imageSrc: "/images/photos-kines/strength-care.png",
+            progenda: "https://progenda.be/calendars/brysse-anne-sophie-kinesitherapeute-ottignies",
             sections: [
                 {
                     title: "Domaines d'intervention",
@@ -182,7 +191,7 @@ export default function Kine() {
                                         {doctor.specialty}
                                     </p>
                                     <button
-                                        className="mt-auto bg-[#0C1A2E] hover:bg-[#1e395e] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] text-[#FBF8F3] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer"
+                                        className="mt-auto bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] text-[#FBF8F3] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer"
                                         onClick={() => setSelectedDoctor(doctor)}
                                     >
                                         PRENDRE RDV
@@ -201,6 +210,8 @@ export default function Kine() {
                 name={selectedDoctor?.name || ""}
                 specialty={selectedDoctor?.specialty || ""}
                 availability={selectedDoctor?.availability || ""}
+                phone={selectedDoctor?.phone}
+                progenda={selectedDoctor?.progenda}
                 sections={selectedDoctor?.sections ?? []}
             />
         </section>

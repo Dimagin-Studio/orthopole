@@ -14,6 +14,8 @@ export default function Imagerie() {
         name: string;
         specialty: string;
         availability: string;
+        phone?: string;
+        progenda?: string;
         sections: {
             title: string;
             items: string[];
@@ -152,7 +154,7 @@ export default function Imagerie() {
                                         {doctor.specialty}
                                     </p>
                                     <button
-                                        className="bg-[#0C1A2E] hover:bg-[#1e395e] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] text-[#FBF8F3] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer"
+                                        className="bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] text-[#FBF8F3] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer"
                                         onClick={() => setSelectedDoctor(doctor)}
                                     >
                                         PRENDRE RDV
@@ -171,6 +173,8 @@ export default function Imagerie() {
                 name={selectedDoctor?.name || ""}
                 specialty={selectedDoctor?.specialty || ""}
                 availability={selectedDoctor?.availability || ""}
+                phone={selectedDoctor?.phone}
+                progenda={selectedDoctor?.progenda}
                 sections={selectedDoctor?.sections ?? []}
             />
         </section>

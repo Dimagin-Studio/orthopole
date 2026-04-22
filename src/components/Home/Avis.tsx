@@ -1,4 +1,25 @@
 export default function Avis() {
+    const avis = [
+        {
+            title: "Résultats efficaces",
+            quote: "Dès mon arrivée, j'ai senti une vraie attention portée à mon bien-être. Les soins étaient adaptés et réalisés avec douceur. Une expérience très positive.",
+            author: "Éric B.",
+            city: "Liège",
+        },
+        {
+            title: "Très professionnel",
+            quote: "Les traitements ont rapidement montré leurs effets. Je me sens beaucoup mieux et la rééducation a été parfaitement suivie. Très satisfait du service.",
+            author: "Sofie M.",
+            city: "Liège",
+        },
+        {
+            title: "Meilleur centre",
+            quote: "Les traitements ont rapidement montré leurs effets. Je me sens beaucoup mieux et la rééducation a été parfaitement suivie. Très satisfait du service.",
+            author: "Bernard A.",
+            city: "Liège",
+        },
+    ];
+
     return (
         <>
             {/* Avis des patients */}
@@ -15,59 +36,25 @@ export default function Avis() {
 
                 {/* Container */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-[16px] md:gap-[24px]">
-                    {/* Card 1 */}
-                    <div className="p-[16px] md:p-[24px] bg-[#F9F9F9] dark:bg-[#C9BBA8] dark:text-[#0C1A2E] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
-
-                        {/* Content */}
-                        <div className="flex flex-col gap-[12px] md:gap-[16px]">
-                            <h4 className="text-xl md:text-2xl font-medium leading-[1.4]">
-                                Résultats efficaces
-                            </h4>
-                            <blockquote className="font-[Outfit] font-light text-base md:text-lg leading-[24px] md:leading-[26px]">
-                                "Dès mon arrivée, j’ai senti une vraie attention portée à mon bien-être. Les soins étaient adaptés et réalisés avec douceur. Une expérience très positive."
-                            </blockquote>
+                    {/* Card avis */}
+                    {avis.map((item, index) => (
+                        <div key={index} className="p-[16px] md:p-[24px] bg-[#F9F9F9] dark:bg-[#F5F3EF] dark:text-[#0C1A2E] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
+                            {/* Titre + avis */}
+                            <div className="flex flex-col gap-[12px] md:gap-[16px]">
+                                <h4 className="text-xl md:text-2xl font-medium leading-[1.4]">
+                                    {item.title}
+                                </h4>
+                                <blockquote className="font-[Outfit] font-light text-base md:text-lg leading-[24px] md:leading-[26px]">
+                                    "{item.quote}"
+                                </blockquote>
+                            </div>
+                            {/* Autheur + ville */}
+                            <div className="flex gap-2 leading-[24px]">
+                                <p>— {item.author}</p>
+                                <p className="text-gray-400 dark:text-gray-600">{item.city}</p>
+                            </div>
                         </div>
-                        <div className="flex gap-2 leading-[24px]">
-                            <p>— Éric B.</p>
-                            <p className="text-gray-400 dark:text-gray-600">Liège</p>
-                        </div>
-                    </div>
-
-                    {/* Card 2 */}
-                    <div className="p-[16px] md:p-[24px] bg-[#F9F9F9] dark:bg-[#C9BBA8] dark:text-[#0C1A2E] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
-
-                        {/* Content */}
-                        <div className="flex flex-col gap-[12px] md:gap-[16px]">
-                            <h4 className="text-xl md:text-2xl font-medium leading-[1.4]">
-                                Très professionnel
-                            </h4>
-                            <blockquote className="font-[Outfit] font-light text-base md:text-lg leading-[24px] md:leading-[26px]">
-                                "Les traitements ont rapidement montré leurs effets. Je me sens beaucoup mieux et la rééducation a été parfaitement suivie. Très satisfait du service."
-                            </blockquote>
-                        </div>
-                        <div className="flex gap-2 leading-[24px]">
-                            <p>— Sofie M.</p>
-                            <p className="text-gray-400 dark:text-gray-600">Liège</p>
-                        </div>
-                    </div>
-
-                    {/* Card 3 */}
-                    <div className="p-[16px] md:p-[24px] bg-[#F9F9F9] dark:bg-[#C9BBA8] dark:text-[#0C1A2E] flex flex-col justify-between gap-[24px] md:gap-[40px] w-full">
-
-                        {/* Content */}
-                        <div className="flex flex-col gap-[12px] md:gap-[16px]">
-                            <h4 className="text-xl md:text-2xl font-medium leading-[1.4]">
-                                Meilleur centre
-                            </h4>
-                            <blockquote className="font-[Outfit] font-light text-base md:text-lg leading-[24px] md:leading-[26px]">
-                                "Les traitements ont rapidement montré leurs effets. Je me sens beaucoup mieux et la rééducation a été parfaitement suivie. Très satisfait du service."
-                            </blockquote>
-                        </div>
-                        <div className="flex gap-2 leading-[24px]">
-                            <p>— Bernard A.</p>
-                            <p className="text-gray-400 dark:text-gray-600">Liège</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </section>
         </>

@@ -1,5 +1,4 @@
-import { useRef, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useRef, useEffect, useState } from "react"
 
 type PopUpDoctorProps = {
     isOpen: boolean;
@@ -8,6 +7,8 @@ type PopUpDoctorProps = {
     name: string;
     specialty: string;
     availability: string;
+    phone?: string;
+    progenda?: string; // optionnel
     sections: {
         title: string;
         items: string[];
@@ -21,6 +22,8 @@ export default function PopUp({
     name,
     specialty,
     availability,
+    phone,
+    progenda,
     sections,
 }: PopUpDoctorProps) {
     const popupRef = useRef<HTMLDivElement>(null);
@@ -103,6 +106,14 @@ export default function PopUp({
                                         </div>
                                         <p>{availability}</p>
                                     </div>
+                                    {phone && (
+                                        <a
+                                            href={`tel:${phone.replace(/\s/g, "")}`}
+                                            className="font-[Outfit] text-sm text-[#2C4A6EBF] hover:text-[#2C4A6E] w-fit"
+                                        >
+                                            📞 {phone}
+                                        </a>
+                                    )}
                                 </div>
 
                                 {/* Infos */}
@@ -150,16 +161,29 @@ export default function PopUp({
                                 </div>
                             </div>
 
-                            {/* Bouton RDV */}
                             <div className="pt-[24px] shrink-0">
-                                <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center">
-                                    <Link to="/infos#contact-form">PRENDRE RDV</Link>
-                                </p>
+                                {progenda ? (
+                                    <a
+                                        href={progenda}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center block"
+                                    >
+                                        PRENDRE RDV
+                                    </a>
+                                ) : (
+                                    <a
+                                        href="/infos#contact-form"
+                                        className="bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center block"
+                                    >
+                                        PRENDRE RDV
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 }

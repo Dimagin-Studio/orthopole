@@ -69,7 +69,7 @@ export default function Fields() {
 
     return (
         <>
-            <section className="px-[24px] md:px-[48px] py-[40px] md:pt-[96px] md:pb-[128px] flex flex-col gap-[32px] md:gap-[64px] dark:text-[#0C1A2E]">
+            <section className="px-[24px] md:px-[48px] py-[40px] md:pt-[96px] md:pb-[128px] flex flex-col gap-[32px] md:gap-[64px]">
                 {fields.map((field, index) => (
                     <div
                         key={field.id}
@@ -77,7 +77,7 @@ export default function Fields() {
                         className="w-full p-[20px] md:p-[40px] flex justify-center lg:justify-end bg-cover bg-center bg-no-repeat"
                         style={{ backgroundImage: field.backgroundImage }}
                     >
-                        <div className="w-full md:w-[608px] flex flex-col gap-[24px] px-[16px] md:px-[32px] py-[16px] md:pt-[48px] md:pb-[32px] bg-[#F9F9F9F2] font-[Outfit] leading-[1.4]">
+                        <div className="w-full md:w-[608px] flex flex-col gap-[24px] px-[16px] md:px-[32px] py-[16px] md:pt-[48px] md:pb-[32px] bg-[#F9F9F9F2] dark:bg-[#111F30] font-[Outfit] leading-[1.4]">
                             <h2 className="text-[26px] md:text-[40px] text-center md:text-left font-[Raleway] leading-[1.2]">
                                 {field.title}
                             </h2>
@@ -103,12 +103,12 @@ export default function Fields() {
                             {/* Boutons RDV / Équipe */}
                             <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-[Raleway] font-medium leading-[23.48px]">
                                 <Link to="/infos#contact-form" className="w-full md:w-fit">
-                                    <p className="bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                    <p className="bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3]  dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
                                         PRENDRE RDV
                                     </p>
                                 </Link>
                                 <Link to={field.teamLink} className="w-full md:w-fit">
-                                    <p className="bg-[#0C1A2E1A] hover:bg-[#3356871a] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                    <p className="bg-[#0C1A2E1A] hover:bg-[#3356871a] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
                                         VOIR L'ÉQUIPE
                                     </p>
                                 </Link>

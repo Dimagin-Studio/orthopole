@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export function Hamburger({
     children,
@@ -11,10 +11,9 @@ export function Hamburger({
     isHome: boolean;
 }) {
     const [isOpen, setIsOpen] = useState(false);
-    const { pathname } = useLocation();
-    // const isHome = pathname === "/";
     const spanColor = isHome ? "bg-[#FBF8F3]" : "bg-[#0C1A2E] dark:bg-[#FBF8F3]";
     const logoSrc = isHome || isDark ? "LOGO-blanc" : "LOGO";
+    const bgDark = isHome ? "bg-none" : "dark:bg-[#0C1A2E]";
 
 
     useEffect(() => {
@@ -22,8 +21,9 @@ export function Hamburger({
             const target = event.target as HTMLElement;
             const isLink = target.closest('a[href]');
             const isInHamburger = target.closest('.hamburger-button') || target.closest('.hamburger-menu');
+            const isDarkModeToggle = target.closest('.dark-mode-toggle');
 
-            if (!isInHamburger && !isLink && isOpen) {
+            if (!isInHamburger && !isLink && !isDarkModeToggle && isOpen) {
                 setIsOpen(false);
             }
         };
@@ -45,7 +45,7 @@ export function Hamburger({
     }, [isOpen]);
 
     return (
-        <nav className="w-full px-[24px] md:px-[48px] py-[16px] text-lg flex flex-col lg:flex-row gap-y-[16px] lg:gap-y-0 gap-x-[16px] lg:gap-x-[32px] lg:items-center justify-items-start text-center">
+        <nav className={`w-full px-[24px] md:px-[48px] py-[16px] text-lg flex flex-col lg:flex-row gap-y-[16px] lg:gap-y-0 gap-x-[16px] lg:gap-x-[32px] lg:items-center justify-items-start text-center ${bgDark}`}>
             <div className="flex justify-between items-center w-full lg:w-fit">
                 <Link to="/">
                     <img

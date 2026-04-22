@@ -5,7 +5,7 @@ export default function Reeduc() {
         <>
             {/* Du diagnostique à la rééducation */}
             <section className="px-[24px] md:px-[48px] py-[40px] md:py-[80px]">
-                <div className="bg-[#F9F9F9] dark:bg-[#EAE2D7] px-4 md:px-[48px] py-[32px] md:py-[64px] flex flex-col lg:flex-row gap-[32px] lg:gap-0 justify-between items-center lg:items-start md:text-center lg:text-left dark:text-[#0C1A2E]">
+                <div className="bg-[#F9F9F9] dark:bg-[#F5F3EF] px-4 md:px-[48px] py-[32px] md:py-[64px] flex flex-col lg:flex-row gap-[32px] lg:gap-0 justify-between items-center lg:items-start md:text-center lg:text-left dark:text-[#0C1A2E]">
                     {/* Zone text */}
                     <div className="md:max-w-[400px] lg:max-w-[580px] flex flex-col gap-[24px] md:gap-[40px] md:items-center lg:items-start">
                         <div className="flex flex-col gap-[16px] md:gap-[24px]">
@@ -21,7 +21,7 @@ export default function Reeduc() {
                         </div>
                         {/* Bouton */}
                         <Link to="/equipes">
-                            <div className="w-full md:w-fit px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] bg-[#0C1A2E] hover:bg-[#1e395e] text-[#FBF8F3] font-medium text-center leading-[23.48px]">
+                            <div className="w-full md:w-fit px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3] font-medium text-center leading-[23.48px]">
                                 NOS ÉQUIPES
                             </div>
                         </Link>

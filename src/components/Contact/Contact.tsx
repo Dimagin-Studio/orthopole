@@ -14,12 +14,12 @@ export default function Contact() {
                         </h2>
                         <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[16px] md:gap-[24px] font-medium">
                             <Link to="/infos#contact-form" className="w-full md:w-fit">
-                                <p className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#1e395e] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
+                                <p className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
                                     PRENDRE RENDEZ-VOUS
                                 </p>
                             </Link>
                             <Link to="/infos#contact-form" className="w-full md:w-fit">
-                                <p className="border border-[#0C1A2E] dark:border-[#F9F9F9] hover:bg-[#EAE2D7] dark:hover:bg-[#1e395e] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
+                                <p className="border border-[#0C1A2E] dark:border-[#F9F9F9] hover:bg-[#EAE2D7] dark:hover:bg-[#172D47] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
                                     NOUS CONTACTER
                                 </p>
                             </Link>

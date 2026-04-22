@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
     return (
         <>
-            <footer className="px-[24px] md:px-[48px] pt-[48px] md:pt-[96px] pb-[24px] md:pb-[48px] bg-[#172D47] text-[#F5F3EF] flex flex-col gap-[32px] md:gap-[48px]">
+            <footer className="px-[24px] md:px-[48px] pt-[48px] md:pt-[96px] pb-[24px] md:pb-[48px] bg-[#172D47] dark:bg-[#0C1A2E] text-[#F5F3EF] flex flex-col gap-[32px] md:gap-[48px]">
                 {/* Infos & Newsletter */}
                 <section className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr_1px_1fr] gap-[32px] md:gap-[40px] lg:gap-[80px] w-full">
 
