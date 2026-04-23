@@ -12,7 +12,7 @@ export function Hamburger({
 }) {
     const [isOpen, setIsOpen] = useState(false);
     const spanColor = isHome ? "bg-[#FBF8F3]" : "bg-[#0C1A2E] dark:bg-[#FBF8F3]";
-    const logoSrc = isHome || isDark ? "LOGO-blanc" : "LOGO";
+    const logoSrc = isHome || isDark ? "Orthopole_white" : "ORTHOPOLE_quadri";
     const bgDark = isHome ? "bg-none" : "dark:bg-[#0C1A2E]";
 
 
@@ -45,7 +45,7 @@ export function Hamburger({
     }, [isOpen]);
 
     return (
-        <nav className={`w-full px-[24px] md:px-[48px] py-[16px] text-lg flex flex-col lg:flex-row gap-y-[16px] lg:gap-y-0 gap-x-[16px] lg:gap-x-[32px] lg:items-center justify-items-start text-center ${bgDark}`}>
+        <nav className={`relative w-full px-[24px] md:px-[48px] py-[16px] text-lg flex flex-col lg:flex-row gap-y-[16px] lg:gap-y-0 gap-x-[16px] lg:gap-x-[32px] lg:items-center justify-items-start text-center ${bgDark}`}>
             <div className="flex justify-between items-center w-full lg:w-fit">
                 <Link to="/">
                     <img
@@ -60,14 +60,13 @@ export function Hamburger({
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
                 >
-                    {/* ajouter condition pour fond si on est sur la page d'accueil */}
                     <span className={`block w-6 h-0.5 z-20 ${spanColor} transition-all ${isOpen ? "rotate-45 fixed bg-[#FBF8F3]" : ""}`}></span>
                     <span className={`block w-6 h-0.5 ${spanColor} transition-all ${isOpen ? "opacity-0 fixed" : ""}`}></span>
                     <span className={`block w-6 h-0.5 z-20 ${spanColor} transition-all ${isOpen ? "-rotate-45 fixed bg-[#FBF8F3]" : ""}`}></span>
                 </button>
             </div>
 
-            {/* Menu déroulant (mobile + md) */}
+            {/* Menu déroulant (mobile + tablette) */}
             <div
                 className={`fixed inset-0 bg-[#0C1A2E] p-4 z-10 transition-all duration-300 ease-in-out overflow-y-auto ${isOpen ? "block" : "hidden"
                     }`}

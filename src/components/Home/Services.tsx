@@ -31,7 +31,7 @@ export default function Services() {
     return (
         <>
             {/* Découvrez nos services */}
-            <section className="px-[24px] md:px-[48px] py-[40px] md:py-[80px] flex flex-col gap-[32px] md:gap-[48px] dark:bg-[#172D47]">
+            <section className="px-[24px] md:px-[48px] py-[40px] md:py-[80px] flex flex-col gap-[32px] md:gap-[48px] dark:bg-[#0C1A2E]">
                 {/* Header */}
                 <div className="flex flex-col gap-[16px] md:gap-[24px] items-center text-center">
                     <p className="px-[8px] py-[4px] font-[Outfit] text-sm text-[#362925] bg-[#EAE2D7] leading-[1.4]">

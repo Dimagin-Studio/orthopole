@@ -8,7 +8,7 @@ export default function Accessibilite() {
                     <p className="font-[Outfit] text-sm md:text-base leading-[1.4]">Informations officielles concernant l'accessibilité du centre pour les personnes à mobilité réduite.</p>
                 </div>
                 {/* Container */}
-                <div className="flex flex-col gap-[16px]">
+                <div className="flex flex-col gap-[16px] dark:text-[#0C1A2E]">
                     {/* Row images 1 */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]">
                         {/* Image 1 */}

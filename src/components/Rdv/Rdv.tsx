@@ -43,7 +43,7 @@ export default function Rdv() {
 
     return (
         <>
-            <section className="px-[24px] py-[40px] md:px-[48px] md:py-[96px] flex flex-col gap-[32px] md:gap-[48px] items-center bg-[#EAE2D7] dark:bg-[#172D47]">
+            <section className="px-[24px] py-[40px] md:px-[48px] md:py-[96px] flex flex-col gap-[32px] md:gap-[48px] items-center bg-[#EAE2D7] dark:bg-[#0C1A2E]">
                 {/* Header */}
                 <h1 className="text-3xl md:text-5xl text-center leading-[1.4] tracking-tight">
                     Prendre rendez-vous
@@ -52,7 +52,7 @@ export default function Rdv() {
                 {/* Container */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-[16px] lg:items-start dark:text-[#0C1A2E]">
                     {/* Box 1 Chirurgie */}
-                    <div className="flex flex-col gap-[24px] p-[24px] bg-[#F9F9F9] lg:h-[220px]">
+                    <div className="flex flex-col gap-[24px] p-[24px] bg-[#F9F9F9] dark:bg-[#F5F3EF] lg:h-[220px]">
                         {/* Texte */}
                         <div className="flex flex-col gap-[12px] flex-1">
                             {/* Header */}
@@ -71,7 +71,7 @@ export default function Rdv() {
                     </div>
 
                     {/* Box 2 Radio */}
-                    <div className="flex flex-col gap-[24px] p-[24px] bg-[#F9F9F9] lg:h-[220px]">
+                    <div className="flex flex-col gap-[24px] p-[24px] bg-[#F9F9F9] dark:bg-[#F5F3EF] lg:h-[220px]">
                         {/* Texte */}
                         <div className="flex flex-col gap-[12px] flex-1">
                             {/* Header */}
@@ -93,7 +93,7 @@ export default function Rdv() {
                     </div>
 
                     {/* Box 3 Kiné */}
-                    <div className="flex flex-col gap-[48px] p-[24px] bg-[#F9F9F9] h-fit">
+                    <div className="flex flex-col gap-[48px] p-[24px] bg-[#F9F9F9] dark:bg-[#F5F3EF] h-fit">
                         {/* Texte */}
                         <div className="flex flex-col gap-[24px]">
                             {/* Header */}
@@ -111,7 +111,7 @@ export default function Rdv() {
                                 <div key={index} className="flex flex-col md:flex-row gap-[12px] justify-between items-start md:items-center">
                                     {/* Image + nom */}
                                     <div className="flex gap-[12px] items-center">
-                                        <img src={kine.imageSrc} alt={kine.name} width="52" height="52" className="object-cover object-center w-[52px] h-[52px]" />
+                                        <img src={kine.imageSrc} alt={kine.name} className="object-cover object-center w-[52px] h-[52px]" />
                                         <h5>{kine.name}</h5>
                                     </div>
 
