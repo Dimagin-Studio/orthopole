@@ -5,23 +5,27 @@ import Rdv from "../components/Rdv/Rdv"
 import Faq from "../components/Faq/Faq"
 import Contact from "../components/Contact/Contact"
 import Footer from "../components/Footer/Footer"
+import FadeInSection from "../components/Animations/FadeInSection"
+import PageTransition from "../components/Animations/PageTransition"
 
 export default function Specialites() {
     return (
         <>
-            <Header />
+            <PageTransition>
+                <Header />
 
-            <Intro />
+                <FadeInSection><Intro /></FadeInSection>
 
-            <Fields />
+                <FadeInSection><Fields /></FadeInSection>
 
-            <Rdv />
+                <FadeInSection><Rdv /></FadeInSection>
 
-            <Faq />
+                <FadeInSection><Faq /></FadeInSection>
 
-            <Contact />
+                <FadeInSection><Contact /></FadeInSection>
 
-            <Footer />
+                <FadeInSection><Footer /></FadeInSection>
+            </PageTransition>
         </>
     )
 }

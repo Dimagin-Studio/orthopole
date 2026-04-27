@@ -5,23 +5,27 @@ import Faq from "../components/Faq/Faq"
 import Centre from "../components/Infos/Centre"
 import Accessibilite from "../components/Infos/Accessibilite"
 import Footer from "../components/Footer/Footer"
+import FadeInSection from "../components/Animations/FadeInSection"
+import PageTransition from "../components/Animations/PageTransition"
 
 export default function Infos() {
     return (
         <>
-            <Header />
+            <PageTransition>
+                <Header />
 
-            <Kine />
+                <FadeInSection><Kine /></FadeInSection>
 
-            <Contact />
+                <FadeInSection><Contact /></FadeInSection>
 
-            <Faq />
+                <FadeInSection><Faq /></FadeInSection>
 
-            <Centre />
+                <FadeInSection><Centre /></FadeInSection>
 
-            <Accessibilite />
+                <FadeInSection><Accessibilite /></FadeInSection>
 
-            <Footer />
+                <FadeInSection><Footer /></FadeInSection>
+            </PageTransition>
         </>
     )
 }

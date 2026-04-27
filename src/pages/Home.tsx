@@ -7,26 +7,30 @@ import Photos from '../components/Home/Photos'
 import Avis from '../components/Home/Avis'
 import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
+import FadeInSection from '../components/Animations/FadeInSection'
+import PageTransition from '../components/Animations/PageTransition'
 
 export default function Home() {
     return (
         <>
-            <Header />
-            <main>
-                <Avantages />
+            <PageTransition>
+                <Header />
+                <main>
+                    <FadeInSection><Avantages /></FadeInSection>
 
-                <Services />
+                    <FadeInSection><Services /></FadeInSection>
 
-                <Reeduc />
+                    <FadeInSection><Reeduc /></FadeInSection>
 
-                <Equipe />
+                    <FadeInSection><Equipe /></FadeInSection>
 
-                <Avis />
+                    <FadeInSection><Avis /></FadeInSection>
 
-                <Contact />
-            </main>
+                    <FadeInSection><Contact /></FadeInSection>
+                </main>
 
-            <Footer />
+                <FadeInSection><Footer /></FadeInSection>
+            </PageTransition>
         </>
     )
 }

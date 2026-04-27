@@ -6,25 +6,29 @@ import Kine from "../components/Equipes/Kine"
 import Rdv from "../components/Rdv/Rdv"
 import Faq from "../components/Faq/Faq"
 import Footer from "../components/Footer/Footer"
+import FadeInSection from "../components/Animations/FadeInSection"
+import PageTransition from "../components/Animations/PageTransition"
 
 export default function Equipes() {
     return (
         <>
-            <Header />
+            <PageTransition>
+                <Header />
 
-            <Intro />
+                <FadeInSection><Intro /></FadeInSection>
 
-            <Chirurgie />
+                <FadeInSection><Chirurgie /></FadeInSection>
 
-            <Imagerie />
+                <FadeInSection><Imagerie /></FadeInSection>
 
-            <Kine />
+                <FadeInSection><Kine /></FadeInSection>
 
-            <Rdv />
+                <FadeInSection><Rdv /></FadeInSection>
 
-            <Faq />
+                <FadeInSection><Faq /></FadeInSection>
 
-            <Footer />
+                <FadeInSection><Footer /></FadeInSection>
+            </PageTransition>
         </>
     )
 }

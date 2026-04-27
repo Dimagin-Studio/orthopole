@@ -1,6 +1,30 @@
-import { Link } from "react-router-dom";
+import { motion, useInView } from "motion/react"
+import { useRef } from "react"
+import { Link } from "react-router-dom"
+
+const containerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.18 } }
+}
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+}
+
+const practiciens = [
+    { src: "/images/photos-chirurgien/valery-fabre.jpeg", alt: "Dr. Valery Fabre", name: "Dr. Valery Fabre", specialty: "CHIRURGIE DE LA HANCHE ET DU GENOU", mt: "" },
+    { src: "/images/photos-chirurgien/louis-gossing.jpg", alt: "Dr. Louis Gossing", name: "Dr. Louis Gossing", specialty: "CHIRURGIE DE L'ÉPAULE", mt: "mt-0 md:mt-[40px]" },
+    { src: "/images/photos-chirurgien/denis-willame.jpg", alt: "Dr. Denis Williame", name: "Dr. Denis Williame", specialty: "CHIRURGIE DE LA MAIN, DU POIGNET ET DU COUDE", mt: "mt-0 md:mt-[80px]" },
+    { src: "/images/photos-chirurgien/eric-manche.jpeg", alt: "Dr. Eric Manche", name: "Dr. Eric Manche", specialty: "CHIRURGIE DE LA COLONNE, HANCHE ET DU GENOU", mt: "mt-0 md:mt-[40px]" },
+    { src: "/images/photos-figma/camille-robert.png", alt: "Dr. Camille Robert", name: "Dr. Camille Robert", specialty: "OPHTALMOLOGIST", mt: "" },
+    { src: "/images/photos-figma/marc-lefevre.png", alt: "Dr. Marc Lefevre", name: "Dr. Marc Lefevre", specialty: "ENDOCRINOLOGIST", mt: "mt-0 md:mt-[80px]" },
+]
 
 export default function Equipe() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
+
     return (
         <>
             {/* L'équipe */}
@@ -16,85 +40,27 @@ export default function Equipe() {
                 </div>
 
                 {/* Container */}
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] md:gap-[40px] lg:gap-[48px] justify-items-center text-center md:text-left">
-                    {/* Card 1 */}
-                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px]">
-                        <img
-                            src="/images/photos-chirurgien/valery-fabre.jpeg"
-                            alt="Dr. Valery Fabre"
-                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
-                        />
-                        <div className="flex flex-col gap-[8px]">
-                            <h6 className="text-lg leading-[1.4]">Dr. Valery Fabre</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">CHIRURGIE DE LA HANCHE ET DU GENOU</p>
-                        </div>
-                    </div>
+                <motion.div
+                    ref={ref}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] md:gap-[40px] lg:gap-[48px] justify-items-center text-center md:text-left"
+                >
+                    {practiciens.map((p, index) => (
+                        <motion.div
+                            key={index}
+                            variants={itemVariants}
+                            className={`flex flex-col gap-[16px] w-full md:max-w-[324px] ${p.mt}`}>
+                            <img src={p.src} alt={p.alt} className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center" />
 
-                    {/* Card 2 */}
-                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px] mt-0 md:mt-[40px]">
-                        <img
-                            src="/images/photos-chirurgien/louis-gossing.jpg"
-                            alt="Dr. Louis Gossing"
-                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
-                        />
-                        <div className="flex flex-col gap-[8px]">
-                            <h6 className="text-lg leading-[1.4]">Dr. Louis Gossing</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">CHIRURGIE DE L'ÉPAULE</p>
-                        </div>
-                    </div>
-
-                    {/* Card 3 */}
-                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px] mt-0 md:mt-[80px]">
-                        <img
-                            src="/images/photos-chirurgien/denis-willame.jpg"
-                            alt="Dr. Denis Williame"
-                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
-                        />
-                        <div className="flex flex-col gap-[8px]">
-                            <h6 className="text-lg leading-[1.4]">Dr. Denis Williame</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">CHIRURGIE DE LA MAIN, DU POIGNET ET DU COUDE</p>
-                        </div>
-                    </div>
-
-                    {/* Card 4 */}
-                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px] mt-0 md:mt-[40px]">
-                        <img
-                            src="/images/photos-chirurgien/eric-manche.jpeg"
-                            alt="Dr. Eric Manche"
-                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
-                        />
-                        <div className="flex flex-col gap-[8px]">
-                            <h6 className="text-lg leading-[1.4]">Dr. Eric Manche</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">CHIRURGIE DE LA COLONNE, HANCHE ET DU GENOU</p>
-                        </div>
-                    </div>
-
-                    {/* Card 5 */}
-                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px]">
-                        <img
-                            src="/images/photos-figma/camille-robert.png"
-                            alt="Dr. Camille Robert"
-                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
-                        />
-                        <div className="flex flex-col gap-[8px]">
-                            <h6 className="text-lg leading-[1.4]">Dr. Camille Robert</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">OPHTALMOLOGIST</p>
-                        </div>
-                    </div>
-
-                    {/* Card 6 */}
-                    <div className="flex flex-col gap-[16px] w-full md:max-w-[324px] mt-0 md:mt-[80px]">
-                        <img
-                            src="/images/photos-figma/marc-lefevre.png"
-                            alt="Dr. Marc Lefevre"
-                            className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center"
-                        />
-                        <div className="flex flex-col gap-[8px]">
-                            <h6 className="text-lg leading-[1.4]">Dr. Marc Lefevre</h6>
-                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">ENDOCRINOLOGIST</p>
-                        </div>
-                    </div>
-                </div>
+                            <div className="flex flex-col gap-[8px]">
+                                <h6 className="text-lg leading-[1.4]">{p.name}</h6>
+                                <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">{p.specialty}</p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
 
                 {/* Button */}
                 <Link to="/equipes">
