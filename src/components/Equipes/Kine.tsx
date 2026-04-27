@@ -1,4 +1,4 @@
-import { motion, useInView } from "motion/react"
+import { motion, useInView, type Variants } from "motion/react"
 import { useState, useRef } from "react"
 import PopUp from "./PopUp"
 import {
@@ -9,12 +9,12 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: {},
-    visible: { transition: { staggerchildren: 0.18 } }
+    visible: { transition: { staggerChildren: 0.18 } }
 }
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 }

@@ -1,13 +1,13 @@
-import { motion, useInView } from "motion/react"
+import { motion, useInView, type Variants } from "motion/react"
 import { useRef } from "react"
 import { Link } from "react-router-dom"
 
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.18 } }
 }
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 }
