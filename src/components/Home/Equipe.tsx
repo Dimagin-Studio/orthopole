@@ -26,49 +26,47 @@ export default function Equipe() {
     const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
 
     return (
-        <>
+        <section className="px-[24px] md:px-[48px] pt-[40px] md:pt-[80px] pb-[64px] md:pb-[128px] flex flex-col gap-[40px] md:gap-[80px]">
             {/* L'équipe */}
-            <section className="px-[24px] md:px-[48px] pt-[40px] md:pt-[80px] pb-[64px] md:pb-[128px] flex flex-col gap-[40px] md:gap-[80px]">
-                {/* Header */}
-                <div className="flex flex-col gap-[16px] md:gap-[24px] items-center text-center">
-                    <p className="px-[8px] py-[4px] font-[Outfit] text-sm text-[#362925] bg-[#EAE2D7] leading-[1.4]">
-                        L'ÉQUIPE
-                    </p>
-                    <h2 className="max-w-[90%] md:max-w-[768px] text-3xl md:text-4xl lg:text-5xl leading-[1.4] tracking-tight">
-                        Une équipe de spécialistes engagés dans une prise en charge personnalisée.
-                    </h2>
+            {/* Header */}
+            <div className="flex flex-col gap-[16px] md:gap-[24px] items-center text-center">
+                <p className="px-[8px] py-[4px] font-[Outfit] text-sm text-[#362925] bg-[#EAE2D7] leading-[1.4]">
+                    L'ÉQUIPE
+                </p>
+                <h2 className="max-w-[90%] md:max-w-[768px] text-3xl md:text-4xl lg:text-5xl leading-[1.4] tracking-tight">
+                    Une équipe de spécialistes engagés dans une prise en charge personnalisée.
+                </h2>
+            </div>
+
+            {/* Container */}
+            <motion.div
+                ref={ref}
+                variants={containerVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] md:gap-[40px] lg:gap-[48px] justify-items-center text-center md:text-left"
+            >
+                {practiciens.map((p, index) => (
+                    <motion.div
+                        key={index}
+                        variants={itemVariants}
+                        className={`flex flex-col gap-[16px] w-full md:max-w-[324px] ${p.mt}`}>
+                        <img src={p.src} alt={p.alt} className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center" />
+
+                        <div className="flex flex-col gap-[8px]">
+                            <h6 className="text-lg leading-[1.4]">{p.name}</h6>
+                            <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">{p.specialty}</p>
+                        </div>
+                    </motion.div>
+                ))}
+            </motion.div>
+
+            {/* Button */}
+            <Link to="/equipes">
+                <div className="w-full md:w-fit mx-auto px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] font-medium text-center leading-[23.48px]">
+                    DÉCOUVRIR L'ÉQUIPE
                 </div>
-
-                {/* Container */}
-                <motion.div
-                    ref={ref}
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={isInView ? "visible" : "hidden"}
-                    className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] md:gap-[40px] lg:gap-[48px] justify-items-center text-center md:text-left"
-                >
-                    {practiciens.map((p, index) => (
-                        <motion.div
-                            key={index}
-                            variants={itemVariants}
-                            className={`flex flex-col gap-[16px] w-full md:max-w-[324px] ${p.mt}`}>
-                            <img src={p.src} alt={p.alt} className="w-full h-[500px] md:w-[324px] md:h-[375px] object-cover object-center" />
-
-                            <div className="flex flex-col gap-[8px]">
-                                <h6 className="text-lg leading-[1.4]">{p.name}</h6>
-                                <p className="font-[Outfit] text-sm text-[#2C4A6EBF] dark:text-[#acacac] leading-[1.4]">{p.specialty}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </motion.div>
-
-                {/* Button */}
-                <Link to="/equipes">
-                    <div className="w-full md:w-fit mx-auto px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] font-medium text-center leading-[23.48px]">
-                        DÉCOUVRIR L'ÉQUIPE
-                    </div>
-                </Link>
-            </section>
-        </>
+            </Link>
+        </section>
     )
 }

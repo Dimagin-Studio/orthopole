@@ -1,52 +1,75 @@
+import { motion, useInView, type Variants } from "motion/react"
 import { Link } from "react-router-dom"
+import { useRef } from "react"
+
+const containerVariants: Variants = {
+    hidden: {},
+    visible: {
+        transition: { staggerChildren: 0.18 }
+    }
+}
+
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+}
+
+const services = [
+    {
+        to: "/specialites#chirurgie-orthopedique",
+        image: "url('/images/photos-figma/home-chirurgie.png')",
+        title: "Chirurgie orthopédique",
+        description: "Réparer et restaurer la mobilité",
+    },
+    {
+        to: "/specialites#imagerie-radiologie",
+        image: "url('/images/photos-site-web/home-imagerie.png')",
+        title: "Radiologie & imagerie",
+        description: "Diagnostic précis par imagerie",
+    },
+    {
+        to: "/specialites#kinesitherapie-reathletisation",
+        image: "url('/images/photos-figma/home-kine.png')",
+        title: "Kinésithérapie",
+        description: "Renforcer et rééduquer le corps",
+    },
+    {
+        to: "/specialites#kinesitherapie-reathletisation",
+        image: "url('/images/photos-site-web/home-rehabilitation.png')",
+        title: "Revalidation fonctionnelle",
+        description: "Récupérer pleinement ses capacités",
+    },
+];
 
 export default function Services() {
-    const services = [
-        {
-            to: "/specialites#chirurgie-orthopedique",
-            image: "url('/images/photos-figma/home-chirurgie.png')",
-            title: "Chirurgie orthopédique",
-            description: "Réparer et restaurer la mobilité",
-        },
-        {
-            to: "/specialites#imagerie-radiologie",
-            image: "url('/images/photos-site-web/home-imagerie.png')",
-            title: "Radiologie & imagerie",
-            description: "Diagnostic précis par imagerie",
-        },
-        {
-            to: "/specialites#kinesitherapie-reathletisation",
-            image: "url('/images/photos-figma/home-kine.png')",
-            title: "Kinésithérapie",
-            description: "Renforcer et rééduquer le corps",
-        },
-        {
-            to: "/specialites#kinesitherapie-reathletisation",
-            image: "url('/images/photos-site-web/home-rehabilitation.png')",
-            title: "Revalidation fonctionnelle",
-            description: "Récupérer pleinement ses capacités",
-        },
-    ];
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
 
     return (
-        <>
+        <section className="px-[24px] md:px-[48px] py-[40px] md:py-[80px] flex flex-col gap-[32px] md:gap-[48px] dark:bg-[#0C1A2E]">
             {/* Découvrez nos services */}
-            <section className="px-[24px] md:px-[48px] py-[40px] md:py-[80px] flex flex-col gap-[32px] md:gap-[48px] dark:bg-[#0C1A2E]">
-                {/* Header */}
-                <div className="flex flex-col gap-[16px] md:gap-[24px] items-center text-center">
-                    <p className="px-[8px] py-[4px] font-[Outfit] text-sm text-[#362925] bg-[#EAE2D7] leading-[1.4]">
-                        NOS SPÉCIALITÉS
-                    </p>
-                    <h2 className="text-3xl md:text-5xl tracking-tight leading-[1.4]">
-                        Découvrez nos services
-                    </h2>
-                </div>
+            {/* Header */}
+            <div className="flex flex-col gap-[16px] md:gap-[24px] items-center text-center">
+                <p className="px-[8px] py-[4px] font-[Outfit] text-sm text-[#362925] bg-[#EAE2D7] leading-[1.4]">
+                    NOS SPÉCIALITÉS
+                </p>
+                <h2 className="text-3xl md:text-5xl tracking-tight leading-[1.4]">
+                    Découvrez nos services
+                </h2>
+            </div>
 
-                {/* Container */}
-                <div className="text-[#F5F3EF] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]">
-                    {/* Box services */}
-                    {services.map((service, index) => (
-                        <Link key={index} to={service.to}>
+            {/* Container */}
+            <motion.div
+                ref={ref}
+                variants={containerVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                className="text-[#F5F3EF] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]"
+            >
+                {/* Box services */}
+                {services.map((service, index) => (
+                    <motion.div key={index} variants={itemVariants}>
+                        <Link to={service.to}>
                             <div className="relative w-full h-[340px] md:h-[460px] flex flex-col gap-[8px] p-[24px] justify-end">
                                 <div
                                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -59,9 +82,9 @@ export default function Services() {
                                 </div>
                             </div>
                         </Link>
-                    ))}
-                </div>
-            </section>
-        </>
+                    </motion.div>
+                ))}
+            </motion.div>
+        </section>
     )
 }

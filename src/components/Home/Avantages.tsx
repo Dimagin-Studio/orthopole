@@ -25,27 +25,25 @@ export default function Avantages() {
     const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
 
     return (
-        <>
+        <section className="px-[24px] md:px-[48px] py-[40px] md:py-[80px] text-base dark:text-[#0C1A2E] md:text-lg leading-[1.4]">
             {/* Avantages */}
-            <section className="px-[24px] md:px-[48px] py-[40px] md:py-[80px] text-base dark:text-[#0C1A2E] md:text-lg leading-[1.4]">
-                <motion.div
-                    ref={ref}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={isInView ? "visible" : "hidden"}
-                >
-                    {avantages.map((item, index) => (
-                        <motion.div
-                            key={index}
-                            variants={itemVariants}
-                            className="p-[24px] bg-[#F9F9F9] dark:bg-[#F5F3EF] flex flex-col justify-between place-items-center md:place-items-start text-center md:text-left h-[160px] md:h-[200px]">
-                            <img src={item.src} alt={item.alt} width="46" height="46" />
-                            <p>{item.text}</p>
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </section>
-        </>
+            <motion.div
+                ref={ref}
+                variants={containerVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]"
+            >
+                {avantages.map((item, index) => (
+                    <motion.div
+                        key={index}
+                        variants={itemVariants}
+                        className="p-[24px] bg-[#F9F9F9] dark:bg-[#F5F3EF] flex flex-col justify-between place-items-center md:place-items-start text-center md:text-left h-[160px] md:h-[200px]">
+                        <img src={item.src} alt={item.alt} width="46" height="46" />
+                        <p>{item.text}</p>
+                    </motion.div>
+                ))}
+            </motion.div>
+        </section>
     )
 }

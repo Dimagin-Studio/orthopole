@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <div className="relative w-full h-[140px] md:h-[260px] flex items-center justify-center">
+        <section className="relative w-full h-[140px] md:h-[260px] flex items-center justify-center">
             {/* Image de fond avec overlay */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -18,6 +18,6 @@ export default function Hero() {
             <h1 className="relative w-full text-center text-4xl md:text-[64px] tracking-tight text-[#F5F3EF]">
                 Nos équipes
             </h1>
-        </div>
+        </section>
     );
 }

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { motion, useInView, AnimatePresence, type Variants } from "motion/react"
+import { useState, useRef } from "react"
 
 type FAQItem = {
     question: string;
@@ -108,6 +109,16 @@ const faqSections: FAQSection[] = [
     },
 ];
 
+const containerVariants: Variants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.08 } }
+}
+
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 16 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+}
+
 export default function Faq() {
     const [openItem, setOpenItem] = useState<[number, number] | null>(null);
 
@@ -116,28 +127,26 @@ export default function Faq() {
     };
 
     return (
-        <>
-            <section id="faq" className="px-[24px] md:px-[48px] py-[40px] md:pt-[128px] md:pb-[48px] md:pb-[96px] grid grid-cols-1 gap-[48px] place-items-center">
-                {/* Header */}
-                <h2 className="text-center text-3xl md:text-5xl leading-[1.4] tracking-tight">
-                    Questions fréquentes
-                </h2>
+        <section id="faq" className="px-[24px] md:px-[48px] py-[40px] md:pt-[128px] md:pb-[48px] md:pb-[96px] grid grid-cols-1 gap-[48px] place-items-center">
+            {/* Header */}
+            <h2 className="text-center text-3xl md:text-5xl leading-[1.4] tracking-tight">
+                Questions fréquentes
+            </h2>
 
-                {/* Container */}
-                <div className="md:w-[720px] flex flex-col gap-[40px]">
-                    {faqSections.map((section, sectionIndex) => (
-                        <FAQSection
-                            key={sectionIndex}
-                            title={section.title}
-                            items={section.items}
-                            sectionIndex={sectionIndex}
-                            openItem={openItem}
-                            toggleItem={toggleItem}
-                        />
-                    ))}
-                </div>
-            </section>
-        </>
+            {/* Container */}
+            <div className="md:w-[720px] flex flex-col gap-[40px]">
+                {faqSections.map((section, sectionIndex) => (
+                    <FAQSection
+                        key={sectionIndex}
+                        title={section.title}
+                        items={section.items}
+                        sectionIndex={sectionIndex}
+                        openItem={openItem}
+                        toggleItem={toggleItem}
+                    />
+                ))}
+            </div>
+        </section>
     );
 }
 
@@ -148,22 +157,34 @@ function FAQSection({ title, items, sectionIndex, openItem, toggleItem }: {
     openItem: [number, number] | null;
     toggleItem: (sectionIndex: number, itemIndex: number) => void;
 }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
+
     return (
         <div className="w-full flex flex-col gap-[20px]">
             <h3 className="text-sm italic font-medium leading-[1.4]">
                 {title}
             </h3>
-            <div className="flex flex-col gap-[8px] dark:text-[#0C1A2E]">
+            <motion.div
+                ref={ref}
+                variants={containerVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                className="flex flex-col gap-[8px] dark:text-[#0C1A2E]"
+            >
                 {items.map((item, itemIndex) => (
-                    <FAQItem
+                    <motion.div
                         key={itemIndex}
-                        question={item.question}
-                        answer={item.answer}
-                        isOpen={openItem?.[0] === sectionIndex && openItem?.[1] === itemIndex}
-                        onToggle={() => toggleItem(sectionIndex, itemIndex)}
-                    />
+                        variants={itemVariants}>
+                        <FAQItem
+                            question={item.question}
+                            answer={item.answer}
+                            isOpen={openItem?.[0] === sectionIndex && openItem?.[1] === itemIndex}
+                            onToggle={() => toggleItem(sectionIndex, itemIndex)}
+                        />
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     );
 }
@@ -181,15 +202,31 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
                 className="w-full cursor-pointer flex justify-between items-center gap-[8px] px-[24px] py-[16px] text-left hover:bg-gray-100 transition-colors duration-200"
             >
                 <span className="text-base md:text-lg font-medium leading-[1.4]">{question}</span>
-                <span className="text-4xl">{isOpen ? "-" : "+"}</span>
+                <motion.span
+                    animate={{ rotate: isOpen ? 45 : 0 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="text-4xl shrink-0"
+                >
+                    +
+                </motion.span>
             </button>
-            {isOpen && (
-                <div className="px-[24px] py-[24px] text-sm md:text-base font-[Outfit] font-light leading-[1.4] flex flex-col gap-2">
-                    {answer.map((paragraph, index) => (
-                        <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
-                    ))}
-                </div>
-            )}
+            <AnimatePresence initial={false}>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.35, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                    >
+                        <div className="px-[24px] py-[24px] text-sm md:text-base font-[Outfit] font-light leading-[1.4] flex flex-col gap-2">
+                            {answer.map((paragraph, index) => (
+                                <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }

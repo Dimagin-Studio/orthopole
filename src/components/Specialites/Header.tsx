@@ -3,11 +3,9 @@ import Hero from "./Hero"
 
 export default function Header() {
     return (
-        <>
-            <header className="w-full h-auto flex flex-col">
-                <NavBar />
-                <Hero />
-            </header>
-        </>
+        <header className="w-full h-auto flex flex-col">
+            <NavBar />
+            <Hero />
+        </header>
     )
 }

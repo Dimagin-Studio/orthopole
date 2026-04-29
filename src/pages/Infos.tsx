@@ -10,22 +10,20 @@ import PageTransition from "../components/Animations/PageTransition"
 
 export default function Infos() {
     return (
-        <>
-            <PageTransition>
-                <Header />
+        <PageTransition>
+            <Header />
 
-                <FadeInSection><Kine /></FadeInSection>
+            <FadeInSection><Kine /></FadeInSection>
 
-                <FadeInSection><Contact /></FadeInSection>
+            <FadeInSection><Contact /></FadeInSection>
 
-                <FadeInSection><Faq /></FadeInSection>
+            <FadeInSection><Faq /></FadeInSection>
 
-                <FadeInSection><Centre /></FadeInSection>
+            <FadeInSection><Centre /></FadeInSection>
 
-                <FadeInSection><Accessibilite /></FadeInSection>
+            <FadeInSection><Accessibilite /></FadeInSection>
 
-                <FadeInSection><Footer /></FadeInSection>
-            </PageTransition>
-        </>
+            <FadeInSection><Footer /></FadeInSection>
+        </PageTransition>
     )
 }

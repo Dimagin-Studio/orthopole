@@ -12,25 +12,23 @@ import PageTransition from '../components/Animations/PageTransition'
 
 export default function Home() {
     return (
-        <>
-            <PageTransition>
-                <Header />
-                <main>
-                    <FadeInSection><Avantages /></FadeInSection>
+        <PageTransition>
+            <Header />
+            <main>
+                <FadeInSection><Avantages /></FadeInSection>
 
-                    <FadeInSection><Services /></FadeInSection>
+                <FadeInSection><Services /></FadeInSection>
 
-                    <FadeInSection><Reeduc /></FadeInSection>
+                <FadeInSection><Reeduc /></FadeInSection>
 
-                    <FadeInSection><Equipe /></FadeInSection>
+                <FadeInSection><Equipe /></FadeInSection>
 
-                    <FadeInSection><Avis /></FadeInSection>
+                <FadeInSection><Avis /></FadeInSection>
 
-                    <FadeInSection><Contact /></FadeInSection>
-                </main>
+                <FadeInSection><Contact /></FadeInSection>
+            </main>
 
-                <FadeInSection><Footer /></FadeInSection>
-            </PageTransition>
-        </>
+            <FadeInSection><Footer /></FadeInSection>
+        </PageTransition>
     )
 }

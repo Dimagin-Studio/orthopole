@@ -1,8 +1,7 @@
 export default function Calendrier() {
     return (
-        <>
-            <section>
-                {/* <script type="text/javascript" src="https://rdv.domaine-existant.be/resscom/jquery/iframe-resizer/iframeResizer.min.js"></script>
+        <section>
+            {/* <script type="text/javascript" src="https://rdv.domaine-existant.be/resscom/jquery/iframe-resizer/iframeResizer.min.js"></script>
  
 <iframe id="frmPrpi" src="https://rdv.domaine-existant.be/client-medoffice/index.php" scrolling="no" style="width:100%;" frameborder="0"></iframe>
  
@@ -30,7 +29,6 @@ if ((tabVarRec["tp"] != undefined) && (tabVarRec["id"] != undefined)) {
 iFrameResize();
  
 </script> */}
-            </section>
-        </>
+        </section>
     )
 }

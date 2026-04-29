@@ -11,24 +11,22 @@ import PageTransition from "../components/Animations/PageTransition"
 
 export default function Equipes() {
     return (
-        <>
-            <PageTransition>
-                <Header />
+        <PageTransition>
+            <Header />
 
-                <FadeInSection><Intro /></FadeInSection>
+            <FadeInSection><Intro /></FadeInSection>
 
-                <FadeInSection><Chirurgie /></FadeInSection>
+            <FadeInSection><Chirurgie /></FadeInSection>
 
-                <FadeInSection><Imagerie /></FadeInSection>
+            <FadeInSection><Imagerie /></FadeInSection>
 
-                <FadeInSection><Kine /></FadeInSection>
+            <FadeInSection><Kine /></FadeInSection>
 
-                <FadeInSection><Rdv /></FadeInSection>
+            <FadeInSection><Rdv /></FadeInSection>
 
-                <FadeInSection><Faq /></FadeInSection>
+            <FadeInSection><Faq /></FadeInSection>
 
-                <FadeInSection><Footer /></FadeInSection>
-            </PageTransition>
-        </>
+            <FadeInSection><Footer /></FadeInSection>
+        </PageTransition>
     )
 }

@@ -1,5 +1,18 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { motion, useInView, type Variants } from "motion/react"
+import { useState, useRef } from "react"
+import { Link } from "react-router-dom"
+
+const containerVariants: Variants = {
+    hidden: {},
+    visible: {
+        transition: { staggerChildren: 1 }
+    }
+}
+
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+}
 
 const fields = [
     {
@@ -62,18 +75,27 @@ const fields = [
 
 export default function Fields() {
     const [expanded, setExpanded] = useState<boolean[]>(fields.map(() => false));
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
 
     const toggle = (index: number) => {
         setExpanded((prev) => prev.map((val, i) => (i === index ? !val : val)));
     };
 
     return (
-        <>
-            <section className="px-[24px] md:px-[48px] py-[40px] md:pt-[96px] md:pb-[128px] flex flex-col gap-[32px] md:gap-[64px]">
+        <section className="px-[24px] md:px-[48px] py-[40px] md:pt-[96px] md:pb-[128px]">
+            <motion.div
+                ref={ref}
+                variants={containerVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                className="flex flex-col gap-[32px] md:gap-[64px]"
+            >
                 {fields.map((field, index) => (
-                    <div
+                    <motion.div
                         key={field.id}
                         id={field.id}
+                        variants={itemVariants}
                         className="w-full p-[20px] md:p-[40px] flex justify-center lg:justify-end bg-cover bg-center bg-no-repeat"
                         style={{ backgroundImage: field.backgroundImage }}
                     >
@@ -114,9 +136,9 @@ export default function Fields() {
                                 </Link>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </section>
-        </>
+            </motion.div>
+        </section>
     );
 }
