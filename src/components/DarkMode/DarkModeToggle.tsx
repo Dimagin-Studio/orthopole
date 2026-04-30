@@ -21,11 +21,11 @@ export function DarkModeToggle({ isHome, isDark, toggle }: Props) {
                 checked={isDark}
                 onCheckedChange={toggle}
                 aria-label="Basculer le mode sombre"
-                className={
-                    isHome
+                className={`cursor-pointer
+                    ${isHome}
                         ? "data-[state=checked]:bg-[#b8cae2]"
                         : "data-[state=checked]:bg-[#2d5183]"
-                }
+                `}
             />
             {/* Icône Lune (bleu en dark, gris en light) */}
             <Moon

@@ -6,7 +6,7 @@ export function Hamburger({
     isDark,
     isHome,
 }: {
-    children: React.ReactNode;
+    children: (isOpen: boolean) => React.ReactNode;
     isDark: boolean;
     isHome: boolean;
 }) {
@@ -72,13 +72,13 @@ export function Hamburger({
                     }`}
             >
                 <div className="flex flex-col items-center justify-center w-full h-full pt-12">
-                    {children}
+                    {children(isOpen)}
                 </div>
             </div>
 
             {/* Menu de navigation (desktop) */}
             <div className="hidden lg:flex justify-center w-full">
-                {children}
+                {children(false)}
             </div>
         </nav>
     );

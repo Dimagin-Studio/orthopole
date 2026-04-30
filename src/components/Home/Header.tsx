@@ -1,4 +1,4 @@
-import { Hamburger } from "../Hamburger/Hamburger"
+import MotionButton from "../Animations/MotionButton"
 import { Link } from "react-router-dom"
 import NavBar from "../NavBar/NavBar"
 
@@ -25,14 +25,14 @@ export default function Header() {
 
                 <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-medium leading-[23.48px]">
                     <Link to="/infos#contact-form" className="w-full md:w-fit">
-                        <p className="bg-[#2C4A6E] hover:bg-[#1e344f] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                        <MotionButton as="div" className="bg-[#2C4A6E] hover:bg-[#1e344f] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
                             Prendre rendez-vous
-                        </p>
+                        </MotionButton>
                     </Link>
                     <Link to="/specialites" className="w-full md:w-fit">
-                        <p className="text-[#0C1A2E] bg-[#C9BBA8] hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                        <MotionButton as="div" className="text-[#0C1A2E] bg-[#C9BBA8] hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
                             Découvrir nos spécialités
-                        </p>
+                        </MotionButton>
                     </Link>
                 </div>
             </section>

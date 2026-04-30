@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react"
 import { motion, AnimatePresence } from "motion/react"
+import MotionButton from "../Animations/MotionButton"
 
 type PopUpDoctorProps = {
     isOpen: boolean;
@@ -174,21 +175,23 @@ export default function PopUp({
 
                                     <div className="pt-[24px] shrink-0">
                                         {progenda ? (
-                                            <a
+                                            <MotionButton
+                                                as="a"
                                                 href={progenda}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center block"
                                             >
                                                 PRENDRE RDV
-                                            </a>
+                                            </MotionButton>
                                         ) : (
-                                            <a
+                                            <MotionButton
+                                                as="a"
                                                 href="/infos#contact-form"
                                                 className="bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center block"
                                             >
                                                 PRENDRE RDV
-                                            </a>
+                                            </MotionButton>
                                         )}
                                     </div>
                                 </div>

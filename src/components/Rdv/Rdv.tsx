@@ -1,4 +1,5 @@
 import { motion, useInView, type Variants } from "motion/react"
+import MotionButton from "../Animations/MotionButton"
 import { Link } from "react-router-dom"
 import { useRef } from "react"
 
@@ -100,9 +101,11 @@ export default function Rdv() {
                     </div>
 
                     {/* Bouton */}
-                    <Link to="/infos#contact-form" className="font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
-                        PRENDRE RDV
-                    </Link>
+                    <MotionButton as="div" className="font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
+                        <Link to="/infos#contact-form">
+                            PRENDRE RDV
+                        </Link>
+                    </MotionButton>
                 </motion.div>
 
                 {/* Box 2 Radio */}
@@ -122,12 +125,16 @@ export default function Rdv() {
                     </div>
 
                     {/* Bouton */}
-                    <a href="tel:0189291885" className="flex gap-[8px] items-center justify-center font-[Outfit] font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
+                    <MotionButton
+                        as="a"
+                        href="tel:0189291885"
+                        className="flex gap-[8px] items-center justify-center font-[Outfit] font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit"
+                    >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d={phoneIconPath} />
                         </svg>
                         01 89 29 18 85
-                    </a>
+                    </MotionButton>
                 </motion.div>
 
                 {/* Box 3 Kiné */}
@@ -165,17 +172,19 @@ export default function Rdv() {
                                 {/* Boutons */}
                                 <div className="flex gap-[8px]">
                                     {/* Icône Calendrier - Lien Progenda */}
-                                    <a
+                                    <MotionButton
+                                        as="a"
                                         href={kine.progenda}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="px-[12px] py-[8px] md:py-[10px] bg-[#C9BBA8] hover:bg-[#ac9c86] flex items-center"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0C1A2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="M10 16h4" /><path d="M12 14v4" /></svg>
-                                    </a>
+                                    </MotionButton>
 
                                     {/* Téléphone */}
-                                    <a
+                                    <MotionButton
+                                        as="a"
                                         href={`tel:${kine.phone}`}
                                         className="flex gap-[8px] items-center justify-center font-[Outfit] font-medium text-[#FBF8F3] text-center text-sm bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[12px] py-[8px] md:py-[10px] w-[160px]"
                                     >
@@ -183,7 +192,7 @@ export default function Rdv() {
                                             <path d={phoneIconPath} />
                                         </svg>
                                         {kine.phoneDisplay}
-                                    </a>
+                                    </MotionButton>
                                 </div>
                             </motion.div>
                         ))}
@@ -193,12 +202,12 @@ export default function Rdv() {
                     <div className="flex flex-col md:flex-row justify-between gap-2 font-[Outfit] text-sm">
                         <p>Ou par appel téléphonique auprès du secrétariat</p>
 
-                        <a href="tel:0189422385" className="flex items-center gap-[6px] px-[12px] py-[8px] bg-[#0C1A2E1A] hover:bg-[#d9d2c8] w-fit h-fit">
+                        <MotionButton as="a" href="tel:0189422385" className="flex items-center gap-[6px] px-[12px] py-[8px] bg-[#0C1A2E1A] hover:bg-[#d9d2c8] w-fit h-fit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d={phoneIconPath} />
                             </svg>
                             <p className="text-sm w-full whitespace-nowrap">01 89 42 23 85</p>
-                        </a>
+                        </MotionButton>
                     </div>
                 </motion.div>
             </motion.div>

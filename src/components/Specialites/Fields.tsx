@@ -1,4 +1,5 @@
 import { motion, useInView, type Variants } from "motion/react"
+import MotionButton from "../Animations/MotionButton"
 import { useState, useRef } from "react"
 import { Link } from "react-router-dom"
 
@@ -125,14 +126,14 @@ export default function Fields() {
                             {/* Boutons RDV / Équipe */}
                             <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-[Raleway] font-medium leading-[23.48px]">
                                 <Link to="/infos#contact-form" className="w-full md:w-fit">
-                                    <p className="bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3]  dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                    <MotionButton className="bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3]  dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
                                         PRENDRE RDV
-                                    </p>
+                                    </MotionButton>
                                 </Link>
                                 <Link to={field.teamLink} className="w-full md:w-fit">
-                                    <p className="bg-[#0C1A2E1A] hover:bg-[#3356871a] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                    <MotionButton className="bg-[#0C1A2E1A] hover:bg-[#3356871a] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
                                         VOIR L'ÉQUIPE
-                                    </p>
+                                    </MotionButton>
                                 </Link>
                             </div>
                         </div>

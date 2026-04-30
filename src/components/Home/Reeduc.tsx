@@ -1,3 +1,4 @@
+import MotionButton from "../Animations/MotionButton"
 import { Link } from "react-router-dom"
 
 export default function Reeduc() {
@@ -20,9 +21,9 @@ export default function Reeduc() {
                     </div>
                     {/* Bouton */}
                     <Link to="/equipes">
-                        <div className="w-full md:w-fit px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3] font-medium text-center leading-[23.48px]">
+                        <MotionButton as="div" className="w-full md:w-fit px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3] font-medium text-center leading-[23.48px]">
                             NOS ÉQUIPES
-                        </div>
+                        </MotionButton>
                     </Link>
                 </div>
 

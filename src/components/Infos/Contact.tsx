@@ -1,6 +1,23 @@
-import { useState } from 'react'
+import { motion, useInView, type Variants } from "motion/react"
+import MotionButton from "../Animations/MotionButton"
+import { useState, useRef } from 'react'
+
+const containerVariants: Variants = {
+    hidden: {},
+    visible: {
+        transition: { staggerChildren: 0.18 }
+    }
+}
+
+const itemVariants: Variants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
+}
 
 export default function Contact() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
+
     const [selectedOption, setSelectedOption] = useState<string>("Spécialité");
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -12,7 +29,7 @@ export default function Contact() {
             {/* Image (sauf sur mobiles) */}
             <img
                 src="/images/form.png"
-                alt="Dotceur"
+                alt="Docteur"
                 className="hidden lg:block object-cover object-center"
             />
 
@@ -29,9 +46,16 @@ export default function Contact() {
                     {/* Inputs + bouton */}
                     <div className="flex flex-col gap-[24px]">
                         {/* Inputs */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] font-[Outfit] text-sm md:text-base leading-[1.4]">
+                        <motion.div
+                            ref={ref}
+                            variants={containerVariants}
+                            initial="hidden"
+                            animate={isInView ? "visible" : "hidden"}
+                            className="grid grid-cols-1 md:grid-cols-2 gap-[16px] font-[Outfit] text-sm md:text-base leading-[1.4]"
+                        >
                             {/* Nom */}
-                            <input
+                            <motion.input
+                                variants={itemVariants}
                                 type="text"
                                 name="nom"
                                 placeholder="Nom"
@@ -40,7 +64,8 @@ export default function Contact() {
                             />
 
                             {/* Prénom */}
-                            <input
+                            <motion.input
+                                variants={itemVariants}
                                 type="text"
                                 name="prenom"
                                 placeholder="Prénom"
@@ -49,7 +74,8 @@ export default function Contact() {
                             />
 
                             {/* Email */}
-                            <input
+                            <motion.input
+                                variants={itemVariants}
                                 type="email"
                                 name="email"
                                 placeholder="Email"
@@ -58,7 +84,8 @@ export default function Contact() {
                             />
 
                             {/* Objet */}
-                            <input
+                            <motion.input
+                                variants={itemVariants}
                                 type="text"
                                 name="objet"
                                 placeholder="Objet"
@@ -67,7 +94,8 @@ export default function Contact() {
                             />
 
                             {/* Spécialité */}
-                            <select
+                            <motion.select
+                                variants={itemVariants}
                                 name="specialite"
                                 id="specialite"
                                 className={`col-span-2 border-b border-[#D9D9D9] py-[12px] md:py-[24px] focus:outline-none w-full 
@@ -81,10 +109,11 @@ export default function Contact() {
                                 <option value="Chirurgie orthopédique" className="text-[#0C1A2E] dark:text-[#FBF8F3]">Chirurgie orthopédique</option>
                                 <option value="Imagerie" className="text-[#0C1A2E] dark:text-[#FBF8F3]">Imagerie</option>
                                 <option value="Kinésithérapie" className="text-[#0C1A2E] dark:text-[#FBF8F3]">Kinésithérapie</option>
-                            </select>
+                            </motion.select>
 
                             {/* Message */}
-                            <textarea
+                            <motion.textarea
+                                variants={itemVariants}
                                 id="message"
                                 name="message"
                                 rows={5}
@@ -93,11 +122,13 @@ export default function Contact() {
                                 className="col-span-2 border-b border-[#D9D9D9] py-[12px] md:py-[24px] focus:outline-none w-full"
                                 required
                             >
-                            </textarea>
-                        </div>
+                            </motion.textarea>
+                        </motion.div>
 
                         {/* Submit */}
-                        <input type="submit" value="ENVOYER LE MESSAGE" className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" />
+                        <MotionButton as="div">
+                            <input type="submit" value="ENVOYER LE MESSAGE" className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" />
+                        </MotionButton>
                     </div>
                 </form>
             </div>

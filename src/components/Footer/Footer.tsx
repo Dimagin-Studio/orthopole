@@ -1,3 +1,5 @@
+import { motion } from "motion/react"
+import MotionButton from "../Animations/MotionButton"
 import { Link } from "react-router-dom"
 
 export default function Footer() {
@@ -10,12 +12,24 @@ export default function Footer() {
                 <div className="flex flex-col gap-[16px] md:gap-[24px] md:text-left text-center">
                     <h5 className="font-[Geist] font-medium leading-[24px] text-[16px] md:text-[18px]">/ Liens</h5>
                     <ul className="list-none flex flex-col gap-[8px] md:gap-[16px] font-[Outfit] text-[14px] md:text-[16px] leading-[1.4]">
-                        <li><Link to="/equipes#chirurgie-orthopedique" className="hover:text-[#b8cae2]">Chirurgie</Link></li>
-                        <li><Link to="/equipes#imagerie-radiologie" className="hover:text-[#b8cae2]">Radiologie</Link></li>
-                        <li><Link to="/equipes#kinesitherapie-reathletisation" className="hover:text-[#b8cae2]">Kinésithérapie</Link></li>
-                        <li><Link to="/infos" className="hover:text-[#b8cae2]">À propos</Link></li>
-                        <li><Link to="/infos#faq" className="hover:text-[#b8cae2]">Aide & FAQ</Link></li>
-                        <Link to="/infos#contact-form" className="hover:text-[#b8cae2]">Contact</Link>
+                        <motion.li whileHover={{ scale: 1.08, originX: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
+                            <Link to="/equipes#chirurgie-orthopedique" className="hover:text-[#b8cae2]">Chirurgie</Link>
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.08, originX: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
+                            <Link to="/equipes#imagerie-radiologie" className="hover:text-[#b8cae2]">Radiologie</Link>
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.08, originX: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
+                            <Link to="/equipes#kinesitherapie-reathletisation" className="hover:text-[#b8cae2]">Kinésithérapie</Link>
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.08, originX: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
+                            <Link to="/infos" className="hover:text-[#b8cae2]">À propos</Link>
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.08, originX: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
+                            <Link to="/infos#faq" className="hover:text-[#b8cae2]">Aide & FAQ</Link>
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.08, originX: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
+                            <Link to="/infos#contact-form" className="hover:text-[#b8cae2]">Contact</Link>
+                        </motion.li>
                     </ul>
                 </div>
 
@@ -45,12 +59,13 @@ export default function Footer() {
                             placeholder="Entrez votre adresse e-mail"
                             className="border-b border-gray-500 py-[12px] md:py-[24px] text-[14px] md:text-[16px] focus:outline-none w-full max-w-[300px]"
                         />
-                        <button
+                        <MotionButton
+                            as="button"
                             type="submit"
                             className="w-fit px-[12px] md:px-[16px] py-[6px] md:py-[8px] font-[Geist] font-medium bg-[#C9BBA8] hover:bg-[#ac9c86] text-[#0C1A2E] text-[14px] md:text-[16px] cursor-pointer"
                         >
                             S'abonner
-                        </button>
+                        </MotionButton>
                     </form>
                 </div>
             </section>
@@ -70,11 +85,11 @@ export default function Footer() {
                 </div>
 
                 <ul className="list-none flex flex-wrap justify-center md:justify-end gap-[8px] lg:gap-[16px] w-full">
-                    <li><a href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Mentions légales</a></li>
+                    <li><MotionButton as="a" href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Mentions légales</MotionButton></li>
                     <span className="hidden md:inline">-</span>
-                    <li><a href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Politique de confidentialité</a></li>
+                    <li><MotionButton as="a" href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Politique de confidentialité</MotionButton></li>
                     <span className="hidden md:inline">-</span>
-                    <li><a href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Contact</a></li>
+                    <li><MotionButton as="a" href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Contact</MotionButton></li>
                 </ul>
             </section>
         </footer>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import MotionButton from "../Animations/MotionButton"
 
 export default function Contact() {
     return (
@@ -13,14 +14,14 @@ export default function Contact() {
                     </h2>
                     <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[16px] md:gap-[24px] font-medium">
                         <Link to="/infos#contact-form" className="w-full md:w-fit">
-                            <p className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
+                            <MotionButton as="div" className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
                                 PRENDRE RENDEZ-VOUS
-                            </p>
+                            </MotionButton>
                         </Link>
                         <Link to="/infos#contact-form" className="w-full md:w-fit">
-                            <p className="border border-[#0C1A2E] dark:border-[#F9F9F9] hover:bg-[#EAE2D7] dark:hover:bg-[#172D47] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
+                            <MotionButton as="div" className="border border-[#0C1A2E] dark:border-[#F9F9F9] hover:bg-[#EAE2D7] dark:hover:bg-[#172D47] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
                                 NOUS CONTACTER
-                            </p>
+                            </MotionButton>
                         </Link>
                     </div>
                 </div>
@@ -28,12 +29,12 @@ export default function Contact() {
                 {/* Téléphone */}
                 <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[8px] font-[Outfit] text-center lg:text-left">
                     <p className="font-light leading-[1.2]">Ou par téléphone sur</p>
-                    <a href="tel:0189422385" className="flex items-center gap-[8px] px-[12px] py-[8px] dark:text-[#0C1A2E] bg-[#0C1A2E1A] hover:bg-[#d9d2c8] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] w-fit h-fit">
+                    <MotionButton as="a" href="tel:0189422385" className="flex items-center gap-[8px] px-[12px] py-[8px] dark:text-[#0C1A2E] bg-[#0C1A2E1A] hover:bg-[#d9d2c8] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] w-fit h-fit">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
                             <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                         </svg>
                         <p className="w-full whitespace-nowrap">01 89 42 23 85</p>
-                    </a>
+                    </MotionButton>
                 </div>
             </div>
 
