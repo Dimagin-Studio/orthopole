@@ -10,16 +10,6 @@ import Infos from "./pages/Infos"
 import NotFound from "./pages/NotFound"
 
 export function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
 
   return (
     <>

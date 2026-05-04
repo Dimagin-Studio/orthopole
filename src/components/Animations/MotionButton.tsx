@@ -31,7 +31,7 @@ export default function MotionButton({
             type={type}
             onClick={onClick}
             className={`transition-colors duration-300 ${className}`}
-            whileHover={{ scale: 1.03, originX: 0 }}
+            whileHover={{ scale: 1.03 }}
             transition={{
                 duration: 0.2,
                 ease: "easeOut",

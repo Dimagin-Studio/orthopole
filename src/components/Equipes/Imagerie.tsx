@@ -147,7 +147,7 @@ export default function Imagerie() {
                             className="pl-[32px] md:pl-[48px] basis-[85%] md:basis-1/2 lg:basis-1/4"
                         >
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                                 transition={{
                                     duration: 0.8,
@@ -162,7 +162,7 @@ export default function Imagerie() {
                                         alt={doctor.name}
                                         className="w-full h-[400px] md:h-[375px] object-cover object-center cursor-pointer"
                                         onClick={() => setSelectedDoctor(doctor)}
-                                        whileHover={{ scale: 1.03, z: 5 }}
+                                        whileHover={{ scale: 1.06, z: 5 }}
                                         transition={{
                                             duration: 0.3,
                                             ease: "easeInOut",

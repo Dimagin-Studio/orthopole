@@ -126,9 +126,11 @@ export default function Contact() {
                         </motion.div>
 
                         {/* Submit */}
-                        <MotionButton as="div">
-                            <input type="submit" value="ENVOYER LE MESSAGE" className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" />
-                        </MotionButton>
+                        <div className="flex">
+                            <MotionButton as="div">
+                                <input type="submit" value="ENVOYER LE MESSAGE" className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center cursor-pointer" />
+                            </MotionButton>
+                        </div>
                     </div>
                 </form>
             </div>
