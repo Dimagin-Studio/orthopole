@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <header className="relative w-full h-screen text-[#FBF8F3] flex flex-col gap-[24px] md:gap-0 overflow-hidden">
             <img
-                src="/images/hero-section.png"
+                src="/images/hero-section.webp"
                 alt=""
                 fetchPriority="high"
                 decoding="async"
