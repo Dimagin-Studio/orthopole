@@ -4,10 +4,15 @@ import NavBar from "../NavBar/NavBar"
 
 export default function Header() {
     return (
-        <header
-            className="w-full h-screen text-[#FBF8F3] flex flex-col gap-[24px] md:gap-0 bg-cover bg-no-repeat overflow-hidden"
-            style={{ backgroundImage: "url('/images/hero-section.png')" }}
-        >
+        <header className="relative w-full h-screen text-[#FBF8F3] flex flex-col gap-[24px] md:gap-0 overflow-hidden">
+            <img
+                src="/images/hero-section.png"
+                alt=""
+                fetchPriority="high"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover -z-10"
+            />
+
             {/* Menu de navigation */}
             <NavBar />
 
