@@ -19,25 +19,21 @@ const services = [
         to: "/specialites#chirurgie-orthopedique",
         image: "url('/images/photos-figma/home-chirurgie.png')",
         title: "Chirurgie orthopédique",
-        description: "Réparer et restaurer la mobilité",
     },
     {
         to: "/specialites#imagerie-radiologie",
         image: "url('/images/photos-site-web/home-imagerie.png')",
         title: "Radiologie & imagerie",
-        description: "Diagnostic précis par imagerie",
     },
     {
         to: "/specialites#kinesitherapie-reathletisation",
         image: "url('/images/photos-figma/home-kine.png')",
         title: "Kinésithérapie",
-        description: "Renforcer et rééduquer le corps",
     },
     {
         to: "/specialites#kinesitherapie-reathletisation",
         image: "url('/images/photos-site-web/home-rehabilitation.png')",
-        title: "Revalidation fonctionnelle",
-        description: "Récupérer pleinement ses capacités",
+        title: "Réathlétisation",
     },
 ];
 
@@ -50,11 +46,11 @@ export default function Services() {
             {/* Découvrez nos services */}
             {/* Header */}
             <div className="flex flex-col gap-[16px] md:gap-[24px] items-center text-center">
-                <p className="px-[8px] py-[4px] font-[Outfit] text-sm text-[#362925] bg-[#EAE2D7] leading-[1.4]">
+                <p className="px-[12px] py-[6px] font-[Outfit] text-base md:text-lg text-[#362925] bg-[#EAE2D7] leading-[1.4]">
                     NOS SPÉCIALITÉS
                 </p>
                 <h2 className="text-3xl md:text-5xl tracking-tight leading-[1.4]">
-                    Découvrez nos services
+                    Découvrez nos spécialités
                 </h2>
             </div>
 
@@ -78,7 +74,6 @@ export default function Services() {
                                 <div className="absolute bottom-0 left-0 right-0 h-full bg-linear-to-t from-[#0C1A2E] to-transparent" />
                                 <div className="relative flex flex-col gap-[8px]">
                                     <h4 className="text-xl md:text-[22px] font-medium leading-[1.4]">{service.title}</h4>
-                                    <p className="font-[Outfit] text-sm leading-[1.3]">{service.description}</p>
                                 </div>
                             </div>
                         </Link>

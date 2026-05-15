@@ -18,14 +18,14 @@ export default function Header() {
 
             {/* Section centre */}
             <section className="max-w-[781px] px-[24px] md:px-[48px] pb-[48px] h-full flex flex-col gap-[24px] md:gap-[48px] justify-center text-center md:text-left">
-                <div className="flex flex-col gap-[16px] place-items-center md:place-items-start">
-                    <p className="w-fit px-[8px] py-[4px] font-[Outfit] text-sm bg-[#FBF8F314] leading-[1.4]">Centre privé</p>
-
-                    <h1 className="text-[32px] md:text-[56px] leading-[1.2] tracking-tight">
-                        Chirurgie orthopédique, imagerie médicale, kinésithérapie et réathlétisation
+                <div className="flex flex-col gap-[24px] md:gap-[32px] place-items-center md:place-items-start">
+                    <h1 className="text-[32px] md:text-[56px] leading-[1.2] tracking-tight flex flex-col gap-[12px] md:gap-[16px]">
+                        <span>Centre privé de chirurgie orthopédique</span>
+                        <span>Imagerie médicale</span>
+                        <span>Kinésithérapie et réathlétisation</span>
                     </h1>
 
-                    <p className="text-base md:text-lg leading-[1.4]">Prise en charge complète du diagnostique à la rééducation</p>
+                    <p className="text-base md:text-lg leading-[1.4]">Prise en charge globale du diagnostic à la rééducation</p>
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-medium leading-[23.48px]">

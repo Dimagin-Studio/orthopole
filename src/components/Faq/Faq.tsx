@@ -17,7 +17,7 @@ const faqSections: FAQSection[] = [
         items: [
             {
                 question: "Comment se déroule une première consultation ?",
-                answer: ["La consultation débute par un interrogatoire complet (antécédents, symptômes), suivi d’un examen clinique. Le praticien analyse votre imagerie afin de poser un diagnostic précis et discuter avec vous des différentes options thérapeutiques."],
+                answer: ["La consultation débute par une anamnèse (antécédents, symptômes), suivi d’un examen clinique. Le praticien analyse votre imagerie ainsi que vos examens complémentaires afin de poser un diagnostic et discuter avec vous des différentes options thérapeutiques."],
             },
             {
                 question: "Dois-je réaliser des examens avant la consultation ?",
@@ -25,11 +25,11 @@ const faqSections: FAQSection[] = [
             },
             {
                 question: "Dois-je passer par mon médecin traitant avant de consulter ?",
-                answer: ["Il est recommandé d’avoir été orienté par votre médecin traitant et d’avoir débuté une prise en charge médicale."],
+                answer: ["Si possible, c’est préférable : nous recommandons d’avoir été orienté par votre médecin traitant ou, idéalement, par un médecin du sport, et d’avoir débuté une prise en charge médicale."],
             },
             {
                 question: "L'imagerie est-elle accessible uniquement aux patients du centre ?",
-                answer: ["Non, l’imagerie est accessible à tous, y compris aux patients externes. Un examen peut également être réalisé avant la consultation si nécessaire."],
+                answer: ["Non, l’imagerie est accessible à tous, y compris aux patients externes, sur rendez-vous. Un examen peut également être réalisé avant la consultation si nécessaire."],
             },
         ],
     },
@@ -45,7 +45,7 @@ const faqSections: FAQSection[] = [
             {
                 question: "Quels documents dois-je apporter ?",
                 answer: ["• Carte d’identité",
-                    "• Prescription médicale (si applicable)",
+                    "• Prescription médicale (pour la kiné)",
                     "• Examens récents (radiographie, IRM, scanner, compte-rendu opératoire…)"],
             },
             {

@@ -1,7 +1,8 @@
 import { motion, useInView, type Variants } from "motion/react"
 import MotionButton from "../Animations/MotionButton"
-import { useState, useRef } from "react"
+import { useState, useRef, Fragment } from "react"
 import { Link } from "react-router-dom"
+import BodyParts from "./BodyParts"
 
 const containerVariants: Variants = {
     hidden: {},
@@ -23,30 +24,29 @@ const fields = [
         teamLink: "/equipes#chirurgie-orthopedique",
         content: (
             <>
-                <p>Notre service couvre l'ensemble des pathologies de l'appareil locomoteur, incluant la chirurgie orthopédique et traumatologique.</p>
+                <p>Notre service couvre l'ensemble des pathologies de l'appareil locomoteur.</p>
                 <ul className="list-disc list-inside">
-                    <li className="list-none">Nous réalisons notamment :</li>
-                    <li>Prothèses de hanche</li>
-                    <li>Prothèses totales et partielles du genou, avec assistance robotique</li>
-                    <li>Chirurgie ménisco-ligamentaire par arthroscopie</li>
+                    <li className="list-none">Domaine de spécialité :</li>
+                    <li>Chirurgie de l'épaule</li>
                     <li>Chirurgie de la main, du poignet et du coude</li>
                     <li>Microchirurgie et chirurgie des nerfs périphériques</li>
-                    <li>Chirurgie de l'épaule et de la colonne</li>
+                    <li>Prothèse totale de hanche</li>
+                    <li>Prothèses totales et partielles du genou, avec assistance robotique</li>
+                    <li>Ligamentoplastie (genou)</li>
+                    <li>Chirurgie du pied et de la cheville</li>
+                    <li>Chirurgie de la colonne</li>
                 </ul>
-                <p>Chaque patient bénéficie d'un accompagnement global, depuis l'évaluation pré-obligatoire jusqu'au suivi post-opératoire, en coordination avec les équipes d'imagerie et de rééducation, afin d'optimiser la récupération fonctionnelle.</p>
-                <p className="font-semibold">Membre supérieur (épaule, coude, poignet) / Hanche & genou / Colonne</p>
+                <p>Chaque patient bénéficie d'un accompagnement global, dès l'évaluation pré-obligatoire jusqu'au suivi post-opératoire.</p>
             </>
         ),
     },
     {
         id: "imagerie-radiologie",
         backgroundImage: "url('/images/imagerie.png')",
-        title: "Imagerie & Radiologie",
-        teamLink: "/equipes#imagerie-radiologie",
+        title: "Imagerie",
         content: (
             <>
-                <p>Notre service d'imagerie médicale permet la réalisation d'examens rapides et précis, directement sur place.</p>
-                <p>La radiographie standard est disponible en première intention, avec la possibilité de compléter le diagnostic par des examens plus avancés tels que le CBCT ou l'échographie, en fonction des besoins cliniques.</p>
+                <p>Notre service de radiologie permet la réalisation d'examens rapides, directement sur place.</p>
                 <p>Chaque examen s'inscrit dans un parcours coordonné, permettant d'orienter efficacement la prise en charge et le traitement du patient.</p>
             </>
         ),
@@ -93,8 +93,8 @@ export default function Fields() {
                 className="flex flex-col gap-[32px] md:gap-[64px]"
             >
                 {fields.map((field, index) => (
+                    <Fragment key={field.id}>
                     <motion.div
-                        key={field.id}
                         id={field.id}
                         variants={itemVariants}
                         className="w-full p-[20px] md:p-[40px] flex justify-center lg:justify-end bg-cover bg-center bg-no-repeat"
@@ -130,14 +130,22 @@ export default function Fields() {
                                         PRENDRE RDV
                                     </MotionButton>
                                 </Link>
-                                <Link to={field.teamLink} className="w-full md:w-fit">
-                                    <MotionButton className="bg-[#0C1A2E1A] hover:bg-[#3356871a] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
-                                        VOIR L'ÉQUIPE
-                                    </MotionButton>
-                                </Link>
+                                {field.teamLink && (
+                                    <Link to={field.teamLink} className="w-full md:w-fit">
+                                        <MotionButton className="bg-[#0C1A2E1A] hover:bg-[#3356871a] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
+                                            VOIR L'ÉQUIPE
+                                        </MotionButton>
+                                    </Link>
+                                )}
                             </div>
                         </div>
                     </motion.div>
+                    {field.id === "chirurgie-orthopedique" && (
+                        <motion.div variants={itemVariants}>
+                            <BodyParts />
+                        </motion.div>
+                    )}
+                    </Fragment>
                 ))}
             </motion.div>
         </section>

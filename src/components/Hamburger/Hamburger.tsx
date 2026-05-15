@@ -51,7 +51,7 @@ export function Hamburger({
                     <img
                         src={`/images/photos-site-web/${logoSrc}.png`}
                         alt="Logo Orthopole"
-                        className="w-[185px] h-fit object-cover object-center"
+                        className="w-[160px] lg:w-[185px] h-auto"
                     />
                 </Link>
                 {/* Bouton hamburger (visible uniquement sur mobile) */}

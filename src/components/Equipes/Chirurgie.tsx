@@ -26,6 +26,7 @@ export default function Chirurgie() {
 
     const doctors = [
         {
+            id: "dr-valery-fabre",
             name: "Dr. Valery Fabre",
             specialty: "CHIRURGIE DE LA HANCHE ET DU GENOU",
             availability: "Disponible dès 13h",
@@ -49,6 +50,7 @@ export default function Chirurgie() {
             ],
         },
         {
+            id: "dr-louis-gossing",
             name: "Dr. Louis Gossing",
             specialty: "CHIRURGIE DE L'ÉPAULE",
             availability: "Disponible dès 13h",
@@ -72,6 +74,7 @@ export default function Chirurgie() {
             ],
         },
         {
+            id: "dr-denis-williame",
             name: "Dr. Denis Williame",
             specialty: "CHIRURGIE DE LA MAIN, DU POIGNET ET DU COUDE",
             availability: "Disponible dès 13h",
@@ -97,6 +100,7 @@ export default function Chirurgie() {
             ],
         },
         {
+            id: "dr-eric-manche",
             name: "Dr. Eric Manche",
             specialty: "CHIRURGIE DE LA COLONNE, HANCHE ET DU GENOU",
             availability: "Disponible dès 13h",
@@ -140,7 +144,8 @@ export default function Chirurgie() {
                     {doctors.map((doctor, index) => (
                         <CarouselItem
                             key={index}
-                            className="pl-[32px] md:pl-[48px] basis-[85%] md:basis-1/2 lg:basis-1/4"
+                            id={doctor.id}
+                            className="pl-[32px] md:pl-[48px] basis-[85%] md:basis-1/2 lg:basis-1/4 scroll-mt-[100px]"
                         >
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
