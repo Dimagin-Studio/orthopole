@@ -5,8 +5,8 @@ import { Link } from "react-router-dom"
 export default function Footer() {
     return (
         <footer className="px-[24px] md:px-[48px] pt-[48px] md:pt-[96px] pb-[24px] md:pb-[48px] bg-[#172D47] dark:bg-[#0C1A2E] text-[#F5F3EF] flex flex-col gap-[32px] md:gap-[48px]">
-            {/* Infos & Newsletter */}
-            <section className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr_1px_1fr] gap-[32px] md:gap-[40px] lg:gap-[80px] w-full">
+            {/* Infos */}
+            <section className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] gap-[32px] md:gap-[40px] lg:gap-[80px] w-full">
 
                 {/* Liens */}
                 <div className="flex flex-col gap-[16px] md:gap-[24px] md:text-left text-center">
@@ -16,7 +16,7 @@ export default function Footer() {
                             <Link to="/equipes#chirurgie-orthopedique" className="hover:text-[#b8cae2]">Chirurgie</Link>
                         </motion.li>
                         <motion.li whileHover={{ scale: 1.08, originX: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
-                            <Link to="/equipes#imagerie-radiologie" className="hover:text-[#b8cae2]">Radiologie</Link>
+                            <Link to="/specialites#imagerie-radiologie" className="hover:text-[#b8cae2]">Radiologie</Link>
                         </motion.li>
                         <motion.li whileHover={{ scale: 1.08, originX: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
                             <Link to="/equipes#kinesitherapie-reathletisation" className="hover:text-[#b8cae2]">Kinésithérapie</Link>
@@ -44,29 +44,6 @@ export default function Footer() {
                         <li>Lun-Ven, 9:00-17:00</li>
                         <li>14 Rue Carnot, 92300 Levallois-Perret, France</li>
                     </ul>
-                </div>
-
-                {/* Ligne verticale */}
-                <div className="hidden md:block border-l border-[#F5F3EF14] h-auto self-stretch"></div>
-
-                {/* Newsletter */}
-                <div className="flex flex-col gap-[16px] md:gap-[24px] text-center md:text-left leading-[1.4]">
-                    <form action="" className="font-[Outfit] flex flex-col gap-[16px] md:gap-[24px] items-center md:items-start">
-                        <p className="text-[14px] md:text-[16px] max-w-[300px] md:max-w-none">Recevez des mises à jour, des conseils de santé et des informations exclusives.</p>
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Entrez votre adresse e-mail"
-                            className="border-b border-gray-500 py-[12px] md:py-[24px] text-[14px] md:text-[16px] focus:outline-none w-full max-w-[300px]"
-                        />
-                        <MotionButton
-                            as="button"
-                            type="submit"
-                            className="w-fit px-[12px] md:px-[16px] py-[6px] md:py-[8px] font-[Geist] font-medium bg-[#C9BBA8] hover:bg-[#ac9c86] text-[#0C1A2E] text-[14px] md:text-[16px] cursor-pointer"
-                        >
-                            S'abonner
-                        </MotionButton>
-                    </form>
                 </div>
             </section>
 

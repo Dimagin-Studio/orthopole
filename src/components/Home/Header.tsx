@@ -17,9 +17,9 @@ export default function Header() {
             <NavBar />
 
             {/* Section centre */}
-            <section className="max-w-[781px] px-[24px] md:px-[48px] pb-[48px] h-full flex flex-col gap-[24px] md:gap-[48px] justify-center text-center md:text-left">
+            <section className="max-w-[781px] lg:max-w-[900px] px-[24px] md:px-[48px] pb-[48px] h-full flex flex-col gap-[24px] md:gap-[48px] justify-center text-center md:text-left">
                 <div className="flex flex-col gap-[24px] md:gap-[32px] place-items-center md:place-items-start">
-                    <h1 className="text-[32px] md:text-[56px] leading-[1.2] tracking-tight flex flex-col gap-[12px] md:gap-[16px]">
+                    <h1 className="text-[28px] md:text-[40px] lg:text-[44px] leading-[1.2] tracking-tight flex flex-col gap-[12px] md:gap-[16px] lg:whitespace-nowrap">
                         <span>Centre privé de chirurgie orthopédique</span>
                         <span>Imagerie médicale</span>
                         <span>Kinésithérapie et réathlétisation</span>
