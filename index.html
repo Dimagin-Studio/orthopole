@@ -6,6 +6,27 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Orthopole</title>
+  <!-- Night shift : applique le thème avant le rendu pour éviter un flash. -->
+  <script>
+    (function () {
+      try {
+        var DARK_START = 20, DARK_END = 7;
+        var h = new Date().getHours();
+        var auto = (h >= DARK_START || h < DARK_END) ? "dark" : "light";
+        var theme = auto;
+        var raw = localStorage.getItem("theme-override");
+        if (raw) {
+          var o = JSON.parse(raw);
+          if (o && o.auto === auto && (o.value === "dark" || o.value === "light")) {
+            theme = o.value;
+          } else {
+            localStorage.removeItem("theme-override");
+          }
+        }
+        if (theme === "dark") document.documentElement.classList.add("dark");
+      } catch (e) {}
+    })();
+  </script>
 </head>
 
 <body class="font-[Raleway] text-base text-[#0C1A2E] bg-[#F5F3EF] dark:text-[#F5F3EF] dark:bg-[#080F1A]">

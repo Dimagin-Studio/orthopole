@@ -26,12 +26,12 @@ const services = [
         title: "Radiologie & imagerie",
     },
     {
-        to: "/specialites#kinesitherapie-reathletisation",
+        to: "/specialites#kinesitherapie",
         image: "url('/images/photos-figma/home-kine.png')",
         title: "Kinésithérapie",
     },
     {
-        to: "/specialites#kinesitherapie-reathletisation",
+        to: "/specialites#reathletisation",
         image: "url('/images/photos-site-web/home-rehabilitation.png')",
         title: "Réathlétisation",
     },

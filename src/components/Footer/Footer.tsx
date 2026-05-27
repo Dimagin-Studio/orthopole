@@ -42,7 +42,7 @@ export default function Footer() {
                     <ul className="list-none flex flex-col gap-[8px] md:gap-[16px] font-[Outfit] text-[14px] md:text-[16px] leading-[1.4]">
                         <li>info@orthopole.com</li>
                         <li>Lun-Ven, 9:00-17:00</li>
-                        <li>14 Rue Carnot, 92300 Levallois-Perret, France</li>
+                        <li>Drève Richelle 33, 1410 Waterloo</li>
                     </ul>
                 </div>
             </section>

@@ -10,7 +10,7 @@ export default function Centre() {
 
                 {/* Map */}
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5246.758788432707!2d2.2867164997522473!3d48.889106327404555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f8511307857%3A0xe5649db3eabc9e52!2s14%20Rue%20Carnot%2C%2092300%20Levallois-Perret%2C%20France!5e0!3m2!1sfr!2sbe!4v1773396113398!5m2!1sfr!2sbe"
+                    src="https://maps.google.com/maps?q=Dr%C3%A8ve%20Richelle%2033%2C%201410%20Waterloo&z=15&hl=fr&output=embed"
                     width="100%"
                     height="300"
                     className="w-full h-full"

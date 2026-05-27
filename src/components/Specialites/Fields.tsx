@@ -52,14 +52,13 @@ const fields = [
         ),
     },
     {
-        id: "kinesitherapie-reathletisation",
+        id: "kinesitherapie",
         backgroundImage: "url('/images/kine.png')",
-        title: "Kinésithérapie & Réathlétisation",
+        title: "Kinésithérapie",
         teamLink: "/equipes#kinesitherapie-reathletisation",
         content: (
             <>
                 <p>En collaboration avec les chirurgiens orthopédiques, nous proposons une prise en charge personnalisée basée sur un bilan précis.</p>
-                <p>La rééducation combine exercices ciblés et travail en salle de sport afin de restaurer la fonction et permettre un retour progressif aux activités du quotidien comme aux activités sportives.</p>
                 <ul className="list-disc list-inside">
                     <li className="list-none">Nous intervenons notamment dans :</li>
                     <li>Rééducation post-opératoire</li>
@@ -67,6 +66,21 @@ const fields = [
                     <li>Rééducation de la course à pied</li>
                     <li>Rééducation de la main</li>
                     <li>Dry Needling</li>
+                    <li>Thérapie manuelle</li>
+                </ul>
+            </>
+        ),
+    },
+    {
+        id: "reathletisation",
+        backgroundImage: "url('/images/reathletisation.jpeg')",
+        title: "Réathlétisation",
+        teamLink: "/equipes#kinesitherapie-reathletisation",
+        content: (
+            <>
+                <p>La rééducation combine exercices ciblés et travail en salle de sport afin de restaurer la fonction et permettre un retour progressif aux activités du quotidien comme aux activités sportives.</p>
+                <ul className="list-disc list-inside">
+                    <li>Réathlétisation</li>
                 </ul>
                 <p className="font-semibold">Rééducation post-opératoire / Kiné du sport / Thérapie manuelle / Réathlétisation</p>
             </>
