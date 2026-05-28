@@ -74,6 +74,7 @@ const fields = [
     {
         id: "reathletisation",
         backgroundImage: "url('/images/reathletisation.jpeg')",
+        blur: true,
         title: "Réathlétisation",
         teamLink: "/equipes#kinesitherapie-reathletisation",
         content: (
@@ -116,10 +117,15 @@ export default function Fields() {
                     <motion.div
                         id={field.id}
                         variants={itemVariants}
-                        className="w-full p-[20px] md:p-[40px] flex justify-center lg:justify-end bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: field.backgroundImage }}
+                        className="relative w-full p-[20px] md:p-[40px] flex justify-center lg:justify-end overflow-hidden"
                     >
-                        <div className="w-full md:w-[608px] flex flex-col gap-[24px] px-[16px] md:px-[32px] py-[16px] md:pt-[48px] md:pb-[32px] bg-[#F9F9F9F2] dark:bg-[#111F30] font-[Outfit] leading-[1.4]">
+                        {/* Image de fond — floutée uniquement si demandé (les autres assets ont déjà un flou cuit) */}
+                        <div
+                            aria-hidden="true"
+                            className={`absolute inset-0 bg-cover bg-center bg-no-repeat ${field.blur ? "blur-sm scale-110" : ""}`}
+                            style={{ backgroundImage: field.backgroundImage }}
+                        />
+                        <div className="relative w-full md:w-[608px] flex flex-col gap-[24px] px-[16px] md:px-[32px] py-[16px] md:pt-[48px] md:pb-[32px] bg-[#F9F9F9F2] dark:bg-[#111F30] font-[Outfit] leading-[1.4]">
                             <h2 className="text-[26px] md:text-[40px] text-center md:text-left font-[Raleway] leading-[1.2]">
                                 {field.title}
                             </h2>

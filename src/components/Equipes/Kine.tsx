@@ -27,7 +27,7 @@ export default function Kine() {
     const doctors = [
         {
             name: "Alexis De Wael",
-            specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
+            specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, mercredi après-midi, jeudi, vendredi matin",
             phone: "+32 472 41 82 31",
             imageSrc: "/images/photos-kines/alexis-de-wael.jpeg",
@@ -52,7 +52,7 @@ export default function Kine() {
         },
         {
             name: "François Dessart",
-            specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
+            specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mercredi, jeudi (8h–17h) – samedi (10h–14h)",
             phone: "+32 489 10 18 00", // placeholder
             imageSrc: "/images/photos-kines/françois-dessart.JPG",
@@ -79,7 +79,7 @@ export default function Kine() {
         },
         {
             name: "Vanina Ullens",
-            specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
+            specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible mardi, mercredi, vendredi après-midi",
             phone: "+32 498 66 87 81 ",
             imageSrc: "/images/photos-kines/vanina-ullens.jpeg",
@@ -102,7 +102,7 @@ export default function Kine() {
         },
         {
             name: "Sylvie Machiels",
-            specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
+            specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, jeudi (7h30–18h) – vendredi (7h30–13h)",
             phone: "+32 489 29 25 98", // placeholder
             imageSrc: "/images/photos-figma/sylvie-machiels.png",
@@ -129,7 +129,7 @@ export default function Kine() {
         },
         {
             name: "Anne-Sophie",
-            specialty: "KINÉSITHÉRAPEUTE DU SPORT",
+            specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, jeudi, vendredi",
             phone: "+32 489 29 25 98", // placeholder
             imageSrc: "/images/photos-kines/strength-care.png",

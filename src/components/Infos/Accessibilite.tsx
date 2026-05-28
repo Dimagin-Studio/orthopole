@@ -49,28 +49,6 @@ export default function Accessibilite() {
                         <h4 className="text-[32px] leading-[1.4] tracking-tight">Ascenseur accessible</h4>
                         <p className="font-[Outfit] leading-[1.4]">Ascenseurs accessibles permettant un accès facile à tous les étages.</p>
                     </motion.div>
-                    {/* Image 2 */}
-                    <motion.div variants={itemVariants}>
-                        <img src="/images/photos-accessibilite/photo2.png" alt="Rampes d'accès" className="hidden md:block w-full h-full object-cover object-center" />
-                    </motion.div>
-                    {/* Texte 2 */}
-                    <motion.div
-                        variants={itemVariants}
-                        className="h-[235px] md:h-full p-[12px] md:p-[24px] flex flex-col justify-between text-center md:text-left bg-[#F9F9F9]"
-                    >
-                        <h4 className="text-[32px] leading-[1.4] tracking-tight">Rampes d'accès</h4>
-                        <p className="font-[Outfit] leading-[1.4]">Rampes d'accès sécurisées facilitant la circulation des fauteuils roulants.</p>
-                    </motion.div>
-                </motion.div>
-
-                {/* Row 2 */}
-                <motion.div
-                    ref={refRow2}
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={isInView2 ? "visible" : "hidden"}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]"
-                >
                     {/* Texte 3 */}
                     <motion.div
                         variants={itemVariants}
@@ -83,6 +61,16 @@ export default function Accessibilite() {
                     <motion.div variants={itemVariants}>
                         <img src="/images/photos-accessibilite/photo3.png" alt="Toilettes adaptées" className="hidden md:block w-full h-full object-cover object-center" />
                     </motion.div>
+                </motion.div>
+
+                {/* Row 2 */}
+                <motion.div
+                    ref={refRow2}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={isInView2 ? "visible" : "hidden"}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px]"
+                >
                     {/* Texte 4 */}
                     <motion.div
                         variants={itemVariants}

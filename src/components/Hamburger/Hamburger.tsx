@@ -12,7 +12,7 @@ export function Hamburger({
 }) {
     const [isOpen, setIsOpen] = useState(false);
     const spanColor = isHome ? "bg-[#FBF8F3]" : "bg-[#0C1A2E] dark:bg-[#FBF8F3]";
-    const logoSrc = isHome || isDark ? "Orthopole_white" : "ORTHOPOLE_quadri";
+    const logoSrc = isHome || isDark ? "orthopole_simple_blanc" : "orthopole_simple_bleu";
     const bgDark = isHome ? "bg-none" : "dark:bg-[#0C1A2E]";
 
 
@@ -49,7 +49,7 @@ export function Hamburger({
             <div className="flex justify-between items-center w-full lg:w-fit">
                 <Link to="/">
                     <img
-                        src={`/images/photos-site-web/${logoSrc}.png`}
+                        src={`/images/${logoSrc}.png`}
                         alt="Logo Orthopole"
                         className="w-[160px] lg:w-[185px] h-auto"
                     />
