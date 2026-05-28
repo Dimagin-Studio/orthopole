@@ -61,13 +61,13 @@ const fields = [
                 <p>En collaboration avec les chirurgiens orthopédiques, nous proposons une prise en charge personnalisée basée sur un bilan précis.</p>
                 <ul className="list-disc list-inside">
                     <li className="list-none">Nous intervenons notamment dans :</li>
-                    <li>Rééducation post-opératoire</li>
                     <li>Kinésithérapie générale et du sport</li>
-                    <li>Rééducation de la course à pied</li>
+                    <li>Rééducation post-opératoire</li>
+                    <li>Thérapie manuelle</li>
                     <li>Rééducation de la main</li>
                     <li>Dry Needling</li>
-                    <li>Thérapie manuelle</li>
                 </ul>
+                <p className="font-semibold">Kinésithérapie générale / Post-opératoire / Thérapie manuelle</p>
             </>
         ),
     },
@@ -78,11 +78,16 @@ const fields = [
         teamLink: "/equipes#kinesitherapie-reathletisation",
         content: (
             <>
-                <p>La rééducation combine exercices ciblés et travail en salle de sport afin de restaurer la fonction et permettre un retour progressif aux activités du quotidien comme aux activités sportives.</p>
+                <p>Notre salle de sport dédiée permet une reprise progressive et sécurisée des activités physiques et sportives, après une blessure ou une intervention chirurgicale.</p>
+                <p>Nos thérapeutes vous accompagnent sur des exercices ciblés de renforcement musculaire, de proprioception et de préparation fonctionnelle, jusqu'au retour complet sur le terrain.</p>
                 <ul className="list-disc list-inside">
-                    <li>Réathlétisation</li>
+                    <li className="list-none">Nous intervenons notamment dans :</li>
+                    <li>Réathlétisation post-opératoire</li>
+                    <li>Retour au sport après blessure ligamentaire</li>
+                    <li>Rééducation de la course à pied</li>
+                    <li>Prévention des récidives</li>
                 </ul>
-                <p className="font-semibold">Rééducation post-opératoire / Kiné du sport / Thérapie manuelle / Réathlétisation</p>
+                <p className="font-semibold">Réathlétisation / Renforcement fonctionnel</p>
             </>
         ),
     },
