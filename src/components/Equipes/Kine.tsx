@@ -26,7 +26,7 @@ export default function Kine() {
 
     const doctors = [
         {
-            name: "Dr. Alexis De Wael",
+            name: "Alexis De Wael",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
             availability: "Disponible lundi, mardi, mercredi après-midi, jeudi, vendredi matin",
             phone: "+32 472 41 82 31",
@@ -51,7 +51,7 @@ export default function Kine() {
             ],
         },
         {
-            name: "Dr. François Dessart",
+            name: "François Dessart",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
             availability: "Disponible lundi, mercredi, jeudi (8h–17h) – samedi (10h–14h)",
             phone: "+32 489 10 18 00", // placeholder
@@ -78,7 +78,7 @@ export default function Kine() {
             ],
         },
         {
-            name: "Dr. Vanina Ullens",
+            name: "Vanina Ullens",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
             availability: "Disponible mardi, mercredi, vendredi après-midi",
             phone: "+32 498 66 87 81 ",
@@ -101,7 +101,7 @@ export default function Kine() {
             ],
         },
         {
-            name: "Dr. Sylvie Machiels",
+            name: "Sylvie Machiels",
             specialty: "KINÉSITHÉRAPEUTE EN RÉHABILITATION",
             availability: "Disponible lundi, mardi, jeudi (7h30–18h) – vendredi (7h30–13h)",
             phone: "+32 489 29 25 98", // placeholder
@@ -128,7 +128,7 @@ export default function Kine() {
             ],
         },
         {
-            name: "Dr. Anne-Sophie",
+            name: "Anne-Sophie",
             specialty: "KINÉSITHÉRAPEUTE DU SPORT",
             availability: "Disponible lundi, mardi, jeudi, vendredi",
             phone: "+32 489 29 25 98", // placeholder
