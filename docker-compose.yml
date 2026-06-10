@@ -8,6 +8,11 @@ services:
       - "traefik.http.middlewares.orthopole-www-redirect.redirectregex.regex=^https?://www\\.orthopole\\.be/(.*)"
       - "traefik.http.middlewares.orthopole-www-redirect.redirectregex.replacement=https://orthopole.be/$${1}"
       - "traefik.http.middlewares.orthopole-www-redirect.redirectregex.permanent=true"
+      # Service bidon : Traefik exige qu'un router pointe vers un service même si le
+      # middleware redirectregex termine la requête avant d'y arriver. Sans ça,
+      # avec plusieurs services déclarés par Dokploy sur ce container, le router
+      # serait invalide et ignoré.
+      - "traefik.http.services.orthopole-www-svc.loadbalancer.server.port=3000"
       # Router HTTPS sur www → applique la redirection
       # priority=1000 pour passer devant les routers auto-générés par Dokploy
       # (qui ont la même règle Host(www.orthopole.be) et servent le contenu directement)
@@ -15,10 +20,12 @@ services:
       - "traefik.http.routers.orthopole-www.entrypoints=websecure"
       - "traefik.http.routers.orthopole-www.tls=true"
       - "traefik.http.routers.orthopole-www.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.orthopole-www.service=orthopole-www-svc"
       - "traefik.http.routers.orthopole-www.middlewares=orthopole-www-redirect"
       - "traefik.http.routers.orthopole-www.priority=1000"
       # Router HTTP sur www → applique la même redirection (au cas où qqn arrive en http://)
       - "traefik.http.routers.orthopole-www-http.rule=Host(`www.orthopole.be`)"
       - "traefik.http.routers.orthopole-www-http.entrypoints=web"
+      - "traefik.http.routers.orthopole-www-http.service=orthopole-www-svc"
       - "traefik.http.routers.orthopole-www-http.middlewares=orthopole-www-redirect"
       - "traefik.http.routers.orthopole-www-http.priority=1000"
