@@ -9,12 +9,16 @@ services:
       - "traefik.http.middlewares.orthopole-www-redirect.redirectregex.replacement=https://orthopole.be/$${1}"
       - "traefik.http.middlewares.orthopole-www-redirect.redirectregex.permanent=true"
       # Router HTTPS sur www → applique la redirection
+      # priority=1000 pour passer devant les routers auto-générés par Dokploy
+      # (qui ont la même règle Host(www.orthopole.be) et servent le contenu directement)
       - "traefik.http.routers.orthopole-www.rule=Host(`www.orthopole.be`)"
       - "traefik.http.routers.orthopole-www.entrypoints=websecure"
       - "traefik.http.routers.orthopole-www.tls=true"
       - "traefik.http.routers.orthopole-www.tls.certresolver=letsencrypt"
       - "traefik.http.routers.orthopole-www.middlewares=orthopole-www-redirect"
+      - "traefik.http.routers.orthopole-www.priority=1000"
       # Router HTTP sur www → applique la même redirection (au cas où qqn arrive en http://)
       - "traefik.http.routers.orthopole-www-http.rule=Host(`www.orthopole.be`)"
       - "traefik.http.routers.orthopole-www-http.entrypoints=web"
       - "traefik.http.routers.orthopole-www-http.middlewares=orthopole-www-redirect"
+      - "traefik.http.routers.orthopole-www-http.priority=1000"
