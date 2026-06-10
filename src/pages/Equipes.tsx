@@ -7,10 +7,16 @@ import Faq from "../components/Faq/Faq"
 import Footer from "../components/Footer/Footer"
 import FadeInSection from "../components/Animations/FadeInSection"
 import PageTransition from "../components/Animations/PageTransition"
+import Seo from "../components/Seo/Seo"
 
 export default function Equipes() {
     return (
         <PageTransition>
+            <Seo
+                title="Notre équipe — Orthopole Waterloo"
+                description="Rencontrez l'équipe d'Orthopole : chirurgiens orthopédistes et kinésithérapeutes spécialisés en chirurgie du membre supérieur, du membre inférieur, du rachis et en rééducation."
+                path="/equipes"
+            />
             <Header />
 
             <FadeInSection><Intro /></FadeInSection>

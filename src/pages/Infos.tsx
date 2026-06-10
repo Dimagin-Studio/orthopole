@@ -7,10 +7,16 @@ import Accessibilite from "../components/Infos/Accessibilite"
 import Footer from "../components/Footer/Footer"
 import FadeInSection from "../components/Animations/FadeInSection"
 import PageTransition from "../components/Animations/PageTransition"
+import Seo from "../components/Seo/Seo"
 
 export default function Infos() {
     return (
         <PageTransition>
+            <Seo
+                title="Prendre rendez-vous & infos pratiques — Orthopole Waterloo"
+                description="Prenez rendez-vous au centre Orthopole à Waterloo (Drève Richelle 33). Horaires, accessibilité PMR, FAQ et formulaire de contact."
+                path="/infos"
+            />
             <Header />
 
             <FadeInSection><Kine /></FadeInSection>

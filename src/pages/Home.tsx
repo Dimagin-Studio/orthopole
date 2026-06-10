@@ -9,10 +9,16 @@ import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
 import FadeInSection from '../components/Animations/FadeInSection'
 import PageTransition from '../components/Animations/PageTransition'
+import Seo from '../components/Seo/Seo'
 
 export default function Home() {
     return (
         <PageTransition>
+            <Seo
+                title="Orthopole — Centre médical pluridisciplinaire à Waterloo"
+                description="Orthopole réunit chirurgie orthopédique, imagerie, kinésithérapie et réathlétisation au sein d'un même centre à Waterloo. Prise en charge globale et coordonnée de l'appareil locomoteur."
+                path="/"
+            />
             <Header />
             <main>
                 <FadeInSection><Avantages /></FadeInSection>

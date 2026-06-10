@@ -1,11 +1,104 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orthopole</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Orthopole — Centre médical pluridisciplinaire à Waterloo</title>
+  <meta name="title" content="Orthopole — Centre médical pluridisciplinaire à Waterloo" />
+  <meta name="description" content="Orthopole réunit chirurgie orthopédique, imagerie, kinésithérapie et réathlétisation au sein d'un même centre à Waterloo. Prise en charge globale et coordonnée de l'appareil locomoteur." />
+  <meta name="author" content="Orthopole" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0C1A2E" />
+  <link rel="canonical" href="https://orthopole.be/" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/images/orthopole_simple_bleu.png" />
+  <link rel="apple-touch-icon" href="/images/orthopole_simple_bleu.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Orthopole" />
+  <meta property="og:locale" content="fr_BE" />
+  <meta property="og:url" content="https://orthopole.be/" />
+  <meta property="og:title" content="Orthopole — Centre médical pluridisciplinaire à Waterloo" />
+  <meta property="og:description" content="Chirurgie orthopédique, imagerie, kinésithérapie et réathlétisation réunies au sein d'un même centre à Waterloo." />
+  <meta property="og:image" content="https://orthopole.be/images/photos-site-web/devanture.jpeg" />
+  <meta property="og:image:alt" content="Devanture du centre Orthopole à Waterloo" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://orthopole.be/" />
+  <meta name="twitter:title" content="Orthopole — Centre médical pluridisciplinaire à Waterloo" />
+  <meta name="twitter:description" content="Chirurgie orthopédique, imagerie, kinésithérapie et réathlétisation réunies au sein d'un même centre à Waterloo." />
+  <meta name="twitter:image" content="https://orthopole.be/images/photos-site-web/devanture.jpeg" />
+
+  <!-- Preconnect (Google Maps embed) -->
+  <link rel="preconnect" href="https://maps.google.com" crossorigin />
+  <link rel="dns-prefetch" href="https://maps.google.com" />
+
+  <!-- JSON-LD : MedicalClinic -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Orthopole",
+    "url": "https://orthopole.be/",
+    "logo": "https://orthopole.be/images/photos-site-web/Orthopole_Black.png",
+    "image": "https://orthopole.be/images/photos-site-web/devanture.jpeg",
+    "description": "Centre médical pluridisciplinaire à Waterloo réunissant chirurgie orthopédique, imagerie, kinésithérapie et réathlétisation.",
+    "telephone": "+32 2 523 30 33",
+    "email": "richelle@orthopole.be",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Drève Richelle 33",
+      "postalCode": "1410",
+      "addressLocality": "Waterloo",
+      "addressCountry": "BE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.7156,
+      "longitude": 4.3996
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:30",
+      "closes": "17:30"
+    }],
+    "medicalSpecialty": [
+      "Orthopedic",
+      "PhysicalTherapy",
+      "Radiography"
+    ],
+    "availableService": [
+      {
+        "@type": "MedicalProcedure",
+        "name": "Chirurgie orthopédique",
+        "description": "Chirurgie de l'épaule, de la main, du poignet, du coude, de la hanche, du genou, du pied, de la cheville et de la colonne."
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Imagerie médicale",
+        "description": "Examens radiologiques réalisés sur place dans un parcours coordonné."
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Kinésithérapie",
+        "description": "Rééducation post-opératoire, thérapie manuelle, kinésithérapie générale et du sport, dry needling."
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Réathlétisation",
+        "description": "Reprise progressive et sécurisée des activités sportives après blessure ou intervention chirurgicale."
+      }
+    ]
+  }
+  </script>
+
   <!-- Night shift : applique le thème avant le rendu pour éviter un flash. -->
   <script>
     (function () {

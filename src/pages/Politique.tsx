@@ -2,10 +2,16 @@ import NavBar from "../components/NavBar/NavBar"
 import Footer from "../components/Footer/Footer"
 import FadeInSection from "../components/Animations/FadeInSection"
 import PageTransition from "../components/Animations/PageTransition"
+import Seo from "../components/Seo/Seo"
 
 export default function Politique() {
     return (
         <PageTransition>
+            <Seo
+                title="Politique de confidentialité — Orthopole"
+                description="Politique de confidentialité d'Orthopole : traitement des données personnelles conforme au RGPD et à la loi belge."
+                path="/politique-confidentialite"
+            />
             <header className="w-full bg-[#E9DECE] dark:bg-[#0C1A2E]">
                 <NavBar />
                 <section className="px-[24px] md:px-[48px] py-[32px] md:py-[64px] flex flex-col gap-[16px] items-center text-center">
