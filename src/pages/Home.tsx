@@ -4,7 +4,7 @@ import Services from '../components/Home/Services'
 import Reeduc from '../components/Home/Reeduc'
 import Equipe from '../components/Home/Equipe'
 import Photos from '../components/Home/Photos'
-import Avis from '../components/Home/Avis'
+// import Avis from '../components/Home/Avis' // Réactiver quand de vrais avis seront disponibles
 import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
 import FadeInSection from '../components/Animations/FadeInSection'
@@ -23,7 +23,8 @@ export default function Home() {
 
                 <FadeInSection><Equipe /></FadeInSection>
 
-                <FadeInSection><Avis /></FadeInSection>
+                {/* Masqué tant que les vrais avis ne sont pas disponibles */}
+                {/* <FadeInSection><Avis /></FadeInSection> */}
 
                 <FadeInSection><Contact /></FadeInSection>
             </main>

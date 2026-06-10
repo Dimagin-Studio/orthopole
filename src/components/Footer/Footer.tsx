@@ -1,5 +1,4 @@
 import { motion } from "motion/react"
-import MotionButton from "../Animations/MotionButton"
 import { Link } from "react-router-dom"
 
 export default function Footer() {
@@ -40,7 +39,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-[16px] md:gap-[24px] md:text-left text-center">
                     <h5 className="font-[Geist] font-medium leading-[24px] text-[16px] md:text-[18px]">/ Informations de contact</h5>
                     <ul className="list-none flex flex-col gap-[8px] md:gap-[16px] font-[Outfit] text-[14px] md:text-[16px] leading-[1.4]">
-                        <li>info@orthopole.com</li>
+                        <li><a href="mailto:richelle@orthopole.be" className="hover:text-[#b8cae2]">richelle@orthopole.be</a></li>
                         <li>Lun-Ven, 9:00-17:00</li>
                         <li>Drève Richelle 33, 1410 Waterloo</li>
                     </ul>
@@ -62,12 +61,25 @@ export default function Footer() {
                 </div>
 
                 <ul className="list-none flex flex-wrap justify-center md:justify-end gap-[8px] lg:gap-[16px] w-full">
-                    <li><MotionButton as="a" href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Mentions légales</MotionButton></li>
+                    <li><Link to="/mentions-legales" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Mentions légales</Link></li>
                     <span className="hidden md:inline">-</span>
-                    <li><MotionButton as="a" href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Politique de confidentialité</MotionButton></li>
+                    <li><Link to="/politique-confidentialite" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Politique de confidentialité</Link></li>
                     <span className="hidden md:inline">-</span>
-                    <li><MotionButton as="a" href="" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Contact</MotionButton></li>
+                    <li><Link to="/infos#contact-form" className="text-[12px] md:text-[13px] hover:text-[#b8cae2]">Contact</Link></li>
                 </ul>
+            </section>
+
+            {/* Signature Dimagin */}
+            <section className="font-[Outfit] text-[11px] md:text-[12px] text-center text-[#F5F3EF99] leading-[1.4]">
+                Made with love by{" "}
+                <a
+                    href="https://dimagin.be"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-2 hover:text-[#b8cae2]"
+                >
+                    Dimagin
+                </a>
             </section>
         </footer>
     )

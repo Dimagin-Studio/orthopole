@@ -59,7 +59,7 @@ export default function Rdv() {
             progenda: "https://progenda.be/calendars/machiels-sylvie-kinesitherapeute-waterloo",
         },
         {
-            name: "Anne-Sophie",
+            name: "Anne-Sophie Brysse",
             imageSrc: "/images/photos-kines/strength-care.png",
             phone: "+32489292598",
             phoneDisplay: "+32 489 29 25 98", // placeholder
@@ -127,13 +127,13 @@ export default function Rdv() {
                     {/* Bouton */}
                     <MotionButton
                         as="a"
-                        href="tel:0189291885"
+                        href="tel:+3225233033"
                         className="flex gap-[8px] items-center justify-center font-[Outfit] font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d={phoneIconPath} />
                         </svg>
-                        01 89 29 18 85
+                        02/523.30.33
                     </MotionButton>
                 </motion.div>
 
@@ -202,11 +202,11 @@ export default function Rdv() {
                     <div className="flex flex-col md:flex-row justify-between gap-2 font-[Outfit] text-sm">
                         <p>Ou par appel téléphonique auprès du secrétariat</p>
 
-                        <MotionButton as="a" href="tel:0189422385" className="flex items-center gap-[6px] px-[12px] py-[8px] bg-[#0C1A2E1A] hover:bg-[#d9d2c8] w-fit h-fit">
+                        <MotionButton as="a" href="tel:+3225233033" className="flex items-center gap-[6px] px-[12px] py-[8px] bg-[#0C1A2E1A] hover:bg-[#d9d2c8] w-fit h-fit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d={phoneIconPath} />
                             </svg>
-                            <p className="text-sm w-full whitespace-nowrap">01 89 42 23 85</p>
+                            <p className="text-sm w-full whitespace-nowrap">02/523.30.33</p>
                         </MotionButton>
                     </div>
                 </motion.div>

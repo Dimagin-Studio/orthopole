@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 export function Hamburger({
     children,
@@ -11,8 +11,14 @@ export function Hamburger({
     isHome: boolean;
 }) {
     const [isOpen, setIsOpen] = useState(false);
+    const { pathname } = useLocation();
+    const isInfos = pathname === "/infos";
     const spanColor = isHome ? "bg-[#FBF8F3]" : "bg-[#0C1A2E] dark:bg-[#FBF8F3]";
-    const logoSrc = isHome || isDark ? "orthopole_simple_blanc" : "orthopole_simple_bleu";
+    const logoUrl = isHome || isDark
+        ? "/images/orthopole_simple_blanc.png"
+        : isInfos
+            ? "/images/photos-site-web/Orthopole_Black.png"
+            : "/images/orthopole_simple_bleu.png";
     const bgDark = isHome ? "bg-none" : "dark:bg-[#0C1A2E]";
 
 
@@ -49,7 +55,7 @@ export function Hamburger({
             <div className="flex justify-between items-center w-full lg:w-fit">
                 <Link to="/">
                     <img
-                        src={`/images/${logoSrc}.png`}
+                        src={logoUrl}
                         alt="Logo Orthopole"
                         className="w-[160px] lg:w-[185px] h-auto"
                     />

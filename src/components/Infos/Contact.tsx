@@ -24,13 +24,37 @@ export default function Contact() {
         setSelectedOption(e.target.value);
     };
 
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const data = new FormData(e.currentTarget);
+        const nom = (data.get("nom") as string) ?? "";
+        const prenom = (data.get("prenom") as string) ?? "";
+        const email = (data.get("email") as string) ?? "";
+        const objet = (data.get("objet") as string) ?? "";
+        const specialite = (data.get("specialite") as string) ?? "";
+        const message = (data.get("message") as string) ?? "";
+
+        const subject = `[Orthopole] ${objet} – ${specialite}`;
+        const body = [
+            `Nom : ${nom}`,
+            `Prénom : ${prenom}`,
+            `Email : ${email}`,
+            `Spécialité : ${specialite}`,
+            "",
+            "Message :",
+            message,
+        ].join("\n");
+
+        window.location.href = `mailto:richelle@orthopole.be?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    };
+
     return (
         <section id="contact-form" className="px-[24px] md:px-[48px] pt-[64px] md:pt-[128px] pb-[40px] md:pb-[96px] grid grid-cols-1 md:grid-cols-2 gap-[40px] lg:gap-[80px]">
             {/* Image (sauf sur mobiles) */}
             <img
-                src="/images/form.png"
-                alt="Docteur"
-                className="hidden lg:block object-cover object-center"
+                src="/images/chirurgie.png"
+                alt="Chirurgie orthopédique"
+                className="hidden lg:block w-full h-full object-cover object-center"
             />
 
             {/* Zone de texte */}
@@ -40,7 +64,7 @@ export default function Contact() {
                 </p>
 
                 {/* Formulaire */}
-                <form action="" className="flex flex-col justify-between w-full h-full">
+                <form onSubmit={handleSubmit} className="flex flex-col justify-between w-full h-full">
                     <h2 className="text-3xl md:text-5xl leading-[1.4] tracking-tight">Formulaire de contact</h2>
 
                     {/* Inputs + bouton */}

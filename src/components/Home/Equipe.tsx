@@ -14,12 +14,20 @@ const itemVariants: Variants = {
 }
 
 const practiciens = [
+    // Chirurgiens
     { src: "/images/photos-chirurgien/valery-fabre.jpeg", alt: "Dr. Valery Fabre", name: "Dr. Valery Fabre", specialty: "CHIRURGIE DE LA HANCHE ET DU GENOU", mt: "" },
     { src: "/images/photos-chirurgien/louis-gossing.jpg", alt: "Dr. Louis Gossing", name: "Dr. Louis Gossing", specialty: "CHIRURGIE DE L'ÉPAULE", mt: "mt-0 md:mt-[40px]" },
     { src: "/images/photos-chirurgien/denis-willame.jpg", alt: "Dr. Denis Williame", name: "Dr. Denis Williame", specialty: "CHIRURGIE DE LA MAIN, DU POIGNET ET DU COUDE", mt: "mt-0 md:mt-[80px]" },
     { src: "/images/photos-chirurgien/eric-manche.jpeg", alt: "Dr. Eric Manche", name: "Dr. Eric Manche", specialty: "CHIRURGIE DE LA COLONNE, HANCHE ET DU GENOU", mt: "mt-0 md:mt-[40px]" },
-    { src: "/images/photos-figma/camille-robert.png", alt: "Dr. Camille Robert", name: "Dr. Camille Robert", specialty: "OPHTALMOLOGIST", mt: "" },
-    { src: "/images/photos-figma/marc-lefevre.png", alt: "Dr. Marc Lefevre", name: "Dr. Marc Lefevre", specialty: "ENDOCRINOLOGIST", mt: "mt-0 md:mt-[80px]" },
+    { src: "/images/photos-practicien/thibaut.jpeg", alt: "Dr. Thibaut Leemrijse", name: "Dr. Thibaut Leemrijse", specialty: "CHIRURGIE DU PIED ET DE LA CHEVILLE", mt: "" },
+    { src: "/images/photos-practicien/DR-TOUSSAINT-whitebg.jpg", alt: "Dr. Juan Toussaint", name: "Dr. Juan Toussaint", specialty: "CHIRURGIE DE LA COLONNE", mt: "mt-0 md:mt-[80px]" },
+    { src: "/images/photos-practicien/docteur-geulette.png", alt: "Dr. Bernard Geulette", name: "Dr. Bernard Geulette", specialty: "CHIRURGIE DU GENOU ET DE LA HANCHE", mt: "" },
+    // Kinésithérapeutes
+    { src: "/images/photos-kines/alexis-de-wael.jpeg", alt: "Alexis De Wael", name: "Alexis De Wael", specialty: "KINÉSITHÉRAPEUTE", mt: "mt-0 md:mt-[40px]" },
+    { src: "/images/photos-kines/françois-dessart.JPG", alt: "François Dessart", name: "François Dessart", specialty: "KINÉSITHÉRAPEUTE", mt: "mt-0 md:mt-[80px]" },
+    { src: "/images/photos-kines/vanina-ullens.jpeg", alt: "Vanina Ullens", name: "Vanina Ullens", specialty: "KINÉSITHÉRAPEUTE", mt: "mt-0 md:mt-[40px]" },
+    { src: "/images/photos-figma/sylvie-machiels.png", alt: "Sylvie Machiels", name: "Sylvie Machiels", specialty: "KINÉSITHÉRAPEUTE", mt: "" },
+    { src: "/images/photos-kines/strength-care.png", alt: "Anne-Sophie Brysse", name: "Anne-Sophie Brysse", specialty: "KINÉSITHÉRAPEUTE", mt: "mt-0 md:mt-[80px]" },
 ]
 
 export default function Equipe() {

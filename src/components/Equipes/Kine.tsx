@@ -128,7 +128,7 @@ export default function Kine() {
             ],
         },
         {
-            name: "Anne-Sophie",
+            name: "Anne-Sophie Brysse",
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, jeudi, vendredi",
             phone: "+32 489 29 25 98", // placeholder

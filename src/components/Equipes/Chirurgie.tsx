@@ -117,6 +117,80 @@ export default function Chirurgie() {
                 },
             ],
         },
+        {
+            id: "dr-thibaut-leemrijse",
+            name: "Dr. Thibaut Leemrijse",
+            specialty: "CHIRURGIE DU PIED ET DE LA CHEVILLE",
+            availability: "Sur rendez-vous",
+            imageSrc: "/images/photos-practicien/thibaut.jpeg",
+            sections: [
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Chirurgie du pied",
+                        "Chirurgie de la cheville",
+                    ],
+                },
+                {
+                    title: "Formations",
+                    items: [
+                        "Université de Louvain",
+                        "Paris – microchirurgie, podologie, pathologie de la main",
+                        "Professeur Clinique à l'UCL depuis 2007",
+                        "Co-fondateur du Foot and Ankle Institute Bruxelles (2009-2024)",
+                    ],
+                },
+                {
+                    title: "Distinctions",
+                    items: [
+                        "Lauréat du 1er Prix European Foot and Ankle Society EFAS-EFORT (1999)",
+                    ],
+                },
+            ],
+        },
+        {
+            id: "dr-juan-toussaint",
+            name: "Dr. Juan Toussaint",
+            specialty: "CHIRURGIE DE LA COLONNE",
+            availability: "Sur rendez-vous",
+            imageSrc: "/images/photos-practicien/DR-TOUSSAINT-whitebg.jpg",
+            sections: [
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Pathologie rachidienne dégénérative",
+                        "Chirurgie robotique de la colonne",
+                        "Approche pluridisciplinaire",
+                    ],
+                },
+                {
+                    title: "Formations",
+                    items: [
+                        "Diplôme en médecine – UCL (2018)",
+                        "Diplôme en orthopédie – UCL (2024)",
+                        "Fellowship en chirurgie du rachis – Bordeaux Nord Aquitaine, aux côtés du Pr JC Le Huec (2024-2025)",
+                        "DIU en chirurgie robotique de la colonne (2025)",
+                    ],
+                },
+            ],
+        },
+        {
+            id: "dr-bernard-geulette",
+            name: "Dr. Bernard Geulette",
+            specialty: "CHIRURGIE DU GENOU ET DE LA HANCHE",
+            availability: "Sur rendez-vous",
+            imageSrc: "/images/photos-practicien/docteur-geulette.png",
+            sections: [
+                {
+                    title: "Domaines d'intervention",
+                    items: [
+                        "Chirurgie du genou",
+                        "Chirurgie de la hanche",
+                        "Orthopédie générale (à l'exclusion du rachis et des membres supérieurs : épaules, mains)",
+                    ],
+                },
+            ],
+        },
     ];
 
     const carouselRef = useRef(null);
