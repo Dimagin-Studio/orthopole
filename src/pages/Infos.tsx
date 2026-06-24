@@ -4,6 +4,7 @@ import Contact from "../components/Infos/Contact"
 import Faq from "../components/Faq/Faq"
 import Centre from "../components/Infos/Centre"
 import Accessibilite from "../components/Infos/Accessibilite"
+import Calendrier from "../components/Infos/Calendrier"
 import Footer from "../components/Footer/Footer"
 import FadeInSection from "../components/Animations/FadeInSection"
 import PageTransition from "../components/Animations/PageTransition"
@@ -18,6 +19,8 @@ export default function Infos() {
                 path="/infos"
             />
             <Header />
+
+            <FadeInSection><Calendrier /></FadeInSection>
 
             <FadeInSection><Kine /></FadeInSection>
 
