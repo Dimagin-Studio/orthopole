@@ -54,7 +54,7 @@ export default function Kine() {
             name: "François Dessart",
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mercredi, jeudi (8h–17h) – samedi (10h–14h)",
-            phone: "+32 489 10 18 00", // placeholder
+            phone: "+32 475 61 75 43",
             imageSrc: "/images/photos-kines/françois-dessart.JPG",
             progenda: "https://progenda.be/calendars/dessart-francois-kinesitherapeute-ruisbroek",
             sections: [
@@ -104,7 +104,7 @@ export default function Kine() {
             name: "Sylvie Machiels",
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, jeudi (7h30–18h) – vendredi (7h30–13h)",
-            phone: "+32 489 29 25 98", // placeholder
+            phone: "+32 487 44 20 65",
             imageSrc: "/images/photos-figma/sylvie-machiels.png",
             progenda: "https://progenda.be/calendars/machiels-sylvie-kinesitherapeute-waterloo",
             sections: [
@@ -131,7 +131,7 @@ export default function Kine() {
             name: "Anne-Sophie Brysse",
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, jeudi, vendredi",
-            phone: "+32 489 29 25 98", // placeholder
+            phone: "+32 472 45 26 30",
             imageSrc: "/images/photos-kines/strength-care.png",
             progenda: "https://progenda.be/calendars/brysse-anne-sophie-kinesitherapeute-ottignies",
             sections: [
