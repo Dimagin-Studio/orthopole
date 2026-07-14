@@ -13,7 +13,7 @@ export default function Contact() {
                         Besoin d'un rendez-vous ou d'une information ?
                     </h2>
                     <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[16px] md:gap-[24px] font-medium">
-                        <Link to="/infos#contact-form" className="w-full md:w-fit">
+                        <Link to="/infos#prise-de-rdv" className="w-full md:w-fit">
                             <MotionButton as="div" className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px]">
                                 PRENDRE RENDEZ-VOUS
                             </MotionButton>

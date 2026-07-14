@@ -18,7 +18,7 @@ const avantages: { src: string; alt: string; text: string; to?: string }[] = [
     { src: "/images/photos-figma/doctor.png", alt: "Icône docteur", text: "Centre dédié à l'appareil locomoteur" },
     { src: "/images/photos-figma/hospital-bed.png", alt: "Icône lit d'hôpital", text: "Plateau technique moderne" },
     { src: "/images/photos-figma/medical-paper.png", alt: "Icône papier médical", text: "Parcours patient optimisé" },
-    { src: "/images/photos-figma/call.png", alt: "Icône téléphone", text: "Prise de rendez-vous rapide", to: "/infos#contact-form" },
+    { src: "/images/photos-figma/call.png", alt: "Icône téléphone", text: "Prise de rendez-vous rapide", to: "/infos#prise-de-rdv" },
 ];
 
 export default function Avantages() {

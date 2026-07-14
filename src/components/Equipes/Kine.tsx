@@ -16,7 +16,6 @@ export default function Kine() {
         name: string;
         specialty: string;
         availability: string;
-        phone?: string;
         progenda?: string;
         sections: {
             title: string;
@@ -29,7 +28,6 @@ export default function Kine() {
             name: "Alexis De Wael",
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, mercredi après-midi, jeudi, vendredi matin",
-            phone: "+32 472 41 82 31",
             imageSrc: "/images/photos-kines/alexis-de-wael.jpeg",
             sections: [
                 {
@@ -54,7 +52,6 @@ export default function Kine() {
             name: "François Dessart",
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mercredi, jeudi (8h–17h) – samedi (10h–14h)",
-            phone: "+32 475 61 75 43",
             imageSrc: "/images/photos-kines/françois-dessart.JPG",
             progenda: "https://progenda.be/calendars/dessart-francois-kinesitherapeute-ruisbroek",
             sections: [
@@ -81,7 +78,6 @@ export default function Kine() {
             name: "Vanina Ullens",
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible mardi, mercredi, vendredi après-midi",
-            phone: "+32 498 66 87 81 ",
             imageSrc: "/images/photos-kines/vanina-ullens.jpeg",
             sections: [
                 {
@@ -104,7 +100,6 @@ export default function Kine() {
             name: "Sylvie Machiels",
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, jeudi (7h30–18h) – vendredi (7h30–13h)",
-            phone: "+32 487 44 20 65",
             imageSrc: "/images/photos-figma/sylvie-machiels.png",
             progenda: "https://progenda.be/calendars/machiels-sylvie-kinesitherapeute-waterloo",
             sections: [
@@ -131,7 +126,6 @@ export default function Kine() {
             name: "Anne-Sophie Brysse",
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, jeudi, vendredi",
-            phone: "+32 472 45 26 30",
             imageSrc: "/images/photos-kines/strength-care.png",
             progenda: "https://progenda.be/calendars/brysse-anne-sophie-kinesitherapeute-ottignies",
             sections: [
@@ -234,7 +228,6 @@ export default function Kine() {
                 name={selectedDoctor?.name || ""}
                 specialty={selectedDoctor?.specialty || ""}
                 availability={selectedDoctor?.availability || ""}
-                phone={selectedDoctor?.phone}
                 progenda={selectedDoctor?.progenda}
                 sections={selectedDoctor?.sections ?? []}
             />

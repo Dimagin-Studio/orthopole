@@ -33,36 +33,26 @@ export default function Rdv() {
         {
             name: "Alexis De Wael",
             imageSrc: "/images/photos-kines/alexis-de-wael.jpeg",
-            phone: "+32472418231",
-            phoneDisplay: "+32 472 41 82 31",
-            progenda: "", // à ajouter
+            progenda: "",
         },
         {
             name: "François Dessart",
             imageSrc: "/images/photos-kines/françois-dessart.JPG",
-            phone: "+32489101800",
-            phoneDisplay: "+32 489 10 18 00", // placeholder
             progenda: "https://progenda.be/calendars/dessart-francois-kinesitherapeute-ruisbroek",
         },
         {
             name: "Vanina Ullens",
             imageSrc: "/images/photos-kines/vanina-ullens.jpeg",
-            phone: "+32498668781",
-            phoneDisplay: "+32 498 66 87 81",
-            progenda: "", // à ajouter
+            progenda: "",
         },
         {
             name: "Sylvie Machiels",
             imageSrc: "/images/photos-figma/sylvie-machiels.png",
-            phone: "+32489292598",
-            phoneDisplay: "+32 489 29 25 98", // placeholder
             progenda: "https://progenda.be/calendars/machiels-sylvie-kinesitherapeute-waterloo",
         },
         {
             name: "Anne-Sophie Brysse",
             imageSrc: "/images/photos-kines/strength-care.png",
-            phone: "+32489292598",
-            phoneDisplay: "+32 489 29 25 98", // placeholder
             progenda: "https://progenda.be/calendars/brysse-anne-sophie-kinesitherapeute-ottignies",
         },
     ];
@@ -102,7 +92,7 @@ export default function Rdv() {
 
                     {/* Bouton */}
                     <MotionButton as="div" className="font-medium text-[#FBF8F3] text-center bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit">
-                        <Link to="/infos#contact-form">
+                        <Link to="/infos#prise-de-rdv">
                             PRENDRE RDV
                         </Link>
                     </MotionButton>
@@ -150,7 +140,7 @@ export default function Rdv() {
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0C1A2E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-activity-icon lucide-activity"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg>
                         </div>
 
-                        <p className="font-[Outfit] leading-[24px]">Prenez rendez-vous par appel téléphonique.</p>
+                        <p className="font-[Outfit] leading-[24px]">Prenez rendez-vous en ligne avec le kinésithérapeute de votre choix.</p>
                     </div>
 
                     {/* Contact */}
@@ -169,31 +159,27 @@ export default function Rdv() {
                                     <h5>{kine.name}</h5>
                                 </div>
 
-                                {/* Boutons */}
-                                <div className="flex gap-[8px]">
-                                    {/* Icône Calendrier - Lien Progenda */}
+                                {/* Bouton PRENDRE RDV — progenda personnel si disponible, sinon iframe i-agenda */}
+                                {kine.progenda ? (
                                     <MotionButton
                                         as="a"
                                         href={kine.progenda}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="px-[12px] py-[8px] md:py-[10px] bg-[#C9BBA8] hover:bg-[#ac9c86] flex items-center"
+                                        className="flex gap-[8px] items-center justify-center font-[Outfit] font-medium text-[#FBF8F3] text-center text-sm bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[16px] py-[8px] md:py-[10px] w-full md:w-fit"
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0C1A2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="M10 16h4" /><path d="M12 14v4" /></svg>
+                                        PRENDRE RDV
                                     </MotionButton>
-
-                                    {/* Téléphone */}
-                                    <MotionButton
-                                        as="a"
-                                        href={`tel:${kine.phone}`}
-                                        className="flex gap-[8px] items-center justify-center font-[Outfit] font-medium text-[#FBF8F3] text-center text-sm bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[12px] py-[8px] md:py-[10px] w-[160px]"
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <path d={phoneIconPath} />
-                                        </svg>
-                                        {kine.phoneDisplay}
-                                    </MotionButton>
-                                </div>
+                                ) : (
+                                    <Link to="/infos#prise-de-rdv" className="w-full md:w-fit">
+                                        <MotionButton
+                                            as="div"
+                                            className="flex gap-[8px] items-center justify-center font-[Outfit] font-medium text-[#FBF8F3] text-center text-sm bg-[#0C1A2E] hover:bg-[#172D47] leading-[23px] px-[16px] py-[8px] md:py-[10px] w-full md:w-fit"
+                                        >
+                                            PRENDRE RDV
+                                        </MotionButton>
+                                    </Link>
+                                )}
                             </motion.div>
                         ))}
                     </motion.div>

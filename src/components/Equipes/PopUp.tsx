@@ -9,7 +9,6 @@ type PopUpDoctorProps = {
     name: string;
     specialty: string;
     availability: string;
-    phone?: string;
     progenda?: string; // optionnel
     sections: {
         title: string;
@@ -24,7 +23,6 @@ export default function PopUp({
     name,
     specialty,
     availability,
-    phone,
     progenda,
     sections,
 }: PopUpDoctorProps) {
@@ -118,14 +116,12 @@ export default function PopUp({
                                                 </div>
                                                 <p>{availability}</p>
                                             </div>
-                                            {phone && (
-                                                <a
-                                                    href={`tel:${phone.replace(/\s/g, "")}`}
-                                                    className="font-[Outfit] text-sm text-[#2C4A6EBF] hover:text-[#2C4A6E] w-fit"
-                                                >
-                                                    📞 {phone}
-                                                </a>
-                                            )}
+                                            <a
+                                                href="tel:+3225233033"
+                                                className="font-[Outfit] text-sm text-[#2C4A6EBF] hover:text-[#2C4A6E] w-fit"
+                                            >
+                                                📞 Secrétariat — 02/523.30.33
+                                            </a>
                                         </div>
 
                                         {/* Infos */}
@@ -187,7 +183,7 @@ export default function PopUp({
                                         ) : (
                                             <MotionButton
                                                 as="a"
-                                                href="/infos#contact-form"
+                                                href="/infos#prise-de-rdv"
                                                 className="bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] w-full md:w-fit text-center block"
                                             >
                                                 PRENDRE RDV

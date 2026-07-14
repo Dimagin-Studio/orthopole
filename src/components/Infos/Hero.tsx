@@ -11,9 +11,7 @@ export default function Hero() {
                 <p className="font-[Outfit] text-sm md:text-base leading-[1.4]">Ou prenez rendez-vous directement en ligne</p>
                 <MotionButton
                     as="a"
-                    href="https://rdv.i-agenda.net/ORTHOWATERLOO"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#prise-de-rdv"
                     className="text-[#FBF8F3] dark:text-[#0C1A2E] bg-[#0C1A2E] hover:bg-[#172D47] dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] font-medium text-center"
                 >
                     PRENDRE RENDEZ-VOUS EN LIGNE

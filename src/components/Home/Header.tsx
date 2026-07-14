@@ -29,7 +29,7 @@ export default function Header() {
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-medium leading-[23.48px]">
-                    <Link to="/infos#contact-form" className="w-full md:w-fit">
+                    <Link to="/infos#prise-de-rdv" className="w-full md:w-fit">
                         <MotionButton as="div" className="bg-[#2C4A6E] hover:bg-[#1e344f] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
                             Prendre rendez-vous
                         </MotionButton>
