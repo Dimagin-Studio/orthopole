@@ -26,15 +26,14 @@ const fields = [
             <>
                 <p>Notre service couvre l'ensemble des pathologies de l'appareil locomoteur.</p>
                 <ul className="list-disc list-inside">
-                    <li className="list-none">Domaine de spécialité :</li>
                     <li>Chirurgie de l'épaule</li>
                     <li>Chirurgie de la main, du poignet et du coude</li>
                     <li>Microchirurgie et chirurgie des nerfs périphériques</li>
-                    <li>Prothèse totale de hanche</li>
-                    <li>Prothèses totales et partielles du genou, avec assistance robotique</li>
-                    <li>Ligamentoplastie (genou)</li>
-                    <li>Chirurgie du pied et de la cheville</li>
-                    <li>Chirurgie de la colonne</li>
+                    <li>Chirurgie de la hanche (prothèse totale de hanche)</li>
+                    <li>Chirurgie prothétique du genou (prothèse totale et partielle de genou avec assistance robotique)</li>
+                    <li>Chirurgie arthroscopique du genou (traitement des lésions de cartilage et des ménisco-ligamentaires)</li>
+                    <li>Chirurgie de la cheville et du pied</li>
+                    <li>Chirurgie du rachis</li>
                 </ul>
                 <p>Chaque patient bénéficie d'un accompagnement global, dès l'évaluation pré-obligatoire jusqu'au suivi post-opératoire.</p>
             </>
@@ -150,7 +149,7 @@ export default function Fields() {
 
                             {/* Boutons RDV / Équipe */}
                             <div className="flex flex-col md:flex-row items-center gap-[24px] md:gap-[32px] font-[Raleway] font-medium leading-[23.48px]">
-                                <Link to="/infos#contact-form" className="w-full md:w-fit">
+                                <Link to="/infos#prise-de-rdv" className="w-full md:w-fit">
                                     <MotionButton className="bg-[#0C1A2E] hover:bg-[#172D47] text-[#FBF8F3]  dark:bg-[#C9BBA8] dark:hover:bg-[#ac9c86] dark:text-[#0C1A2E] px-[16px] md:px-[20px] lg:px-[24px] py-[8px] md:py-[10px] text-center">
                                         PRENDRE RDV
                                     </MotionButton>
