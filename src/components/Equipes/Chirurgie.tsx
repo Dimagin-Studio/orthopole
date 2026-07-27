@@ -97,16 +97,15 @@ export default function Chirurgie() {
     {
       id: "dr-eric-manche",
       name: "Dr. Eric Manche",
-      specialty: "CHIRURGIE DE LA COLONNE, HANCHE ET DU GENOU",
+      specialty: "CHIRURGIE DE LA HANCHE, DU GENOU ET DE LA COLONNE",
       availability: "Disponible dès 13h",
       imageSrc: "/images/photos-chirurgien/eric-manche.jpeg",
       sections: [
         {
           title: "Domaines d'intervention",
           items: [
+            "Chirurgie de la hanche et du genou",
             "Chirurgie de la colonne",
-            "Chirurgie de la hanche",
-            "Chirurgie du genou",
             "Chirurgie traumatologique",
           ],
         },
