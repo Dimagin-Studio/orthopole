@@ -9,19 +9,10 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import type { Doctor } from "@/data/doctors"
 
 export default function Kine() {
-    const [selectedDoctor, setSelectedDoctor] = useState<{
-        imageSrc: string;
-        name: string;
-        specialty: string;
-        availability: string;
-        progenda?: string;
-        sections: {
-            title: string;
-            items: string[];
-        }[];
-    } | null>(null);
+    const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
 
     const doctors = [
         {
@@ -224,12 +215,7 @@ export default function Kine() {
             <PopUp
                 isOpen={!!selectedDoctor}
                 onClose={() => setSelectedDoctor(null)}
-                imageSrc={selectedDoctor?.imageSrc || ""}
-                name={selectedDoctor?.name || ""}
-                specialty={selectedDoctor?.specialty || ""}
-                availability={selectedDoctor?.availability || ""}
-                progenda={selectedDoctor?.progenda}
-                sections={selectedDoctor?.sections ?? []}
+                doctors={selectedDoctor ? [selectedDoctor] : []}
             />
         </section>
     );
