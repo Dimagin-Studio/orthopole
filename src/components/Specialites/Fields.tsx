@@ -31,7 +31,7 @@ const fields = [
                     <li>Microchirurgie et chirurgie des nerfs périphériques</li>
                     <li>Chirurgie de la hanche (prothèse totale de hanche)</li>
                     <li>Chirurgie prothétique du genou (prothèse totale et partielle de genou avec assistance robotique)</li>
-                    <li>Chirurgie arthroscopique du genou (traitement des lésions de cartilage et des ménisco-ligamentaires)</li>
+                    <li>Chirurgie arthroscopique du genou (traitement des lésions de cartilage et des lésions ménisco-ligamentaires)</li>
                     <li>Chirurgie de la cheville et du pied</li>
                     <li>Chirurgie du rachis</li>
                 </ul>

@@ -92,7 +92,7 @@ const zoneDoctorIds: Record<Zone, string[]> = {
     genou: ["dr-valery-fabre", "dr-eric-manche", "dr-bernard-geulette"],
     cheville: ["dr-thibaut-leemrijse"],
     pied: ["dr-thibaut-leemrijse"],
-    colonne: ["dr-eric-manche", "dr-juan-toussaint"],
+    colonne: ["dr-juan-toussaint"],
 }
 
 export default function BodyParts() {
