@@ -68,7 +68,7 @@ export default function Calendrier() {
     }, [])
 
     return (
-        <section id="prise-de-rdv" className="px-[24px] md:px-[48px] py-[64px] md:py-[96px] mx-auto max-w-[1100px] w-full flex flex-col gap-[24px]">
+        <section id="prise-de-rdv" className="px-[24px] md:px-[48px] py-[64px] md:py-[96px] mx-auto max-w-[1100px] w-full flex flex-col gap-[24px] min-h-[calc(100vh-76px)]">
             <div className="flex flex-col gap-[12px] text-center md:text-left">
                 <p className="px-[8px] py-[4px] font-[Outfit] text-sm text-[#362925] bg-[#EAE2D7] leading-[1.4] w-fit mx-auto md:mx-0">
                     PRISE DE RENDEZ-VOUS EN LIGNE
