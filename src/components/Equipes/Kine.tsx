@@ -20,6 +20,7 @@ export default function Kine() {
             specialty: "KINÉSITHÉRAPEUTE",
             availability: "Disponible lundi, mardi, mercredi après-midi, jeudi, vendredi matin",
             imageSrc: "/images/photos-kines/alexis-de-wael.jpeg",
+            progenda: "https://progenda.be/calendars/de-wael-alexis-kinesitherapeute-waterloo",
             sections: [
                 {
                     title: "Domaines d'intervention",
